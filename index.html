@@ -1,0 +1,867 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Pânico Pós-Eleição 2026</title>
+<meta name="description" content="A queda da bolsa e a alta do dólar após a eleição de 2026 foram manipulação ou exagero? Dados públicos, gráficos e acompanhamento mensal.">
+<meta property="og:title" content="Pânico Pós-Eleição 2026">
+<meta property="og:description" content="A queda da bolsa e a alta do dólar após a eleição de 2026 foram manipulação ou exagero? Dados públicos, gráficos e acompanhamento mensal.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://aleflavio.com.br/eleicao/">
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-53VPLBM');</script>
+<!-- End Google Tag Manager -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js"></script>
+<style>
+/* Página única, coluna central larga; mesmos tokens que o dashboard original usa */
+:root {
+  --color-bg: #f5f6f8; --color-panel: #ffffff; --color-fg: #1b2130; --color-fg-muted: #5d6677;
+  --color-border-line: #e1e4ea; --color-ok: #1f7a4d; --color-warn: #a35f00; --color-bad: #c0352b;
+  --cds-chart-grid: #e9ecf1; --cds-chart-axis: #b9bfca; --cds-chart-reference: #8b93a3; --cds-chart-muted: #b4bac6;
+  --cds-chart-status-critical: #d2493f; --cds-surface-popover: #ffffff; --cds-border: #d9dde4;
+  --cds-shadow-popover: 0 4px 16px rgba(20, 28, 45, .12); --cds-text-secondary: #5d6677;
+  --c1: #2f5bd3; --c2: #d08a1c; --c3: #2b9a6a; --c4: #8a55c9; --c5: #c2477a; --c6: #2a9bb5; --c7: #6f7d32; --c8: #8c6a4a;
+  --font-anthropic-sans: "Inter Tight", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-anthropic-serif: "Source Serif 4", Georgia, "Times New Roman", serif;
+  --cds-font-size-caption: .8125rem; --cds-font-size-body: .9375rem; --cds-font-size-heading: 1.0625rem; --cds-font-size-title: 1.75rem;
+  --cds-font-weight-medium: 600;
+  --cds-gap-xs: .25rem; --cds-gap-sm: .5rem; --cds-gap-md: 1rem; --cds-gap-lg: 1.5rem; --cds-gap-xl: 2.5rem;
+  --cds-pad-xs: .25rem; --cds-pad-sm: .5rem; --cds-pad-md: .875rem; --cds-pad-lg: 1.25rem; --cds-pad-xl: 2rem;
+  --cds-radius: 10px; --cds-dur-slow: 400ms; --cds-ease-out: cubic-bezier(.2, .7, .2, 1);
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-bg: #11141b; --color-panel: #191d27; --color-fg: #e7eaf1; --color-fg-muted: #9aa3b4;
+    --color-border-line: #2a303d; --color-ok: #5cc493; --color-warn: #e3a64a; --color-bad: #f07a70;
+    --cds-chart-grid: #252b37; --cds-chart-axis: #4a5262; --cds-chart-reference: #7c8597; --cds-chart-muted: #4f5767;
+    --cds-chart-status-critical: #f0695e; --cds-surface-popover: #222734; --cds-border: #353c4b;
+    --cds-shadow-popover: 0 6px 20px rgba(0, 0, 0, .45); --cds-text-secondary: #9aa3b4;
+    --c1: #7fa2ff; --c2: #f0b04a; --c3: #5cc493; --c4: #b48cf0; --c5: #ef7fab; --c6: #5cc8e0; --c7: #b5c46a; --c8: #c9a27e;
+    color-scheme: dark;
+  }
+}
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; background: var(--color-bg); color: var(--color-fg); font-family: var(--font-anthropic-sans); font-size: var(--cds-font-size-body); line-height: 1.45; }
+#dash-root { padding-block: 2rem 3rem; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+.dash-skeleton { color: transparent !important; background: var(--color-border-line); border-radius: 4px; }
+.px-foot { max-width: 76rem; margin: 3rem auto 0; display: flex; flex-direction: column; gap: var(--cds-gap-md); color: var(--color-fg-muted); font-size: var(--cds-font-size-caption); border-top: 1px solid var(--color-border-line); padding-top: var(--cds-gap-lg); }
+.px-foot h2 { font-size: var(--cds-font-size-heading); color: var(--color-fg); margin: 0; font-weight: 600; }
+.px-foot dl { margin: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 22rem), 1fr)); gap: var(--cds-gap-md); }
+.px-foot dt { color: var(--color-fg); font-weight: 600; }
+.px-foot dd { margin: 0; }
+.px-foot a { color: var(--c1); }
+</style>
+<script id="dados" type="application/json">{"atualizado": "2026-10-26", "dados": {"mercado": [{"data": "2026-01-02", "momento": "Início de 2026", "ibov": null, "dolar": 5.45, "fonte": "Bora Investir/B3 (analista Convexa: câmbio começou o ano perto de R$ 5,45)"}, {"data": "2026-09-30", "momento": "Fechamento de setembro", "ibov": 186340.46, "dolar": 5.174, "fonte": "Suno/Investidor10 (Ibovespa); dólar à vista R$ 5,174 segundo Suno (CNN Brasil: 5,1735; Seu Dinheiro: 5,175)"}, {"data": "2026-10-02", "momento": "Véspera do 1º turno", "ibov": 192108, "dolar": 5.217, "fonte": "Derivado do fechamento de 05/10 e das variações do dia (Agência Brasil)"}, {"data": "2026-10-05", "momento": "Pós 1º turno (Flávio à frente)", "ibov": 207190.44, "dolar": 5.0022, "fonte": "Agência Brasil / CNN Brasil"}, {"data": "2026-10-22", "momento": "Pesquisas apertadas", "ibov": 204130, "dolar": 5.03, "fonte": "InfoMoney 22/10 (Ibov derivado de 23/10)"}, {"data": "2026-10-23", "momento": "Último pregão antes do 2º turno", "ibov": 205088.74, "dolar": 4.9931, "fonte": "InfoMoney / SpaceMoney"}, {"data": "2026-10-26", "momento": "Pós 2º turno, ~12h (Lula eleito)", "ibov": 173064.64, "dolar": 5.4414, "fonte": "Reuters via Investing.com, 12h05"}], "setores": [{"ativo": "Magazine Luiza ON", "grupo": "Varejo doméstico", "var": -55.08}, {"ativo": "XP (EUA)", "grupo": "Financeiro", "var": -50.97}, {"ativo": "Cyrela ON", "grupo": "Imobiliário", "var": -43.91}, {"ativo": "BTG Pactual Unit", "grupo": "Financeiro", "var": -34.09}, {"ativo": "Índice Imobiliário (IMOB)", "grupo": "Índice", "var": -28.56}, {"ativo": "Banco do Brasil ON", "grupo": "Financeiro", "var": -28.56}, {"ativo": "Small Caps (SMLL)", "grupo": "Índice", "var": -26.31}, {"ativo": "Bradesco PN", "grupo": "Financeiro", "var": -25.58}, {"ativo": "Consumo (ICON)", "grupo": "Índice", "var": -25.48}, {"ativo": "Nubank (EUA)", "grupo": "Financeiro", "var": -20.65}, {"ativo": "Itaú Unibanco PN", "grupo": "Financeiro", "var": -15.63}, {"ativo": "Ibovespa", "grupo": "Índice", "var": -15.61}, {"ativo": "Petrobras PN", "grupo": "Estatal / petróleo", "var": -11.78}, {"ativo": "Santander Brasil Unit", "grupo": "Financeiro", "var": -3.85}, {"ativo": "Vale ON", "grupo": "Exportadora", "var": 5.61}, {"ativo": "Embraer ON", "grupo": "Exportadora", "var": 7.63}, {"ativo": "Suzano ON", "grupo": "Exportadora", "var": 7.8}], "expectativa": [{"medida": "Quaest, véspera (votos válidos)", "flavio": 51, "lula": 49, "tipo": "pesquisa", "fonte": "Exame, 24/10"}, {"medida": "Média de 10 pesquisas (23–24/10)", "flavio": 50.9, "lula": 49.1, "tipo": "pesquisa", "fonte": "Rio Times"}, {"medida": "Polymarket, sábado à noite (prob. de vitória)", "flavio": 83.9, "lula": 16.1, "tipo": "aposta", "fonte": "Rio Times"}, {"medida": "Kalshi, véspera (prob. de vitória)", "flavio": 80, "lula": 20, "tipo": "aposta", "fonte": "Rio Times"}, {"medida": "Resultado TSE (votos válidos)", "flavio": 48.21, "lula": 51.79, "tipo": "resultado", "fonte": "TSE via InfoMoney / TRE-SP"}], "polymarket": [{"hora": "Sáb noite", "min": -600, "lula": 16.1, "evento": "Flávio a 83,9¢"}, {"hora": "16h06", "min": 0, "lula": 23.9, "evento": "Queda de Flávio antes de decisão judicial ser pública"}, {"hora": "16h12", "min": 6, "lula": 35.0, "evento": "Flávio a 65%"}, {"hora": "17h56", "min": 110, "lula": 35.0, "evento": "Lula sobe antes da contagem retomar"}, {"hora": "17h59", "min": 113, "lula": 43.0, "evento": "Movimento sem explicação"}, {"hora": "18h09", "min": 123, "lula": 50.0, "evento": "Lula passa de 50% com menos de 2% apurado"}, {"hora": "18h41", "min": 155, "lula": 70.0, "evento": ""}, {"hora": "19h03", "min": 177, "lula": 80.0, "evento": "Flávio ainda lidera a contagem por 317 mil votos"}, {"hora": "19h15", "min": 189, "lula": 90.0, "evento": ""}, {"hora": "19h28", "min": 202, "lula": 93.0, "evento": "Contagem vira para Lula"}, {"hora": "Dom noite", "min": 300, "lula": 99.85, "evento": "Mercado liquidado"}], "fluxo": [{"indicador": "Fluxo estrangeiro na B3 em 05/10 (dia seguinte ao 1º turno)", "valor": 10.06, "unidade": "R$ bi", "fonte": "Gazeta Mercantil"}, {"indicador": "Fluxo estrangeiro em outubro até 07/10", "valor": 13.08, "unidade": "R$ bi", "fonte": "Carteira Fundos (dados B3)"}, {"indicador": "Fluxo estrangeiro acumulado em 2026 após 05/10", "valor": 40.01, "unidade": "R$ bi", "fonte": "Gazeta Mercantil"}, {"indicador": "Valorização do real no ano até 07/10", "valor": 10.19, "unidade": "%", "fonte": "Elos Ayta via Aciara"}, {"indicador": "Alta dos juros futuros longos (DI) pós-eleição", "valor": 260, "unidade": "pb", "fonte": "Reuters"}, {"indicador": "Volume financeiro na B3 até ~12h de 26/10", "valor": 33.24, "unidade": "R$ bi", "fonte": "Reuters"}], "hipotese": [{"id": "h1", "evidencia": "Mercado apostava pesado em Flávio: pesquisas 51–49 e apostas a ~80%", "peso": "Contra", "leitura": "Uma surpresa contra um consenso tão forte provoca repreço brusco sem precisar de coordenação."}, {"id": "h2", "evidencia": "O rali após o 1º turno foi o mesmo movimento ao contrário (bolsa sobe, dólar cai, entrada recorde de estrangeiros)", "peso": "Contra", "leitura": "Hoje está sendo desfeito, em parte, um prêmio que o próprio mercado tinha colocado nos preços."}, {"id": "h3", "evidencia": "Dólar a ~R$ 5,44 está perto de onde começou o ano (~R$ 5,45)", "peso": "Contra", "leitura": "Fora do normal era o dólar abaixo de R$ 5,00 na véspera. O nível de agora não é inédito."}, {"id": "h4", "evidencia": "Queda seletiva: bancos, varejo, imobiliário e small caps afundam; exportadoras (Vale, Suzano, Embraer) sobem", "peso": "Contra", "leitura": "Bate com a lógica de juros mais altos e câmbio mais fraco. Uma venda forçada e artificial tende a derrubar tudo junto."}, {"id": "h5", "evidencia": "Juros longos +260 pb e Tesouro cancela leilões de 27 a 29/10", "peso": "Contra", "leitura": "O choque atinge o mercado de dívida pública, que é profundo e difícil de manipular por um grupo isolado."}, {"id": "h6", "evidencia": "Estrangeiro que vende agora recebe menos dólares: em USD o Ibovespa caiu mais que em reais", "peso": "Contra", "leitura": "Vender ações com o dólar alto dá prejuízo em dobro para quem converte. Quem ganha é quem já estava vendido ou protegido, ou quem compra barato."}, {"id": "h11", "evidencia": "Quem apostou em Flávio perde dinheiro a cada ponto de queda", "peso": "Contra", "leitura": "Para recuperar o prejuízo essas instituições precisam que os preços subam. Espalhar pessimismo aprofundaria a perda delas."}, {"id": "h12", "evidencia": "O mercado transformou um empate técnico numa certeza de ~80%", "peso": "A favor (viés)", "leitura": "Indica manada e preferência política no consenso. Explica o erro de aposta, mas não é manipulação no sentido legal."}, {"id": "h13", "evidencia": "Pessimismo com Lula já se mostrou exagerado em 2002 e 2022", "peso": "A favor (viés)", "leitura": "Histórico sugere que o mercado superestima o risco Lula, o que reforça a tese de exagero."}, {"id": "h14", "evidencia": "Crescimento e emprego melhoraram, mas a dívida subiu e o primário virou déficit", "peso": "Contra", "leitura": "O mercado precifica a trajetória fiscal, que piorou em números oficiais do BCB. O cenário não é inventado, embora o peso dado a ele seja discutível."}, {"id": "h7", "evidencia": "Queda acima de 15%, perto do pior dia desde 1998, com circuit breaker e ações caindo 30% a 55%", "peso": "A favor (exagero)", "leitura": "A intensidade sugere overshoot: stops, desalavancagem e pouca liquidez. Isso é exagero de mercado, não prova de manipulação."}, {"id": "h8", "evidencia": "Polymarket se moveu sem explicação antes da apuração (16h06 e 17h56)", "peso": "Inconclusivo", "leitura": "Pode indicar informação privilegiada sobre a ordem da contagem. Os dados públicos não identificam os traders, e não há ligação conhecida com a B3."}, {"id": "h9", "evidencia": "CEO da Petrobras chama a queda de \"movimento especulativo\"", "peso": "Inconclusivo", "leitura": "É uma opinião de parte interessada (estatal do governo eleito), não uma evidência."}, {"id": "h10", "evidencia": "Nenhuma investigação da CVM ou da B3 noticiada até agora", "peso": "Inconclusivo", "leitura": "Ausência de investigação não prova nada, mas também não sustenta a tese."}], "macro": [{"serie": "divida_bruta", "nome": "Dívida bruta do governo geral", "unidade": "% do PIB", "mes": "2022-12", "valor": 71.68, "codigo_sgs": 13762}, {"serie": "divida_bruta", "nome": "Dívida bruta do governo geral", "unidade": "% do PIB", "mes": "2023-01", "valor": 71.38, "codigo_sgs": 13762}, {"serie": "divida_bruta", "nome": "Dívida bruta do governo geral", "unidade": "% do PIB", "mes": "2023-02", "valor": 71.77, "codigo_sgs": 13762}, {"serie": "divida_bruta", "nome": "Dívida bruta do governo geral", "unidade": "% do PIB", "mes": "2023-03", "valor": 71.54, "codigo_sgs": 13762}, {"serie": "divida_bruta", "nome": "Dívida bruta do governo geral", "unidade": "% do PIB", "mes": "2023-04", "valor": 71.57, "codigo_sgs": 13762}, {"serie": "divida_bruta", "nome": "Dívida bruta do governo geral", "unidade": "% do PIB", "mes": "2023-05", "valor": 72.11, "codigo_sgs": 13762}, {"serie": "divida_bruta", "nome": "Dívida bruta do governo geral", "unidade": "% do PIB", "mes": "2023-06", "valor": 71.97, "codigo_sgs": 13762}, {"serie": "divida_bruta", "nome": "Dívida bruta do governo geral", "unidade": "% do PIB", "mes": "2023-07", "valor": 72.48, "codigo_sgs": 13762}, {"serie": "divida_bruta", "nome": "Dívida bruta do governo geral", "unidade": "% do PIB", "mes": "2023-08", "valor": 72.89, "codigo_sgs": 13762}, {"serie": "divida_bruta", "nome": "Dívida bruta do governo geral", "unidade": "% do PIB", "mes": "2023-09", "valor": 73.01, "codigo_sgs": 13762}, {"serie": "divida_bruta", "nome": "Dívida bruta do governo geral", "unidade": "% do PIB", "mes": "2023-10", "valor": 73.32, "codigo_sgs": 13762}, {"serie": "divida_bruta", "nome": "Dívida bruta do governo geral", "unidade": "% do PIB", "mes": "2023-11", "valor": 73.32, "codigo_sgs": 13762}, {"serie": "divida_bruta", "nome": "Dívida bruta do governo geral", "unidade": "% do PIB", "mes": "2023-12", "valor": 73.83, "codigo_sgs": 13762}, {"serie": "divida_bruta", "nome": "Dívida bruta do governo geral", "unidade": "% do PIB", "mes": "2024-01", "valor": 74.47, "codigo_sgs": 13762}, {"serie": "divida_bruta", "nome": "Dívida bruta do governo geral", "unidade": "% do PIB", "mes": "2024-02", "valor": 74.81, "codigo_sgs": 13762}, {"serie": "divida_bruta", "nome": "Dívida bruta do governo geral", "unidade": "% do PIB", "mes": "2024-03", "valor": 75.02, "codigo_sgs": 13762}, {"serie": "divida_bruta", "nome": "Dívida bruta do governo geral", "unidade": "% do PIB", "mes": "2024-04", "valor": 75.15, "codigo_sgs": 13762}, {"serie": "divida_bruta", "nome": "Dívida bruta do governo geral", "unidade": "% do PIB", "mes": "2024-05", "valor": 75.67, "codigo_sgs": 13762}, {"serie": "divida_bruta", "nome": "Dívida bruta do governo geral", "unidade": "% do PIB", "mes": "2024-06", "valor": 76.68, "codigo_sgs": 13762}, {"serie": "divida_bruta", "nome": "Dívida bruta do governo geral", "unidade": "% do PIB", "mes": "2024-07", "valor": 77.21, "codigo_sgs": 13762}, {"serie": "divida_bruta", "nome": "Dívida bruta do governo geral", "unidade": "% do PIB", "mes": "2024-08", "valor": 77.36, "codigo_sgs": 13762}, {"serie": "divida_bruta", "nome": "Dívida bruta do governo geral", "unidade": "% do PIB", "mes": "2024-09", "valor": 77.09, "codigo_sgs": 13762}, {"serie": "divida_bruta", "nome": "Dívida bruta do governo geral", "unidade": "% do PIB", "mes": "2024-10", "valor": 77.38, "codigo_sgs": 13762}, {"serie": "divida_bruta", "nome": "Dívida bruta do governo geral", "unidade": "% do PIB", "mes": "2024-11", "valor": 77.5, "codigo_sgs": 13762}, {"serie": "divida_bruta", "nome": "Dívida bruta do governo geral", "unidade": "% do PIB", "mes": "2024-12", "valor": 76.27, "codigo_sgs": 13762}, {"serie": "divida_bruta", "nome": "Dívida bruta do governo geral", "unidade": "% do PIB", "mes": "2025-01", "valor": 75.48, "codigo_sgs": 13762}, {"serie": "divida_bruta", "nome": "Dívida bruta do governo geral", "unidade": "% do PIB", "mes": "2025-02", "valor": 75.78, "codigo_sgs": 13762}, {"serie": "divida_bruta", "nome": "Dívida bruta do governo geral", "unidade": "% do PIB", "mes": "2025-03", "valor": 75.55, "codigo_sgs": 13762}, {"serie": "divida_bruta", "nome": "Dívida bruta do governo geral", "unidade": "% do PIB", "mes": "2025-04", "valor": 75.62, "codigo_sgs": 13762}, {"serie": "divida_bruta", "nome": "Dívida bruta do governo geral", "unidade": "% do PIB", "mes": "2025-05", "valor": 75.75, "codigo_sgs": 13762}, {"serie": "divida_bruta", "nome": "Dívida bruta do governo geral", "unidade": "% do PIB", "mes": "2025-06", "valor": 76.3, "codigo_sgs": 13762}, {"serie": "divida_bruta", "nome": "Dívida bruta do governo geral", "unidade": "% do PIB", "mes": "2025-07", "valor": 77.18, "codigo_sgs": 13762}, {"serie": "divida_bruta", "nome": "Dívida bruta do governo geral", "unidade": "% do PIB", "mes": "2025-08", "valor": 77.31, "codigo_sgs": 13762}, {"serie": "divida_bruta", "nome": "Dívida bruta do governo geral", "unidade": "% do PIB", "mes": "2025-09", "valor": 77.84, "codigo_sgs": 13762}, {"serie": "divida_bruta", "nome": "Dívida bruta do governo geral", "unidade": "% do PIB", "mes": "2025-10", "valor": 78.29, "codigo_sgs": 13762}, {"serie": "divida_bruta", "nome": "Dívida bruta do governo geral", "unidade": "% do PIB", "mes": "2025-11", "valor": 78.95, "codigo_sgs": 13762}, {"serie": "divida_bruta", "nome": "Dívida bruta do governo geral", "unidade": "% do PIB", "mes": "2025-12", "valor": 78.64, "codigo_sgs": 13762}, {"serie": "divida_bruta", "nome": "Dívida bruta do governo geral", "unidade": "% do PIB", "mes": "2026-01", "valor": 78.7, "codigo_sgs": 13762}, {"serie": "divida_bruta", "nome": "Dívida bruta do governo geral", "unidade": "% do PIB", "mes": "2026-02", "valor": 79.13, "codigo_sgs": 13762}, {"serie": "divida_bruta", "nome": "Dívida bruta do governo geral", "unidade": "% do PIB", "mes": "2026-03", "valor": 79.88, "codigo_sgs": 13762}, {"serie": "divida_bruta", "nome": "Dívida bruta do governo geral", "unidade": "% do PIB", "mes": "2026-04", "valor": 80.09, "codigo_sgs": 13762}, {"serie": "divida_bruta", "nome": "Dívida bruta do governo geral", "unidade": "% do PIB", "mes": "2026-05", "valor": 81.04, "codigo_sgs": 13762}, {"serie": "divida_bruta", "nome": "Dívida bruta do governo geral", "unidade": "% do PIB", "mes": "2026-06", "valor": 81.95, "codigo_sgs": 13762}, {"serie": "divida_bruta", "nome": "Dívida bruta do governo geral", "unidade": "% do PIB", "mes": "2026-07", "valor": 82.55, "codigo_sgs": 13762}, {"serie": "divida_bruta", "nome": "Dívida bruta do governo geral", "unidade": "% do PIB", "mes": "2026-08", "valor": 82.87, "codigo_sgs": 13762}, {"serie": "divida_liquida", "nome": "Dívida líquida do setor público", "unidade": "% do PIB", "mes": "2022-12", "valor": 56.13, "codigo_sgs": 4513}, {"serie": "divida_liquida", "nome": "Dívida líquida do setor público", "unidade": "% do PIB", "mes": "2023-01", "valor": 55.21, "codigo_sgs": 4513}, {"serie": "divida_liquida", "nome": "Dívida líquida do setor público", "unidade": "% do PIB", "mes": "2023-02", "valor": 55.71, "codigo_sgs": 4513}, {"serie": "divida_liquida", "nome": "Dívida líquida do setor público", "unidade": "% do PIB", "mes": "2023-03", "valor": 55.98, "codigo_sgs": 4513}, {"serie": "divida_liquida", "nome": "Dívida líquida do setor público", "unidade": "% do PIB", "mes": "2023-04", "valor": 55.92, "codigo_sgs": 4513}, {"serie": "divida_liquida", "nome": "Dívida líquida do setor público", "unidade": "% do PIB", "mes": "2023-05", "valor": 56.59, "codigo_sgs": 4513}, {"serie": "divida_liquida", "nome": "Dívida líquida do setor público", "unidade": "% do PIB", "mes": "2023-06", "valor": 57.78, "codigo_sgs": 4513}, {"serie": "divida_liquida", "nome": "Dívida líquida do setor público", "unidade": "% do PIB", "mes": "2023-07", "valor": 58.34, "codigo_sgs": 4513}, {"serie": "divida_liquida", "nome": "Dívida líquida do setor público", "unidade": "% do PIB", "mes": "2023-08", "valor": 58.68, "codigo_sgs": 4513}, {"serie": "divida_liquida", "nome": "Dívida líquida do setor público", "unidade": "% do PIB", "mes": "2023-09", "valor": 58.87, "codigo_sgs": 4513}, {"serie": "divida_liquida", "nome": "Dívida líquida do setor público", "unidade": "% do PIB", "mes": "2023-10", "valor": 58.85, "codigo_sgs": 4513}, {"serie": "divida_liquida", "nome": "Dívida líquida do setor público", "unidade": "% do PIB", "mes": "2023-11", "valor": 59.08, "codigo_sgs": 4513}, {"serie": "divida_liquida", "nome": "Dívida líquida do setor público", "unidade": "% do PIB", "mes": "2023-12", "valor": 60.43, "codigo_sgs": 4513}, {"serie": "divida_liquida", "nome": "Dívida líquida do setor público", "unidade": "% do PIB", "mes": "2024-01", "valor": 59.55, "codigo_sgs": 4513}, {"serie": "divida_liquida", "nome": "Dívida líquida do setor público", "unidade": "% do PIB", "mes": "2024-02", "valor": 60.32, "codigo_sgs": 4513}, {"serie": "divida_liquida", "nome": "Dívida líquida do setor público", "unidade": "% do PIB", "mes": "2024-03", "valor": 60.59, "codigo_sgs": 4513}, {"serie": "divida_liquida", "nome": "Dívida líquida do setor público", "unidade": "% do PIB", "mes": "2024-04", "valor": 60.55, "codigo_sgs": 4513}, {"serie": "divida_liquida", "nome": "Dívida líquida do setor público", "unidade": "% do PIB", "mes": "2024-05", "valor": 61.23, "codigo_sgs": 4513}, {"serie": "divida_liquida", "nome": "Dívida líquida do setor público", "unidade": "% do PIB", "mes": "2024-06", "valor": 61.28, "codigo_sgs": 4513}, {"serie": "divida_liquida", "nome": "Dívida líquida do setor público", "unidade": "% do PIB", "mes": "2024-07", "valor": 60.91, "codigo_sgs": 4513}, {"serie": "divida_liquida", "nome": "Dívida líquida do setor público", "unidade": "% do PIB", "mes": "2024-08", "valor": 61.08, "codigo_sgs": 4513}, {"serie": "divida_liquida", "nome": "Dívida líquida do setor público", "unidade": "% do PIB", "mes": "2024-09", "valor": 61.46, "codigo_sgs": 4513}, {"serie": "divida_liquida", "nome": "Dívida líquida do setor público", "unidade": "% do PIB", "mes": "2024-10", "valor": 61.12, "codigo_sgs": 4513}, {"serie": "divida_liquida", "nome": "Dívida líquida do setor público", "unidade": "% do PIB", "mes": "2024-11", "valor": 60.99, "codigo_sgs": 4513}, {"serie": "divida_liquida", "nome": "Dívida líquida do setor público", "unidade": "% do PIB", "mes": "2024-12", "valor": 61.3, "codigo_sgs": 4513}, {"serie": "divida_liquida", "nome": "Dívida líquida do setor público", "unidade": "% do PIB", "mes": "2025-01", "valor": 60.96, "codigo_sgs": 4513}, {"serie": "divida_liquida", "nome": "Dívida líquida do setor público", "unidade": "% do PIB", "mes": "2025-02", "valor": 61.13, "codigo_sgs": 4513}, {"serie": "divida_liquida", "nome": "Dívida líquida do setor público", "unidade": "% do PIB", "mes": "2025-03", "valor": 61.3, "codigo_sgs": 4513}, {"serie": "divida_liquida", "nome": "Dívida líquida do setor público", "unidade": "% do PIB", "mes": "2025-04", "valor": 61.25, "codigo_sgs": 4513}, {"serie": "divida_liquida", "nome": "Dívida líquida do setor público", "unidade": "% do PIB", "mes": "2025-05", "valor": 61.71, "codigo_sgs": 4513}, {"serie": "divida_liquida", "nome": "Dívida líquida do setor público", "unidade": "% do PIB", "mes": "2025-06", "valor": 62.6, "codigo_sgs": 4513}, {"serie": "divida_liquida", "nome": "Dívida líquida do setor público", "unidade": "% do PIB", "mes": "2025-07", "valor": 63.41, "codigo_sgs": 4513}, {"serie": "divida_liquida", "nome": "Dívida líquida do setor público", "unidade": "% do PIB", "mes": "2025-08", "valor": 64.05, "codigo_sgs": 4513}, {"serie": "divida_liquida", "nome": "Dívida líquida do setor público", "unidade": "% do PIB", "mes": "2025-09", "valor": 64.57, "codigo_sgs": 4513}, {"serie": "divida_liquida", "nome": "Dívida líquida do setor público", "unidade": "% do PIB", "mes": "2025-10", "valor": 64.68, "codigo_sgs": 4513}, {"serie": "divida_liquida", "nome": "Dívida líquida do setor público", "unidade": "% do PIB", "mes": "2025-11", "valor": 65.18, "codigo_sgs": 4513}, {"serie": "divida_liquida", "nome": "Dívida líquida do setor público", "unidade": "% do PIB", "mes": "2025-12", "valor": 65.24, "codigo_sgs": 4513}, {"serie": "divida_liquida", "nome": "Dívida líquida do setor público", "unidade": "% do PIB", "mes": "2026-01", "valor": 64.94, "codigo_sgs": 4513}, {"serie": "divida_liquida", "nome": "Dívida líquida do setor público", "unidade": "% do PIB", "mes": "2026-02", "valor": 65.46, "codigo_sgs": 4513}, {"serie": "divida_liquida", "nome": "Dívida líquida do setor público", "unidade": "% do PIB", "mes": "2026-03", "valor": 66.67, "codigo_sgs": 4513}, {"serie": "divida_liquida", "nome": "Dívida líquida do setor público", "unidade": "% do PIB", "mes": "2026-04", "valor": 67.13, "codigo_sgs": 4513}, {"serie": "divida_liquida", "nome": "Dívida líquida do setor público", "unidade": "% do PIB", "mes": "2026-05", "valor": 67.88, "codigo_sgs": 4513}, {"serie": "divida_liquida", "nome": "Dívida líquida do setor público", "unidade": "% do PIB", "mes": "2026-06", "valor": 68.49, "codigo_sgs": 4513}, {"serie": "divida_liquida", "nome": "Dívida líquida do setor público", "unidade": "% do PIB", "mes": "2026-07", "valor": 69.11, "codigo_sgs": 4513}, {"serie": "divida_liquida", "nome": "Dívida líquida do setor público", "unidade": "% do PIB", "mes": "2026-08", "valor": 69.27, "codigo_sgs": 4513}, {"serie": "primario", "nome": "Resultado primário, 12 meses", "unidade": "% do PIB", "mes": "2022-12", "valor": 1.25, "codigo_sgs": 5793}, {"serie": "primario", "nome": "Resultado primário, 12 meses", "unidade": "% do PIB", "mes": "2023-01", "valor": 1.21, "codigo_sgs": 5793}, {"serie": "primario", "nome": "Resultado primário, 12 meses", "unidade": "% do PIB", "mes": "2023-02", "valor": 0.91, "codigo_sgs": 5793}, {"serie": "primario", "nome": "Resultado primário, 12 meses", "unidade": "% do PIB", "mes": "2023-03", "valor": 0.72, "codigo_sgs": 5793}, {"serie": "primario", "nome": "Resultado primário, 12 meses", "unidade": "% do PIB", "mes": "2023-04", "valor": 0.54, "codigo_sgs": 5793}, {"serie": "primario", "nome": "Resultado primário, 12 meses", "unidade": "% do PIB", "mes": "2023-05", "valor": 0.37, "codigo_sgs": 5793}, {"serie": "primario", "nome": "Resultado primário, 12 meses", "unidade": "% do PIB", "mes": "2023-06", "valor": -0.23, "codigo_sgs": 5793}, {"serie": "primario", "nome": "Resultado primário, 12 meses", "unidade": "% do PIB", "mes": "2023-07", "valor": -0.76, "codigo_sgs": 5793}, {"serie": "primario", "nome": "Resultado primário, 12 meses", "unidade": "% do PIB", "mes": "2023-08", "valor": -0.69, "codigo_sgs": 5793}, {"serie": "primario", "nome": "Resultado primário, 12 meses", "unidade": "% do PIB", "mes": "2023-09", "valor": -0.95, "codigo_sgs": 5793}, {"serie": "primario", "nome": "Resultado primário, 12 meses", "unidade": "% do PIB", "mes": "2023-10", "valor": -1.06, "codigo_sgs": 5793}, {"serie": "primario", "nome": "Resultado primário, 12 meses", "unidade": "% do PIB", "mes": "2023-11", "valor": -1.21, "codigo_sgs": 5793}, {"serie": "primario", "nome": "Resultado primário, 12 meses", "unidade": "% do PIB", "mes": "2023-12", "valor": -2.28, "codigo_sgs": 5793}, {"serie": "primario", "nome": "Resultado primário, 12 meses", "unidade": "% do PIB", "mes": "2024-01", "valor": -2.23, "codigo_sgs": 5793}, {"serie": "primario", "nome": "Resultado primário, 12 meses", "unidade": "% do PIB", "mes": "2024-02", "valor": -2.42, "codigo_sgs": 5793}, {"serie": "primario", "nome": "Resultado primário, 12 meses", "unidade": "% do PIB", "mes": "2024-03", "valor": -2.27, "codigo_sgs": 5793}, {"serie": "primario", "nome": "Resultado primário, 12 meses", "unidade": "% do PIB", "mes": "2024-04", "valor": -2.38, "codigo_sgs": 5793}, {"serie": "primario", "nome": "Resultado primário, 12 meses", "unidade": "% do PIB", "mes": "2024-05", "valor": -2.49, "codigo_sgs": 5793}, {"serie": "primario", "nome": "Resultado primário, 12 meses", "unidade": "% do PIB", "mes": "2024-06", "valor": -2.4, "codigo_sgs": 5793}, {"serie": "primario", "nome": "Resultado primário, 12 meses", "unidade": "% do PIB", "mes": "2024-07", "valor": -2.25, "codigo_sgs": 5793}, {"serie": "primario", "nome": "Resultado primário, 12 meses", "unidade": "% do PIB", "mes": "2024-08", "valor": -2.23, "codigo_sgs": 5793}, {"serie": "primario", "nome": "Resultado primário, 12 meses", "unidade": "% do PIB", "mes": "2024-09", "valor": -2.12, "codigo_sgs": 5793}, {"serie": "primario", "nome": "Resultado primário, 12 meses", "unidade": "% do PIB", "mes": "2024-10", "valor": -1.91, "codigo_sgs": 5793}, {"serie": "primario", "nome": "Resultado primário, 12 meses", "unidade": "% do PIB", "mes": "2024-11", "valor": -1.64, "codigo_sgs": 5793}, {"serie": "primario", "nome": "Resultado primário, 12 meses", "unidade": "% do PIB", "mes": "2024-12", "valor": -0.4, "codigo_sgs": 5793}, {"serie": "primario", "nome": "Resultado primário, 12 meses", "unidade": "% do PIB", "mes": "2025-01", "valor": -0.39, "codigo_sgs": 5793}, {"serie": "primario", "nome": "Resultado primário, 12 meses", "unidade": "% do PIB", "mes": "2025-02", "valor": -0.13, "codigo_sgs": 5793}, {"serie": "primario", "nome": "Resultado primário, 12 meses", "unidade": "% do PIB", "mes": "2025-03", "valor": -0.11, "codigo_sgs": 5793}, {"serie": "primario", "nome": "Resultado primário, 12 meses", "unidade": "% do PIB", "mes": "2025-04", "valor": -0.05, "codigo_sgs": 5793}, {"serie": "primario", "nome": "Resultado primário, 12 meses", "unidade": "% do PIB", "mes": "2025-05", "valor": 0.2, "codigo_sgs": 5793}, {"serie": "primario", "nome": "Resultado primário, 12 meses", "unidade": "% do PIB", "mes": "2025-06", "valor": 0.15, "codigo_sgs": 5793}, {"serie": "primario", "nome": "Resultado primário, 12 meses", "unidade": "% do PIB", "mes": "2025-07", "valor": -0.22, "codigo_sgs": 5793}, {"serie": "primario", "nome": "Resultado primário, 12 meses", "unidade": "% do PIB", "mes": "2025-08", "valor": -0.19, "codigo_sgs": 5793}, {"serie": "primario", "nome": "Resultado primário, 12 meses", "unidade": "% do PIB", "mes": "2025-09", "valor": -0.27, "codigo_sgs": 5793}, {"serie": "primario", "nome": "Resultado primário, 12 meses", "unidade": "% do PIB", "mes": "2025-10", "valor": -0.3, "codigo_sgs": 5793}, {"serie": "primario", "nome": "Resultado primário, 12 meses", "unidade": "% do PIB", "mes": "2025-11", "valor": -0.36, "codigo_sgs": 5793}, {"serie": "primario", "nome": "Resultado primário, 12 meses", "unidade": "% do PIB", "mes": "2025-12", "valor": -0.43, "codigo_sgs": 5793}, {"serie": "primario", "nome": "Resultado primário, 12 meses", "unidade": "% do PIB", "mes": "2026-01", "valor": -0.43, "codigo_sgs": 5793}, {"serie": "primario", "nome": "Resultado primário, 12 meses", "unidade": "% do PIB", "mes": "2026-02", "valor": -0.41, "codigo_sgs": 5793}, {"serie": "primario", "nome": "Resultado primário, 12 meses", "unidade": "% do PIB", "mes": "2026-03", "valor": -1.06, "codigo_sgs": 5793}, {"serie": "primario", "nome": "Resultado primário, 12 meses", "unidade": "% do PIB", "mes": "2026-04", "valor": -0.97, "codigo_sgs": 5793}, {"serie": "primario", "nome": "Resultado primário, 12 meses", "unidade": "% do PIB", "mes": "2026-05", "valor": -1.14, "codigo_sgs": 5793}, {"serie": "primario", "nome": "Resultado primário, 12 meses", "unidade": "% do PIB", "mes": "2026-06", "valor": -1.19, "codigo_sgs": 5793}, {"serie": "primario", "nome": "Resultado primário, 12 meses", "unidade": "% do PIB", "mes": "2026-07", "valor": -0.67, "codigo_sgs": 5793}, {"serie": "primario", "nome": "Resultado primário, 12 meses", "unidade": "% do PIB", "mes": "2026-08", "valor": -0.62, "codigo_sgs": 5793}, {"serie": "selic", "nome": "Selic efetiva", "unidade": "% ao ano", "mes": "2022-12", "valor": 13.65, "codigo_sgs": 4189}, {"serie": "selic", "nome": "Selic efetiva", "unidade": "% ao ano", "mes": "2023-01", "valor": 13.65, "codigo_sgs": 4189}, {"serie": "selic", "nome": "Selic efetiva", "unidade": "% ao ano", "mes": "2023-02", "valor": 13.65, "codigo_sgs": 4189}, {"serie": "selic", "nome": "Selic efetiva", "unidade": "% ao ano", "mes": "2023-03", "valor": 13.65, "codigo_sgs": 4189}, {"serie": "selic", "nome": "Selic efetiva", "unidade": "% ao ano", "mes": "2023-04", "valor": 13.65, "codigo_sgs": 4189}, {"serie": "selic", "nome": "Selic efetiva", "unidade": "% ao ano", "mes": "2023-05", "valor": 13.65, "codigo_sgs": 4189}, {"serie": "selic", "nome": "Selic efetiva", "unidade": "% ao ano", "mes": "2023-06", "valor": 13.65, "codigo_sgs": 4189}, {"serie": "selic", "nome": "Selic efetiva", "unidade": "% ao ano", "mes": "2023-07", "valor": 13.65, "codigo_sgs": 4189}, {"serie": "selic", "nome": "Selic efetiva", "unidade": "% ao ano", "mes": "2023-08", "valor": 13.19, "codigo_sgs": 4189}, {"serie": "selic", "nome": "Selic efetiva", "unidade": "% ao ano", "mes": "2023-09", "valor": 12.97, "codigo_sgs": 4189}, {"serie": "selic", "nome": "Selic efetiva", "unidade": "% ao ano", "mes": "2023-10", "valor": 12.65, "codigo_sgs": 4189}, {"serie": "selic", "nome": "Selic efetiva", "unidade": "% ao ano", "mes": "2023-11", "valor": 12.17, "codigo_sgs": 4189}, {"serie": "selic", "nome": "Selic efetiva", "unidade": "% ao ano", "mes": "2023-12", "valor": 11.87, "codigo_sgs": 4189}, {"serie": "selic", "nome": "Selic efetiva", "unidade": "% ao ano", "mes": "2024-01", "valor": 11.65, "codigo_sgs": 4189}, {"serie": "selic", "nome": "Selic efetiva", "unidade": "% ao ano", "mes": "2024-02", "valor": 11.15, "codigo_sgs": 4189}, {"serie": "selic", "nome": "Selic efetiva", "unidade": "% ao ano", "mes": "2024-03", "valor": 11.0, "codigo_sgs": 4189}, {"serie": "selic", "nome": "Selic efetiva", "unidade": "% ao ano", "mes": "2024-04", "valor": 10.65, "codigo_sgs": 4189}, {"serie": "selic", "nome": "Selic efetiva", "unidade": "% ao ano", "mes": "2024-05", "valor": 10.46, "codigo_sgs": 4189}, {"serie": "selic", "nome": "Selic efetiva", "unidade": "% ao ano", "mes": "2024-06", "valor": 10.4, "codigo_sgs": 4189}, {"serie": "selic", "nome": "Selic efetiva", "unidade": "% ao ano", "mes": "2024-07", "valor": 10.4, "codigo_sgs": 4189}, {"serie": "selic", "nome": "Selic efetiva", "unidade": "% ao ano", "mes": "2024-08", "valor": 10.4, "codigo_sgs": 4189}, {"serie": "selic", "nome": "Selic efetiva", "unidade": "% ao ano", "mes": "2024-09", "valor": 10.5, "codigo_sgs": 4189}, {"serie": "selic", "nome": "Selic efetiva", "unidade": "% ao ano", "mes": "2024-10", "valor": 10.65, "codigo_sgs": 4189}, {"serie": "selic", "nome": "Selic efetiva", "unidade": "% ao ano", "mes": "2024-11", "valor": 11.04, "codigo_sgs": 4189}, {"serie": "selic", "nome": "Selic efetiva", "unidade": "% ao ano", "mes": "2024-12", "valor": 11.77, "codigo_sgs": 4189}, {"serie": "selic", "nome": "Selic efetiva", "unidade": "% ao ano", "mes": "2025-01", "valor": 12.24, "codigo_sgs": 4189}, {"serie": "selic", "nome": "Selic efetiva", "unidade": "% ao ano", "mes": "2025-02", "valor": 13.15, "codigo_sgs": 4189}, {"serie": "selic", "nome": "Selic efetiva", "unidade": "% ao ano", "mes": "2025-03", "valor": 13.57, "codigo_sgs": 4189}, {"serie": "selic", "nome": "Selic efetiva", "unidade": "% ao ano", "mes": "2025-04", "valor": 14.15, "codigo_sgs": 4189}, {"serie": "selic", "nome": "Selic efetiva", "unidade": "% ao ano", "mes": "2025-05", "valor": 14.55, "codigo_sgs": 4189}, {"serie": "selic", "nome": "Selic efetiva", "unidade": "% ao ano", "mes": "2025-06", "valor": 14.74, "codigo_sgs": 4189}, {"serie": "selic", "nome": "Selic efetiva", "unidade": "% ao ano", "mes": "2025-07", "valor": 14.9, "codigo_sgs": 4189}, {"serie": "selic", "nome": "Selic efetiva", "unidade": "% ao ano", "mes": "2025-08", "valor": 14.9, "codigo_sgs": 4189}, {"serie": "selic", "nome": "Selic efetiva", "unidade": "% ao ano", "mes": "2025-09", "valor": 14.9, "codigo_sgs": 4189}, {"serie": "selic", "nome": "Selic efetiva", "unidade": "% ao ano", "mes": "2025-10", "valor": 14.9, "codigo_sgs": 4189}, {"serie": "selic", "nome": "Selic efetiva", "unidade": "% ao ano", "mes": "2025-11", "valor": 14.9, "codigo_sgs": 4189}, {"serie": "selic", "nome": "Selic efetiva", "unidade": "% ao ano", "mes": "2025-12", "valor": 14.9, "codigo_sgs": 4189}, {"serie": "selic", "nome": "Selic efetiva", "unidade": "% ao ano", "mes": "2026-01", "valor": 14.9, "codigo_sgs": 4189}, {"serie": "selic", "nome": "Selic efetiva", "unidade": "% ao ano", "mes": "2026-02", "valor": 14.9, "codigo_sgs": 4189}, {"serie": "selic", "nome": "Selic efetiva", "unidade": "% ao ano", "mes": "2026-03", "valor": 14.8, "codigo_sgs": 4189}, {"serie": "selic", "nome": "Selic efetiva", "unidade": "% ao ano", "mes": "2026-04", "valor": 14.64, "codigo_sgs": 4189}, {"serie": "selic", "nome": "Selic efetiva", "unidade": "% ao ano", "mes": "2026-05", "valor": 14.4, "codigo_sgs": 4189}, {"serie": "selic", "nome": "Selic efetiva", "unidade": "% ao ano", "mes": "2026-06", "valor": 14.29, "codigo_sgs": 4189}, {"serie": "selic", "nome": "Selic efetiva", "unidade": "% ao ano", "mes": "2026-07", "valor": 14.15, "codigo_sgs": 4189}, {"serie": "selic", "nome": "Selic efetiva", "unidade": "% ao ano", "mes": "2026-08", "valor": 13.94, "codigo_sgs": 4189}, {"serie": "selic", "nome": "Selic efetiva", "unidade": "% ao ano", "mes": "2026-09", "valor": 13.78, "codigo_sgs": 4189}, {"serie": "selic", "nome": "Selic efetiva", "unidade": "% ao ano", "mes": "2026-10", "valor": 13.65, "codigo_sgs": 4189}, {"serie": "ipca", "nome": "Inflação (IPCA), 12 meses", "unidade": "%", "mes": "2022-12", "valor": 5.79, "codigo_sgs": 13522}, {"serie": "ipca", "nome": "Inflação (IPCA), 12 meses", "unidade": "%", "mes": "2023-01", "valor": 5.77, "codigo_sgs": 13522}, {"serie": "ipca", "nome": "Inflação (IPCA), 12 meses", "unidade": "%", "mes": "2023-02", "valor": 5.6, "codigo_sgs": 13522}, {"serie": "ipca", "nome": "Inflação (IPCA), 12 meses", "unidade": "%", "mes": "2023-03", "valor": 4.65, "codigo_sgs": 13522}, {"serie": "ipca", "nome": "Inflação (IPCA), 12 meses", "unidade": "%", "mes": "2023-04", "valor": 4.18, "codigo_sgs": 13522}, {"serie": "ipca", "nome": "Inflação (IPCA), 12 meses", "unidade": "%", "mes": "2023-05", "valor": 3.94, "codigo_sgs": 13522}, {"serie": "ipca", "nome": "Inflação (IPCA), 12 meses", "unidade": "%", "mes": "2023-06", "valor": 3.16, "codigo_sgs": 13522}, {"serie": "ipca", "nome": "Inflação (IPCA), 12 meses", "unidade": "%", "mes": "2023-07", "valor": 3.99, "codigo_sgs": 13522}, {"serie": "ipca", "nome": "Inflação (IPCA), 12 meses", "unidade": "%", "mes": "2023-08", "valor": 4.61, "codigo_sgs": 13522}, {"serie": "ipca", "nome": "Inflação (IPCA), 12 meses", "unidade": "%", "mes": "2023-09", "valor": 5.19, "codigo_sgs": 13522}, {"serie": "ipca", "nome": "Inflação (IPCA), 12 meses", "unidade": "%", "mes": "2023-10", "valor": 4.82, "codigo_sgs": 13522}, {"serie": "ipca", "nome": "Inflação (IPCA), 12 meses", "unidade": "%", "mes": "2023-11", "valor": 4.68, "codigo_sgs": 13522}, {"serie": "ipca", "nome": "Inflação (IPCA), 12 meses", "unidade": "%", "mes": "2023-12", "valor": 4.62, "codigo_sgs": 13522}, {"serie": "ipca", "nome": "Inflação (IPCA), 12 meses", "unidade": "%", "mes": "2024-01", "valor": 4.51, "codigo_sgs": 13522}, {"serie": "ipca", "nome": "Inflação (IPCA), 12 meses", "unidade": "%", "mes": "2024-02", "valor": 4.5, "codigo_sgs": 13522}, {"serie": "ipca", "nome": "Inflação (IPCA), 12 meses", "unidade": "%", "mes": "2024-03", "valor": 3.93, "codigo_sgs": 13522}, {"serie": "ipca", "nome": "Inflação (IPCA), 12 meses", "unidade": "%", "mes": "2024-04", "valor": 3.69, "codigo_sgs": 13522}, {"serie": "ipca", "nome": "Inflação (IPCA), 12 meses", "unidade": "%", "mes": "2024-05", "valor": 3.93, "codigo_sgs": 13522}, {"serie": "ipca", "nome": "Inflação (IPCA), 12 meses", "unidade": "%", "mes": "2024-06", "valor": 4.23, "codigo_sgs": 13522}, {"serie": "ipca", "nome": "Inflação (IPCA), 12 meses", "unidade": "%", "mes": "2024-07", "valor": 4.5, "codigo_sgs": 13522}, {"serie": "ipca", "nome": "Inflação (IPCA), 12 meses", "unidade": "%", "mes": "2024-08", "valor": 4.24, "codigo_sgs": 13522}, {"serie": "ipca", "nome": "Inflação (IPCA), 12 meses", "unidade": "%", "mes": "2024-09", "valor": 4.42, "codigo_sgs": 13522}, {"serie": "ipca", "nome": "Inflação (IPCA), 12 meses", "unidade": "%", "mes": "2024-10", "valor": 4.76, "codigo_sgs": 13522}, {"serie": "ipca", "nome": "Inflação (IPCA), 12 meses", "unidade": "%", "mes": "2024-11", "valor": 4.87, "codigo_sgs": 13522}, {"serie": "ipca", "nome": "Inflação (IPCA), 12 meses", "unidade": "%", "mes": "2024-12", "valor": 4.83, "codigo_sgs": 13522}, {"serie": "ipca", "nome": "Inflação (IPCA), 12 meses", "unidade": "%", "mes": "2025-01", "valor": 4.56, "codigo_sgs": 13522}, {"serie": "ipca", "nome": "Inflação (IPCA), 12 meses", "unidade": "%", "mes": "2025-02", "valor": 5.06, "codigo_sgs": 13522}, {"serie": "ipca", "nome": "Inflação (IPCA), 12 meses", "unidade": "%", "mes": "2025-03", "valor": 5.48, "codigo_sgs": 13522}, {"serie": "ipca", "nome": "Inflação (IPCA), 12 meses", "unidade": "%", "mes": "2025-04", "valor": 5.53, "codigo_sgs": 13522}, {"serie": "ipca", "nome": "Inflação (IPCA), 12 meses", "unidade": "%", "mes": "2025-05", "valor": 5.32, "codigo_sgs": 13522}, {"serie": "ipca", "nome": "Inflação (IPCA), 12 meses", "unidade": "%", "mes": "2025-06", "valor": 5.35, "codigo_sgs": 13522}, {"serie": "ipca", "nome": "Inflação (IPCA), 12 meses", "unidade": "%", "mes": "2025-07", "valor": 5.23, "codigo_sgs": 13522}, {"serie": "ipca", "nome": "Inflação (IPCA), 12 meses", "unidade": "%", "mes": "2025-08", "valor": 5.13, "codigo_sgs": 13522}, {"serie": "ipca", "nome": "Inflação (IPCA), 12 meses", "unidade": "%", "mes": "2025-09", "valor": 5.17, "codigo_sgs": 13522}, {"serie": "ipca", "nome": "Inflação (IPCA), 12 meses", "unidade": "%", "mes": "2025-10", "valor": 4.68, "codigo_sgs": 13522}, {"serie": "ipca", "nome": "Inflação (IPCA), 12 meses", "unidade": "%", "mes": "2025-11", "valor": 4.46, "codigo_sgs": 13522}, {"serie": "ipca", "nome": "Inflação (IPCA), 12 meses", "unidade": "%", "mes": "2025-12", "valor": 4.26, "codigo_sgs": 13522}, {"serie": "ipca", "nome": "Inflação (IPCA), 12 meses", "unidade": "%", "mes": "2026-01", "valor": 4.44, "codigo_sgs": 13522}, {"serie": "ipca", "nome": "Inflação (IPCA), 12 meses", "unidade": "%", "mes": "2026-02", "valor": 3.81, "codigo_sgs": 13522}, {"serie": "ipca", "nome": "Inflação (IPCA), 12 meses", "unidade": "%", "mes": "2026-03", "valor": 4.14, "codigo_sgs": 13522}, {"serie": "ipca", "nome": "Inflação (IPCA), 12 meses", "unidade": "%", "mes": "2026-04", "valor": 4.39, "codigo_sgs": 13522}, {"serie": "ipca", "nome": "Inflação (IPCA), 12 meses", "unidade": "%", "mes": "2026-05", "valor": 4.72, "codigo_sgs": 13522}, {"serie": "ipca", "nome": "Inflação (IPCA), 12 meses", "unidade": "%", "mes": "2026-06", "valor": 4.64, "codigo_sgs": 13522}, {"serie": "ipca", "nome": "Inflação (IPCA), 12 meses", "unidade": "%", "mes": "2026-07", "valor": 4.44, "codigo_sgs": 13522}, {"serie": "ipca", "nome": "Inflação (IPCA), 12 meses", "unidade": "%", "mes": "2026-08", "valor": 4.22, "codigo_sgs": 13522}, {"serie": "ipca", "nome": "Inflação (IPCA), 12 meses", "unidade": "%", "mes": "2026-09", "valor": 4.58, "codigo_sgs": 13522}, {"serie": "desemprego", "nome": "Desemprego (PNAD)", "unidade": "%", "mes": "2022-12", "valor": 7.9, "codigo_sgs": 24369}, {"serie": "desemprego", "nome": "Desemprego (PNAD)", "unidade": "%", "mes": "2023-01", "valor": 8.4, "codigo_sgs": 24369}, {"serie": "desemprego", "nome": "Desemprego (PNAD)", "unidade": "%", "mes": "2023-02", "valor": 8.6, "codigo_sgs": 24369}, {"serie": "desemprego", "nome": "Desemprego (PNAD)", "unidade": "%", "mes": "2023-03", "valor": 8.8, "codigo_sgs": 24369}, {"serie": "desemprego", "nome": "Desemprego (PNAD)", "unidade": "%", "mes": "2023-04", "valor": 8.5, "codigo_sgs": 24369}, {"serie": "desemprego", "nome": "Desemprego (PNAD)", "unidade": "%", "mes": "2023-05", "valor": 8.3, "codigo_sgs": 24369}, {"serie": "desemprego", "nome": "Desemprego (PNAD)", "unidade": "%", "mes": "2023-06", "valor": 8.0, "codigo_sgs": 24369}, {"serie": "desemprego", "nome": "Desemprego (PNAD)", "unidade": "%", "mes": "2023-07", "valor": 7.9, "codigo_sgs": 24369}, {"serie": "desemprego", "nome": "Desemprego (PNAD)", "unidade": "%", "mes": "2023-08", "valor": 7.8, "codigo_sgs": 24369}, {"serie": "desemprego", "nome": "Desemprego (PNAD)", "unidade": "%", "mes": "2023-09", "valor": 7.7, "codigo_sgs": 24369}, {"serie": "desemprego", "nome": "Desemprego (PNAD)", "unidade": "%", "mes": "2023-10", "valor": 7.6, "codigo_sgs": 24369}, {"serie": "desemprego", "nome": "Desemprego (PNAD)", "unidade": "%", "mes": "2023-11", "valor": 7.5, "codigo_sgs": 24369}, {"serie": "desemprego", "nome": "Desemprego (PNAD)", "unidade": "%", "mes": "2023-12", "valor": 7.4, "codigo_sgs": 24369}, {"serie": "desemprego", "nome": "Desemprego (PNAD)", "unidade": "%", "mes": "2024-01", "valor": 7.6, "codigo_sgs": 24369}, {"serie": "desemprego", "nome": "Desemprego (PNAD)", "unidade": "%", "mes": "2024-02", "valor": 7.8, "codigo_sgs": 24369}, {"serie": "desemprego", "nome": "Desemprego (PNAD)", "unidade": "%", "mes": "2024-03", "valor": 7.9, "codigo_sgs": 24369}, {"serie": "desemprego", "nome": "Desemprego (PNAD)", "unidade": "%", "mes": "2024-04", "valor": 7.5, "codigo_sgs": 24369}, {"serie": "desemprego", "nome": "Desemprego (PNAD)", "unidade": "%", "mes": "2024-05", "valor": 7.1, "codigo_sgs": 24369}, {"serie": "desemprego", "nome": "Desemprego (PNAD)", "unidade": "%", "mes": "2024-06", "valor": 6.9, "codigo_sgs": 24369}, {"serie": "desemprego", "nome": "Desemprego (PNAD)", "unidade": "%", "mes": "2024-07", "valor": 6.8, "codigo_sgs": 24369}, {"serie": "desemprego", "nome": "Desemprego (PNAD)", "unidade": "%", "mes": "2024-08", "valor": 6.6, "codigo_sgs": 24369}, {"serie": "desemprego", "nome": "Desemprego (PNAD)", "unidade": "%", "mes": "2024-09", "valor": 6.4, "codigo_sgs": 24369}, {"serie": "desemprego", "nome": "Desemprego (PNAD)", "unidade": "%", "mes": "2024-10", "valor": 6.2, "codigo_sgs": 24369}, {"serie": "desemprego", "nome": "Desemprego (PNAD)", "unidade": "%", "mes": "2024-11", "valor": 6.1, "codigo_sgs": 24369}, {"serie": "desemprego", "nome": "Desemprego (PNAD)", "unidade": "%", "mes": "2024-12", "valor": 6.2, "codigo_sgs": 24369}, {"serie": "desemprego", "nome": "Desemprego (PNAD)", "unidade": "%", "mes": "2025-01", "valor": 6.5, "codigo_sgs": 24369}, {"serie": "desemprego", "nome": "Desemprego (PNAD)", "unidade": "%", "mes": "2025-02", "valor": 6.8, "codigo_sgs": 24369}, {"serie": "desemprego", "nome": "Desemprego (PNAD)", "unidade": "%", "mes": "2025-03", "valor": 7.0, "codigo_sgs": 24369}, {"serie": "desemprego", "nome": "Desemprego (PNAD)", "unidade": "%", "mes": "2025-04", "valor": 6.6, "codigo_sgs": 24369}, {"serie": "desemprego", "nome": "Desemprego (PNAD)", "unidade": "%", "mes": "2025-05", "valor": 6.2, "codigo_sgs": 24369}, {"serie": "desemprego", "nome": "Desemprego (PNAD)", "unidade": "%", "mes": "2025-06", "valor": 5.8, "codigo_sgs": 24369}, {"serie": "desemprego", "nome": "Desemprego (PNAD)", "unidade": "%", "mes": "2025-07", "valor": 5.6, "codigo_sgs": 24369}, {"serie": "desemprego", "nome": "Desemprego (PNAD)", "unidade": "%", "mes": "2025-08", "valor": 5.6, "codigo_sgs": 24369}, {"serie": "desemprego", "nome": "Desemprego (PNAD)", "unidade": "%", "mes": "2025-09", "valor": 5.6, "codigo_sgs": 24369}, {"serie": "desemprego", "nome": "Desemprego (PNAD)", "unidade": "%", "mes": "2025-10", "valor": 5.4, "codigo_sgs": 24369}, {"serie": "desemprego", "nome": "Desemprego (PNAD)", "unidade": "%", "mes": "2025-11", "valor": 5.2, "codigo_sgs": 24369}, {"serie": "desemprego", "nome": "Desemprego (PNAD)", "unidade": "%", "mes": "2025-12", "valor": 5.1, "codigo_sgs": 24369}, {"serie": "desemprego", "nome": "Desemprego (PNAD)", "unidade": "%", "mes": "2026-01", "valor": 5.4, "codigo_sgs": 24369}, {"serie": "desemprego", "nome": "Desemprego (PNAD)", "unidade": "%", "mes": "2026-02", "valor": 5.8, "codigo_sgs": 24369}, {"serie": "desemprego", "nome": "Desemprego (PNAD)", "unidade": "%", "mes": "2026-03", "valor": 6.1, "codigo_sgs": 24369}, {"serie": "desemprego", "nome": "Desemprego (PNAD)", "unidade": "%", "mes": "2026-04", "valor": 5.8, "codigo_sgs": 24369}, {"serie": "desemprego", "nome": "Desemprego (PNAD)", "unidade": "%", "mes": "2026-05", "valor": 5.6, "codigo_sgs": 24369}, {"serie": "desemprego", "nome": "Desemprego (PNAD)", "unidade": "%", "mes": "2026-06", "valor": 5.4, "codigo_sgs": 24369}, {"serie": "desemprego", "nome": "Desemprego (PNAD)", "unidade": "%", "mes": "2026-07", "valor": 5.3, "codigo_sgs": 24369}, {"serie": "desemprego", "nome": "Desemprego (PNAD)", "unidade": "%", "mes": "2026-08", "valor": 5.3, "codigo_sgs": 24369}, {"serie": "dolar", "nome": "Dólar, média do mês", "unidade": "R$", "mes": "2022-12", "valor": 5.2424, "codigo_sgs": 3698}, {"serie": "dolar", "nome": "Dólar, média do mês", "unidade": "R$", "mes": "2023-01", "valor": 5.2007, "codigo_sgs": 3698}, {"serie": "dolar", "nome": "Dólar, média do mês", "unidade": "R$", "mes": "2023-02", "valor": 5.1717, "codigo_sgs": 3698}, {"serie": "dolar", "nome": "Dólar, média do mês", "unidade": "R$", "mes": "2023-03", "valor": 5.2115, "codigo_sgs": 3698}, {"serie": "dolar", "nome": "Dólar, média do mês", "unidade": "R$", "mes": "2023-04", "valor": 5.0197, "codigo_sgs": 3698}, {"serie": "dolar", "nome": "Dólar, média do mês", "unidade": "R$", "mes": "2023-05", "valor": 4.9828, "codigo_sgs": 3698}, {"serie": "dolar", "nome": "Dólar, média do mês", "unidade": "R$", "mes": "2023-06", "valor": 4.8516, "codigo_sgs": 3698}, {"serie": "dolar", "nome": "Dólar, média do mês", "unidade": "R$", "mes": "2023-07", "valor": 4.8008, "codigo_sgs": 3698}, {"serie": "dolar", "nome": "Dólar, média do mês", "unidade": "R$", "mes": "2023-08", "valor": 4.9035, "codigo_sgs": 3698}, {"serie": "dolar", "nome": "Dólar, média do mês", "unidade": "R$", "mes": "2023-09", "valor": 4.937, "codigo_sgs": 3698}, {"serie": "dolar", "nome": "Dólar, média do mês", "unidade": "R$", "mes": "2023-10", "valor": 5.0648, "codigo_sgs": 3698}, {"serie": "dolar", "nome": "Dólar, média do mês", "unidade": "R$", "mes": "2023-11", "valor": 4.8983, "codigo_sgs": 3698}, {"serie": "dolar", "nome": "Dólar, média do mês", "unidade": "R$", "mes": "2023-12", "valor": 4.8972, "codigo_sgs": 3698}, {"serie": "dolar", "nome": "Dólar, média do mês", "unidade": "R$", "mes": "2024-01", "valor": 4.9144, "codigo_sgs": 3698}, {"serie": "dolar", "nome": "Dólar, média do mês", "unidade": "R$", "mes": "2024-02", "valor": 4.9644, "codigo_sgs": 3698}, {"serie": "dolar", "nome": "Dólar, média do mês", "unidade": "R$", "mes": "2024-03", "valor": 4.9801, "codigo_sgs": 3698}, {"serie": "dolar", "nome": "Dólar, média do mês", "unidade": "R$", "mes": "2024-04", "valor": 5.1291, "codigo_sgs": 3698}, {"serie": "dolar", "nome": "Dólar, média do mês", "unidade": "R$", "mes": "2024-05", "valor": 5.133, "codigo_sgs": 3698}, {"serie": "dolar", "nome": "Dólar, média do mês", "unidade": "R$", "mes": "2024-06", "valor": 5.389, "codigo_sgs": 3698}, {"serie": "dolar", "nome": "Dólar, média do mês", "unidade": "R$", "mes": "2024-07", "valor": 5.542, "codigo_sgs": 3698}, {"serie": "dolar", "nome": "Dólar, média do mês", "unidade": "R$", "mes": "2024-08", "valor": 5.5526, "codigo_sgs": 3698}, {"serie": "dolar", "nome": "Dólar, média do mês", "unidade": "R$", "mes": "2024-09", "valor": 5.5416, "codigo_sgs": 3698}, {"serie": "dolar", "nome": "Dólar, média do mês", "unidade": "R$", "mes": "2024-10", "valor": 5.6241, "codigo_sgs": 3698}, {"serie": "dolar", "nome": "Dólar, média do mês", "unidade": "R$", "mes": "2024-11", "valor": 5.8071, "codigo_sgs": 3698}, {"serie": "dolar", "nome": "Dólar, média do mês", "unidade": "R$", "mes": "2024-12", "valor": 6.097, "codigo_sgs": 3698}, {"serie": "dolar", "nome": "Dólar, média do mês", "unidade": "R$", "mes": "2025-01", "valor": 6.0218, "codigo_sgs": 3698}, {"serie": "dolar", "nome": "Dólar, média do mês", "unidade": "R$", "mes": "2025-02", "valor": 5.7656, "codigo_sgs": 3698}, {"serie": "dolar", "nome": "Dólar, média do mês", "unidade": "R$", "mes": "2025-03", "valor": 5.7468, "codigo_sgs": 3698}, {"serie": "dolar", "nome": "Dólar, média do mês", "unidade": "R$", "mes": "2025-04", "valor": 5.7837, "codigo_sgs": 3698}, {"serie": "dolar", "nome": "Dólar, média do mês", "unidade": "R$", "mes": "2025-05", "valor": 5.6674, "codigo_sgs": 3698}, {"serie": "dolar", "nome": "Dólar, média do mês", "unidade": "R$", "mes": "2025-06", "valor": 5.5471, "codigo_sgs": 3698}, {"serie": "dolar", "nome": "Dólar, média do mês", "unidade": "R$", "mes": "2025-07", "valor": 5.5285, "codigo_sgs": 3698}, {"serie": "dolar", "nome": "Dólar, média do mês", "unidade": "R$", "mes": "2025-08", "valor": 5.4469, "codigo_sgs": 3698}, {"serie": "dolar", "nome": "Dólar, média do mês", "unidade": "R$", "mes": "2025-09", "valor": 5.3674, "codigo_sgs": 3698}, {"serie": "dolar", "nome": "Dólar, média do mês", "unidade": "R$", "mes": "2025-10", "valor": 5.3855, "codigo_sgs": 3698}, {"serie": "dolar", "nome": "Dólar, média do mês", "unidade": "R$", "mes": "2025-11", "valor": 5.3409, "codigo_sgs": 3698}, {"serie": "dolar", "nome": "Dólar, média do mês", "unidade": "R$", "mes": "2025-12", "valor": 5.4531, "codigo_sgs": 3698}, {"serie": "dolar", "nome": "Dólar, média do mês", "unidade": "R$", "mes": "2026-01", "valor": 5.338, "codigo_sgs": 3698}, {"serie": "dolar", "nome": "Dólar, média do mês", "unidade": "R$", "mes": "2026-02", "valor": 5.2006, "codigo_sgs": 3698}, {"serie": "dolar", "nome": "Dólar, média do mês", "unidade": "R$", "mes": "2026-03", "valor": 5.2316, "codigo_sgs": 3698}, {"serie": "dolar", "nome": "Dólar, média do mês", "unidade": "R$", "mes": "2026-04", "valor": 5.0331, "codigo_sgs": 3698}, {"serie": "dolar", "nome": "Dólar, média do mês", "unidade": "R$", "mes": "2026-05", "valor": 4.9837, "codigo_sgs": 3698}, {"serie": "dolar", "nome": "Dólar, média do mês", "unidade": "R$", "mes": "2026-06", "valor": 5.1276, "codigo_sgs": 3698}, {"serie": "dolar", "nome": "Dólar, média do mês", "unidade": "R$", "mes": "2026-07", "valor": 5.1139, "codigo_sgs": 3698}, {"serie": "dolar", "nome": "Dólar, média do mês", "unidade": "R$", "mes": "2026-08", "valor": 5.1532, "codigo_sgs": 3698}, {"serie": "dolar", "nome": "Dólar, média do mês", "unidade": "R$", "mes": "2026-09", "valor": 5.1447, "codigo_sgs": 3698}, {"serie": "pib", "nome": "Crescimento do PIB", "unidade": "% no ano", "mes": "2023-12", "valor": 3.24, "codigo_sgs": 7326}, {"serie": "pib", "nome": "Crescimento do PIB", "unidade": "% no ano", "mes": "2024-12", "valor": 3.42, "codigo_sgs": 7326}, {"serie": "pib", "nome": "Crescimento do PIB", "unidade": "% no ano", "mes": "2025-12", "valor": 2.29, "codigo_sgs": 7326}], "acompanhamento": [{"id": "a1", "ponto": "Equipe econômica e plano fiscal", "referencia": "Não anunciados (26/10)", "bom": "Nomes com credibilidade e meta de primário mantida", "ruim": "Flexibilização do arcabouço fiscal ou meta afrouxada", "status": "Aguardando", "atualizado": "2026-10-26", "atual": "Não encontrado: sem anúncio de equipe econômica ou plano fiscal até 26/10/2026"}, {"id": "a2", "ponto": "Juros futuros longos (DI)", "referencia": "+260 pb após a eleição", "bom": "Devolve pelo menos metade da alta", "ruim": "Nova rodada de alta", "status": "Crítico", "atualizado": "2026-10-26", "atual": "Fechamento de set/26 não encontrado; DI jan/2031 em 12,60% em 07/10 (Money Times, após queda de mais de 100 pb em dois dias)"}, {"id": "a3", "ponto": "Dólar", "referencia": "R$ 5,44 em 26/10 (~12h)", "bom": "Volta abaixo de R$ 5,20", "ruim": "Fecha acima de R$ 5,60 (pico do dia)", "status": "Crítico", "atualizado": "2026-10-26", "atual": "R$ 5,17 em 30/09, queda de 0,15% em setembro (Agência Brasil); R$ 5,44 em 26/10 ~12h (Reuters)"}, {"id": "a4", "ponto": "Ibovespa", "referencia": "173 mil pontos em 26/10 (~12h)", "bom": "Recupera 190 mil pontos", "ruim": "Fecha abaixo de 170 mil pontos", "status": "Crítico", "atualizado": "2026-10-26", "atual": "186.340 pontos em 30/09, alta de 5,03% em setembro (Investidor10/Suno); 173 mil em 26/10 ~12h (Reuters)"}, {"id": "a5", "ponto": "Fluxo estrangeiro na B3", "referencia": "+R$ 40 bi no ano até 05/10", "bom": "Mês volta a ter entrada líquida", "ruim": "Saída líquida por dois meses seguidos", "status": "A observar", "atualizado": "2026-10-26", "atual": "Setembro: entrada líquida de R$ 9,11 bi, 32,03 bi no ano; agosto teve saída de R$ 18,12 bi (Poder360/Elos Ayta); outubro não encontrado"}, {"id": "a6", "ponto": "Dívida bruta (BCB)", "referencia": "82,9% do PIB em ago/26", "bom": "Estabiliza perto do nível atual", "ruim": "Sobe mais de 0,5 ponto por mês", "status": "A observar", "atualizado": "2026-10-26", "atual": "82,87% do PIB em ago/26, sem dado novo (BCB SGS 13762)"}, {"id": "a7", "ponto": "Resultado primário, 12 meses", "referencia": "Déficit de 0,62% do PIB em ago/26", "bom": "Déficit encolhe em direção à meta", "ruim": "Déficit aumenta", "status": "A observar", "atualizado": "2026-10-26", "atual": "Déficit de 0,62% do PIB em ago/26, vindo de 0,67% em jul (BCB SGS 5793)"}, {"id": "a8", "ponto": "Selic e Copom", "referencia": "Meta de 13,75% ao ano", "bom": "Ciclo de cortes continua", "ruim": "Copom interrompe cortes ou volta a subir", "status": "A observar", "atualizado": "2026-10-26", "atual": "Copom cortou a Selic para 13,75% em 16/09, 5º corte seguido e unânime; próxima reunião em 04/11 (Atlas Público/Banco Central)"}, {"id": "a9", "ponto": "Contestação do resultado", "referencia": "Flávio pede anulação e não reconhece", "bom": "Reconhecimento ou rejeição rápida pelo TSE", "ruim": "Escalada institucional prolongada", "status": "Crítico", "atualizado": "2026-10-26", "atual": "Flávio não reconheceu a derrota e disse que pedirá à Justiça a anulação da votação (CNBC, Rio Times, 26/10)"}, {"id": "a10", "ponto": "Leilões do Tesouro", "referencia": "Leilões de 27 a 29/10 cancelados", "bom": "Retomada normal das emissões", "ruim": "Novos cancelamentos ou prêmios muito altos", "status": "Crítico", "atualizado": "2026-10-26", "atual": "Tesouro cancelou os leilões de 27 a 29/10 após a eleição (CNBC, 26/10)"}, {"id": "a11", "ponto": "Investigação de manipulação (CVM/BSM)", "referencia": "Nenhuma notícia", "bom": "Nada atípico apontado", "ruim": "Abertura de investigação sobre o pregão de 26/10", "status": "A observar", "atualizado": "2026-10-26", "atual": "Não encontrado: nenhuma investigação da CVM/BSM sobre o pregão de 26/10 nas buscas"}], "eleicoes": [{"eleicao": "2002", "panico": "Dólar sobe de cerca de R$ 2,60 no início do ano para R$ 3,99 em 10/10, o recorde do Plano Real até então", "depois": "Governo mantém disciplina fiscal; mercado se acalma nos primeiros meses de 2003 e o câmbio recua", "fonte": "Gazeta do Povo; Jornal Opção"}, {"eleicao": "2022", "panico": "Sem pânico: vitória de Lula já estava nos preços", "depois": "No dia seguinte o Ibovespa sobe 1,31% e o dólar cai 2,54%; o dólar médio passa de R$ 5,25 (out/22) para R$ 5,06 (out/23)", "fonte": "ICL Notícias; BCB, série 3698"}, {"eleicao": "2026", "panico": "Vitória surpresa contra um consenso de ~80%: Ibovespa −15%, dólar +9%, juros longos +260 pb", "depois": "Em aberto. Depende de sinal fiscal, da equipe econômica e da contestação do resultado", "fonte": "Reuters; este dashboard"}]}, "fontes": {"mercado": {"title": "Ibovespa e dólar nas datas-chave", "description": "Fechamentos do Ibovespa e do dólar comercial em datas-chave de 2026 e o nível intradiário de 26/10 (~12h), compilados de Agência Brasil, CNN Brasil, InfoMoney, SpaceMoney e Reuters. Valores de 02/10 e o Ibovespa de 22/10 são derivados das variações publicadas."}, "setores": {"title": "Ações e índices em 26/10", "description": "Variação intradiária de ações e índices setoriais em 26/10/2026 por volta de 12h, segundo reportagem da Reuters (via Investing.com)."}, "expectativa": {"title": "Pesquisas, apostas e resultado", "description": "Pesquisas da véspera (Quaest, média de 10 pesquisas), probabilidades em Polymarket e Kalshi e o resultado oficial do TSE, compilados de Exame, Rio Times e InfoMoney."}, "polymarket": {"title": "Polymarket na noite da apuração", "description": "Probabilidade implícita de vitória de Lula no Polymarket em 25/10/2026, horários ET, segundo a linha do tempo publicada pelo Rio Times."}, "fluxo": {"title": "Fluxo, câmbio e juros", "description": "Fluxo estrangeiro na B3, valorização do real em 2026, alta dos juros longos e volume do pregão, compilados de Gazeta Mercantil, Carteira Fundos, Elos Ayta (via Aciara) e Reuters."}, "hipotese": {"title": "Avaliação das evidências", "description": "Análise do Claude: cada evidência pública classificada quanto a apoiar ou não a hipótese de manipulação. É julgamento, não dado de mercado."}, "macro": {"title": "Indicadores do Banco Central", "description": "Séries mensais do SGS do Banco Central desde dez/2022: dívida bruta (13762), dívida líquida (4513), resultado primário 12m com sinal invertido para superávit positivo (5793), Selic efetiva (4189), IPCA 12m (13522), desemprego PNAD (24369), dólar médio (3698) e PIB anual (7326)."}, "acompanhamento": {"title": "Pontos críticos acompanhados", "description": "Pontos que decidem se a queda pós-eleição foi exagero: referência no pós-eleição, sinal bom, sinal ruim e status. Limites e status são avaliação do Claude a partir de notícias públicas."}, "eleicoes": {"title": "Reação a Lula em 2002, 2022, 2026", "description": "Como câmbio e bolsa reagiram às eleições de Lula, compilado de Gazeta do Povo, Jornal Opção, ICL Notícias, Reuters e da série 3698 do Banco Central."}}}</script>
+<script>
+// Camada mínima que oferece a mesma API "dash" do dashboard original, sobre os dados embutidos
+window.dash = (function () {
+  // Dados embutidos servem de reserva; a versão atual vem do GitHub ao abrir a página
+  let bundle = JSON.parse(document.getElementById('dados').textContent);
+  let raw = bundle.dados;
+  const calcs = {}, subs = [];
+  const REMOTO = [
+    'https://raw.githubusercontent.com/aleflavio/dash-eleicao/main/data/dados.json',
+    'https://cdn.jsdelivr.net/gh/aleflavio/dash-eleicao@main/data/dados.json'
+  ];
+  const css = (v) => getComputedStyle(document.documentElement).getPropertyValue(v).trim();
+  const api = {
+    get bundle() { return bundle; },
+    colors: ['--c1', '--c2', '--c3', '--c4', '--c5', '--c6', '--c7', '--c8'].map((v) => `var(${v})`),
+    data(id) {
+      if (raw[id]) return { status: 'ok', data: raw[id], columns: Object.keys(raw[id][0] || {}), meta: [] };
+      const c = calcs[id];
+      if (c) {
+        try {
+          if (!('v' in c)) c.v = c.fn(...c.inputs.map((i) => api.data(i).data));
+          return { status: 'ok', data: c.v, meta: [] };
+        } catch (e) { console.error(e); return { status: 'error', data: [], meta: [] }; }
+      }
+      return { status: 'missing', data: [], meta: [] };
+    },
+    calc(id, def) { calcs[id] = def; },
+    onData(fn) { subs.push(fn); try { fn(); } catch (e) { console.error(e); } },
+    setLink(name) { try { history.replaceState(null, '', '#' + name); } catch (e) {} },
+    params: () => ({}), setParams() {}, resetParams() {}, refresh() {},
+    css
+  };
+  const redesenhar = () => subs.forEach((fn) => { try { fn(); } catch (e) { console.error(e); } });
+  async function carregarRemoto() {
+    for (const url of REMOTO) {
+      try {
+        const r = await fetch(url, { cache: 'no-cache' });
+        if (!r.ok) continue;
+        const b = await r.json();
+        if (!b || !b.dados || !b.dados.mercado) continue;
+        bundle = b; raw = b.dados;
+        Object.values(calcs).forEach((c) => { delete c.v; });
+        redesenhar();
+        return;
+      } catch (e) { /* tenta a próxima fonte */ }
+    }
+  }
+  document.addEventListener('DOMContentLoaded', carregarRemoto);
+  let t, w = window.innerWidth;
+  window.addEventListener('resize', () => {
+    if (window.innerWidth === w) return;
+    w = window.innerWidth; clearTimeout(t);
+    t = setTimeout(redesenhar, 150);
+  });
+  return api;
+})();
+</script>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-53VPLBM" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<div id="dash-root">
+<style>
+.px { display: flex; flex-direction: column; gap: var(--cds-gap-xl); font-family: var(--font-anthropic-sans); max-width: 76rem; margin-inline: auto; }
+.px-head { display: flex; flex-direction: column; gap: var(--cds-gap-sm); }
+.px-head h1 { font-family: var(--font-anthropic-serif); font-weight: 400; font-size: var(--cds-font-size-title); margin: 0; text-wrap: balance; }
+.px-take { font-size: var(--cds-font-size-body); color: var(--color-fg); max-width: 62ch; margin: 0; line-height: 1.5; }
+.px-take b, .px b { font-weight: 600; }
+.px-meta { color: var(--color-fg-muted); font-size: var(--cds-font-size-caption); margin: 0; }
+.px-tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 13rem), 1fr)); gap: var(--cds-gap-md); }
+.px-tile { background: var(--color-panel); border: 1px solid var(--color-border-line); border-radius: var(--cds-radius); padding: var(--cds-pad-lg); display: flex; flex-direction: column; gap: var(--cds-gap-xs); min-width: 0; }
+.px-tile-label { font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); }
+.px-tile-value { font-family: var(--font-anthropic-serif); font-weight: 400; font-size: var(--cds-font-size-title); font-variant-numeric: tabular-nums; min-height: 1.2em; }
+.px-tile-delta { font-size: var(--cds-font-size-caption); font-variant-numeric: tabular-nums; min-height: 1.3em; }
+.px-bad { color: var(--color-bad); }
+.px-ok { color: var(--color-ok); }
+.px-sec { display: flex; flex-direction: column; gap: var(--cds-gap-md); }
+.px-sec > h2 { font-size: var(--cds-font-size-heading); font-weight: var(--cds-font-weight-medium); margin: 0; }
+.px-sec > p { margin: 0; color: var(--color-fg-muted); max-width: 70ch; line-height: 1.5; }
+.px-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 22rem), 1fr)); gap: var(--cds-gap-md); }
+.px-card { background: var(--color-panel); border: 1px solid var(--color-border-line); border-radius: var(--cds-radius); padding: var(--cds-pad-lg); display: flex; flex-direction: column; gap: var(--cds-gap-sm); min-width: 0; }
+.px-card h3 { font-size: var(--cds-font-size-heading); font-weight: var(--cds-font-weight-medium); margin: 0; }
+.px-note { font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); margin: 0; line-height: 1.45; }
+.px-chart { position: relative; min-height: 220px; }
+.px-chart.tall { min-height: 460px; }
+.px-chart svg { display: block; overflow: visible; }
+.px-chart text { fill: var(--color-fg-muted); font-size: var(--cds-font-size-caption); font-family: var(--font-anthropic-sans); }
+.px-chart text.px-strong { fill: var(--color-fg); font-weight: 600; }
+.px-fail { display: flex; align-items: center; justify-content: center; gap: var(--cds-gap-xs); min-height: inherit; height: 100%; color: var(--color-fg-muted); font-size: var(--cds-font-size-caption); }
+.px-fail::before { content: ""; width: .375rem; height: .375rem; border-radius: 50%; background: var(--color-bad); }
+.px-tip { position: absolute; pointer-events: none; background: var(--cds-surface-popover); border: 1px solid var(--cds-border); border-radius: var(--cds-radius); box-shadow: var(--cds-shadow-popover); padding: var(--cds-pad-xs) var(--cds-pad-sm); font-size: var(--cds-font-size-caption); max-width: 16rem; z-index: 2; line-height: 1.4; }
+.px-tip .t { color: var(--cds-text-secondary); }
+.px-table-wrap { overflow-x: auto; }
+.px-table { width: 100%; border-collapse: collapse; font-size: var(--cds-font-size-body); }
+.px-table th { text-align: left; font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); font-weight: 500; padding: var(--cds-pad-xs) var(--cds-pad-sm); border-bottom: 1px solid var(--color-border-line); }
+.px-table td { padding: var(--cds-pad-sm); border-bottom: 1px solid var(--color-border-line); vertical-align: top; line-height: 1.45; }
+.px-table tr:last-child td { border-bottom: 0; }
+.px-table td.num { font-variant-numeric: tabular-nums; white-space: nowrap; }
+.px-table td.muted { color: var(--color-fg-muted); font-size: var(--cds-font-size-caption); }
+.px-pill { display: inline-block; white-space: nowrap; font-size: var(--cds-font-size-caption); padding: 0.1rem 0.5rem; border-radius: 999px; border: 1px solid currentColor; }
+.px-pill.contra { color: var(--color-ok); }
+.px-pill.favor { color: var(--color-warn); }
+.px-pill.inc { color: var(--color-fg-muted); }
+.px-score { display: flex; flex-wrap: wrap; gap: var(--cds-gap-sm); }
+.px-score span { font-variant-numeric: tabular-nums; }
+.px-verdict { background: var(--color-panel); border: 1px solid var(--color-border-line); border-radius: var(--cds-radius); padding: var(--cds-pad-lg); display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 20rem), 1fr)); gap: var(--cds-gap-lg); }
+.px-verdict h3 { font-size: var(--cds-font-size-heading); font-weight: var(--cds-font-weight-medium); margin: 0 0 var(--cds-gap-xs); }
+.px-verdict ul { margin: 0; padding-left: 1.1rem; display: flex; flex-direction: column; gap: var(--cds-gap-xs); line-height: 1.45; }
+.px-nav { display: flex; flex-wrap: wrap; gap: var(--cds-gap-xs); }
+.px-nav button { font: inherit; font-size: var(--cds-font-size-caption); color: var(--color-fg); background: var(--color-panel); border: 1px solid var(--color-border-line); border-radius: 999px; padding: 0.25rem 0.75rem; cursor: pointer; }
+.px-nav button:hover { border-color: var(--color-fg-muted); }
+.px-nav button:focus-visible { outline: 2px solid var(--color-fg); outline-offset: 2px; }
+.px-macro { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr)); gap: var(--cds-gap-md); }
+.px-mcard { background: var(--color-panel); border: 1px solid var(--color-border-line); border-radius: var(--cds-radius); padding: var(--cds-pad-md); display: flex; flex-direction: column; gap: var(--cds-gap-xs); min-width: 0; }
+.px-mcard .px-tile-label { min-height: 2.6em; }
+.px-mval { font-family: var(--font-anthropic-serif); font-weight: 400; font-size: var(--cds-font-size-title); font-variant-numeric: tabular-nums; }
+.px-spark { position: relative; min-height: 64px; }
+.px-spark svg { display: block; overflow: visible; }
+.px-spark text { fill: var(--color-fg-muted); font-size: var(--cds-font-size-caption); font-family: var(--font-anthropic-sans); }
+.px-pill.critico { color: var(--color-bad); }
+.px-pill.aguardando { color: var(--color-warn); }
+.px-pill.observar { color: var(--color-fg-muted); }
+.px-pill.ok2 { color: var(--color-ok); }
+[data-dash-source-state=empty] { color: transparent; }
+[data-dash-source-state=refreshing] { opacity: .5; transition: opacity var(--cds-dur-slow); }
+@media (prefers-reduced-motion: no-preference) {
+  .px-anim { animation: px-in var(--cds-dur-slow) var(--cds-ease-out); }
+  @keyframes px-in { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: none; } }
+}
+</style>
+
+<div class="px">
+  <header class="px-head">
+    <h1>Pânico pós-eleição: erro coletivo, não manipulação</h1>
+    <p class="px-take" id="take">
+      No dia seguinte à reeleição de Lula, o Ibovespa cai
+      <b data-source="kpis" data-field="var" data-where="kpi=ibov" class="dash-skeleton">—</b>
+      e o dólar sobe
+      <b data-source="kpis" data-field="var" data-where="kpi=dolar" class="dash-skeleton">—</b>.
+      O mercado transformou um empate técnico em quase certeza de vitória de Flávio Bolsonaro, com viés político no consenso, e agora corrige essa aposta de forma exagerada. Não há evidência de manipulação coordenada, e o risco fiscal que ele precifica aparece nos números oficiais, embora o peso dado a ele seja discutível.
+    </p>
+    <p class="px-meta">Valores de 26/10/2026 são intradiários (por volta de 12h, Reuters). Indicadores econômicos do Banco Central (SGS). Acompanhamento atualizado todo mês.</p>
+    <nav class="px-nav" aria-label="Seções">
+      <button type="button" data-go="o-que-aconteceu">A queda</button>
+      <button type="button" data-go="hipotese">A hipótese</button>
+      <button type="button" data-go="economia">Economia real</button>
+      <button type="button" data-go="acompanhamento">Acompanhamento mensal</button>
+    </nav>
+  </header>
+
+  <div class="px-tiles">
+    <div class="px-tile">
+      <span class="px-tile-label">Ibovespa · 26/10, ~12h</span>
+      <span class="px-tile-value dash-skeleton" data-source="kpis" data-field="valor" data-where="kpi=ibov" data-fetchpriority="high">—</span>
+      <span class="px-tile-delta dash-skeleton" data-source="kpis" data-field="var" data-where="kpi=ibov">—</span>
+    </div>
+    <div class="px-tile">
+      <span class="px-tile-label">Dólar comercial · 26/10, ~12h</span>
+      <span class="px-tile-value dash-skeleton" data-source="kpis" data-field="valor" data-where="kpi=dolar" data-fetchpriority="high">—</span>
+      <span class="px-tile-delta dash-skeleton" data-source="kpis" data-field="var" data-where="kpi=dolar">—</span>
+    </div>
+    <div class="px-tile">
+      <span class="px-tile-label">Dólar vs. início de 2026</span>
+      <span class="px-tile-value dash-skeleton" data-source="kpis" data-field="vsInicio" data-where="kpi=dolar">—</span>
+      <span class="px-tile-delta px-note">O real devolve o ganho do ano, mas não vai além dele</span>
+    </div>
+    <div class="px-tile">
+      <span class="px-tile-label">Ibovespa medido em dólar</span>
+      <span class="px-tile-value dash-skeleton" data-source="kpis" data-field="var" data-where="kpi=ibovusd">—</span>
+      <span class="px-tile-delta px-note">Queda para quem converte para USD, desde 23/10</span>
+    </div>
+    <div class="px-tile">
+      <span class="px-tile-label">Juros futuros longos (DI)</span>
+      <span class="px-tile-value dash-skeleton" data-source="kpis" data-field="valor" data-where="kpi=di">—</span>
+      <span class="px-tile-delta px-note">Tesouro cancelou os leilões de 27 a 29/10</span>
+    </div>
+  </div>
+
+  <section class="px-sec" id="o-que-aconteceu">
+    <h2>O que aconteceu: a alta do 1º turno foi desfeita em um dia</h2>
+    <p>Depois que Flávio terminou o 1º turno na frente, a bolsa bateu recorde e o dólar caiu abaixo de R$ 5. Com a virada de Lula, o movimento se inverteu.</p>
+    <div class="px-grid">
+      <div class="px-card">
+        <h3>Ibovespa, pontos</h3>
+        <p class="px-note">Fechamentos nas datas-chave e o nível de 26/10 por volta de 12h.</p>
+        <div class="px-chart" id="ch-ibov" data-source="mercado"></div>
+      </div>
+      <div class="px-card">
+        <h3>Dólar comercial, R$</h3>
+        <p class="px-note">A linha tracejada marca onde o dólar começou 2026.</p>
+        <div class="px-chart" id="ch-dolar" data-source="mercado"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="px-sec" id="surpresa">
+    <h2>Por que o choque foi tão grande: o mercado tinha uma certeza que as urnas não confirmaram</h2>
+    <p>Pesquisas davam empate técnico com Flávio levemente à frente, e os mercados de apostas transformaram isso em quase certeza. Preços montados sobre um consenso tão forte caem rápido quando ele quebra.</p>
+    <div class="px-grid">
+      <div class="px-card">
+        <h3>Expectativa vs. resultado</h3>
+        <p class="px-note">Pesquisas e resultado em % dos votos válidos. Apostas em probabilidade implícita de vitória.</p>
+        <div class="px-chart" id="ch-exp" data-source="expectativa"></div>
+      </div>
+      <div class="px-card">
+        <h3>Polymarket: chance de vitória de Lula na noite da apuração</h3>
+        <p class="px-note">Horários de Nova York (ET), como na fonte; some 1h para Brasília. Eixo não proporcional ao tempo. A aposta virou antes da contagem oficial.</p>
+        <div class="px-chart" id="ch-poly" data-source="polymarket"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="px-sec" id="setores">
+    <h2>Quem caiu e quem subiu: a queda tem lógica econômica</h2>
+    <p>Bancos, varejo, imobiliário e small caps, os mais sensíveis a juros, lideram as perdas. Exportadoras, que ganham com dólar alto, sobem. Venda artificial e indiscriminada costuma derrubar tudo junto.</p>
+    <div class="px-card">
+      <h3>Variação intradiária em 26/10, %</h3>
+      <p class="px-note">Reuters, por volta de 12h. Índices em cinza.</p>
+      <div class="px-chart tall" id="ch-set" data-source="setores"></div>
+    </div>
+  </section>
+
+  <section class="px-sec" id="contexto">
+    <h2>O prêmio que estava nos preços</h2>
+    <p>Antes da eleição, estrangeiros despejaram bilhões na B3 e o real foi uma das moedas que mais se valorizaram no mundo. Parte disso era aposta eleitoral, e é isso que está sendo devolvido.</p>
+    <div class="px-card">
+      <div class="px-table-wrap">
+        <table class="px-table" id="tb-fluxo" data-source="fluxo" data-row-key="indicador">
+          <thead><tr><th data-field="indicador">Indicador</th><th data-field="valor">Valor</th><th data-field="fonte">Fonte</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="px-sec" id="hipotese">
+    <h2>A hipótese da manipulação, item por item</h2>
+    <p>Cada evidência pública avaliada quanto a apoiar ou não a tese de um pânico fabricado para lucrar. Avaliação feita pelo Claude a partir das fontes citadas.</p>
+    <div class="px-score" id="placar" data-source="placar"></div>
+    <div class="px-card">
+      <div class="px-table-wrap">
+        <table class="px-table" id="tb-hip" data-source="hipotese" data-row-key="id">
+          <thead><tr><th data-field="evidencia">Evidência</th><th data-field="peso">Pesa</th><th data-field="leitura">Leitura</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+    <div class="px-verdict">
+      <div>
+        <h3>Minha leitura</h3>
+        <ul>
+          <li>Erro coletivo com viés ideológico, seguido de exagero na correção. O mercado concentrou a aposta numa eleição empatada e foi pego do lado errado.</li>
+          <li>Quem apostou em Flávio não ganha espalhando pessimismo: perde a cada ponto de queda. Quem lucra é quem estava vendido ou protegido, e isso é hedge, não combinação.</li>
+          <li>Crescimento, emprego e renda melhoraram de verdade. O que piorou foi a conta fiscal: dívida maior e primário em déficit, segundo o Banco Central. É isso que o mercado precifica, com peso que pode ser exagerado.</li>
+          <li>O histórico favorece a tese do exagero: em 2002 e em 2022 o pessimismo com Lula foi revertido.</li>
+          <li>O dólar de agora está perto do nível de janeiro. Fora do normal era o dólar abaixo de R$ 5 na véspera.</li>
+          <li>A recusa de Flávio em reconhecer o resultado e a falta de sinal fiscal do governo eleito são riscos reais que o preço também carrega.</li>
+        </ul>
+      </div>
+      <div>
+        <h3>O que mudaria essa leitura</h3>
+        <ul>
+          <li>Compras atípicas de opções de venda, dólar futuro ou aluguel de ações nos dias antes do 2º turno, concentradas em poucos participantes.</li>
+          <li>Abertura de investigação pela CVM ou pela BSM (supervisão da B3) sobre o pregão de 26/10.</li>
+          <li>Ligação entre os movimentos sem explicação no Polymarket e operações na B3.</li>
+          <li>Recuperação rápida e total dos preços sem nenhuma notícia fiscal nova, o que sugeriria pânico sem fundamento.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="px-sec" id="economia">
+    <h2>Economia real: o que melhorou e o que o mercado precifica</h2>
+    <p>Indicadores oficiais desde dezembro de 2022, véspera do terceiro mandato. Emprego, inflação e crescimento melhoraram. A dívida subiu e o resultado primário passou de superávit para déficit, que é o ponto em que o mercado concentra o pessimismo.</p>
+    <div class="px-macro" id="macro-grid" data-source="macro"></div>
+    <div class="px-grid">
+      <div class="px-card">
+        <h3>Crescimento do PIB, % ao ano</h3>
+        <p class="px-note">IBGE via Banco Central (série 7326).</p>
+        <div class="px-chart" id="ch-pib" data-source="macro"></div>
+      </div>
+      <div class="px-card">
+        <h3>Como o mercado reagiu a Lula antes</h3>
+        <p class="px-note">O pânico de 2002 foi revertido quando o governo mostrou disciplina fiscal. Em 2022 a vitória já estava nos preços.</p>
+        <div class="px-table-wrap">
+          <table class="px-table" id="tb-elei" data-source="eleicoes" data-row-key="eleicao">
+            <thead><tr><th data-field="eleicao">Eleição</th><th data-field="panico">Reação</th><th data-field="depois">Depois</th></tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="px-sec" id="acompanhamento">
+    <h2>Acompanhamento mensal: os pontos que decidem se a queda foi exagero</h2>
+    <p>Para cada ponto, o nível de referência no pós-eleição e o que seria sinal bom ou ruim. Os limites são sugestões minhas, não metas oficiais. A tabela e os indicadores acima são atualizados uma vez por mês.</p>
+    <div class="px-score" id="placar-acomp" data-source="placar_acomp"></div>
+    <div class="px-card">
+      <div class="px-table-wrap">
+        <table class="px-table" id="tb-acomp" data-source="acompanhamento" data-row-key="id">
+          <thead><tr><th data-field="ponto">Ponto</th><th data-field="status">Status</th><th data-field="referencia">Referência (pós-eleição)</th><th data-field="atual">Situação atual</th><th data-field="bom">Sinal bom</th><th data-field="ruim">Sinal ruim</th><th data-field="atualizado">Atualizado</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+</div>
+
+<script>
+(function () {
+window.pxFmt = {
+  num: new Intl.NumberFormat('pt-BR', { maximumFractionDigits: 0 }),
+  brl: new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL', minimumFractionDigits: 2, maximumFractionDigits: 2 }),
+  pct: (v, d = 1) => (v > 0 ? '+' : v < 0 ? '−' : '') + Math.abs(v * 100).toLocaleString('pt-BR', { minimumFractionDigits: d, maximumFractionDigits: d }) + '%',
+  pp: (v, d = 1) => (v > 0 ? '+' : v < 0 ? '−' : '') + Math.abs(v).toLocaleString('pt-BR', { minimumFractionDigits: d, maximumFractionDigits: d }) + '%',
+  dec: (v, d = 1) => Number(v).toLocaleString('pt-BR', { minimumFractionDigits: d, maximumFractionDigits: d })
+};
+window.pxFail = (el) => { el.innerHTML = ''; const d = document.createElement('div'); d.className = 'px-fail'; d.textContent = 'Failed to load'; el.appendChild(d); };
+window.pxTip = (box) => {
+  let tip = box.querySelector('.px-tip');
+  if (!tip) { tip = document.createElement('div'); tip.className = 'px-tip'; tip.hidden = true; box.appendChild(tip); }
+  return {
+    show(ev, title, lines) {
+      tip.innerHTML = '';
+      const t = document.createElement('div'); t.className = 't'; t.textContent = title; tip.appendChild(t);
+      lines.forEach((l) => { const d = document.createElement('div'); d.textContent = l; tip.appendChild(d); });
+      tip.hidden = false;
+      const r = box.getBoundingClientRect();
+      let x = ev.clientX - r.left + 12, y = ev.clientY - r.top + 12;
+      const w = tip.offsetWidth, h = tip.offsetHeight;
+      if (x + w > box.clientWidth) x = Math.max(0, ev.clientX - r.left - w - 12);
+      if (y + h > box.clientHeight + 40) y = Math.max(0, ev.clientY - r.top - h - 12);
+      tip.style.left = x + 'px'; tip.style.top = y + 'px';
+    },
+    hide() { tip.hidden = true; }
+  };
+};
+window.pxTextW = (svg, s) => { const t = svg.append('text').text(s); const w = t.node().getComputedTextLength(); t.remove(); return w; };
+
+})();
+</script>
+
+<script>
+(function () {
+dash.calc('kpis', {
+  title: 'Indicadores do dia 26/10',
+  description: 'Variações de 23/10 (último pregão antes do 2º turno) para 26/10 por volta de 12h, dólar contra o início do ano, Ibovespa convertido em dólar e alta dos juros longos.',
+  inputs: ['mercado', 'fluxo'],
+  fn: (mercado, fluxo) => {
+    const pick = (d) => mercado.find((r) => r.data === d);
+    const ini = pick('2026-01-02'), pre = pick('2026-10-23'), pos = pick('2026-10-26');
+    const usdPre = Number(pre.ibov) / Number(pre.dolar), usdPos = Number(pos.ibov) / Number(pos.dolar);
+    const di = fluxo.find((r) => String(r.indicador).startsWith('Alta dos juros'));
+    return [
+      { kpi: 'ibov', valor: Number(pos.ibov), var: Number(pos.ibov) / Number(pre.ibov) - 1 },
+      { kpi: 'dolar', valor: Number(pos.dolar), var: Number(pos.dolar) / Number(pre.dolar) - 1, vsInicio: Number(pos.dolar) / Number(ini.dolar) - 1 },
+      { kpi: 'ibovusd', valor: usdPos, var: usdPos / usdPre - 1 },
+      { kpi: 'di', valor: Number(di.valor) }
+    ];
+  }
+});
+
+dash.onData(() => {
+  const k = dash.data('kpis');
+  document.querySelectorAll('[data-source="kpis"]').forEach((el) => {
+    if (k.status !== 'ok') { if (k.status === 'error') { el.classList.remove('dash-skeleton'); el.textContent = '—'; } return; }
+    el.classList.remove('dash-skeleton');
+    const kpi = el.dataset.where.split('=')[1], field = el.dataset.field;
+    const row = k.data.find((r) => r.kpi === kpi);
+    const v = row ? row[field] : null;
+    if (v == null) { el.textContent = '—'; return; }
+    let txt;
+    if (field === 'var' || field === 'vsInicio') {
+      txt = pxFmt.pct(v);
+      const isTake = el.closest('#take');
+      if (el.classList.contains('px-tile-delta')) txt += ' desde 23/10';
+      const bad = (kpi === 'dolar') ? v > 0 : v < 0;
+      if (!isTake && field === 'var') { el.classList.toggle('px-bad', bad); el.classList.toggle('px-ok', !bad); }
+    } else if (kpi === 'dolar') txt = pxFmt.brl.format(v);
+    else if (kpi === 'di') txt = '+' + pxFmt.num.format(v) + ' pb';
+    else txt = pxFmt.num.format(v);
+    el.textContent = txt;
+  });
+});
+
+})();
+</script>
+
+<script>
+(function () {
+// Linhas de Ibovespa e dólar nas datas-chave
+const parse = d3.utcParse('%Y-%m-%d');
+const dfmt = d3.utcFormat('%d/%m');
+function drawLine(el, rows, field, fmtV, color, ref) {
+  el.innerHTML = '';
+  const W = el.clientWidth || 360, H = 220;
+  const svg = d3.select(el).append('svg').attr('width', '100%').attr('viewBox', `0 0 ${W} ${H}`);
+  const pts = rows.filter((r) => r[field] != null).map((r) => ({ ...r, v: Number(r[field]), d: parse(r.data) }));
+  const yMin = d3.min(pts, (p) => p.v), yMax = d3.max(pts, (p) => p.v);
+  const pad = (yMax - yMin) * 0.15;
+  const y0 = d3.scaleLinear([yMin - pad, yMax + pad], [H - 28, 12]).nice(4);
+  const ticks = y0.ticks(4);
+  const left = d3.max(ticks, (t) => pxTextW(svg, fmtV(t))) + 10;
+  const right = pxTextW(svg, fmtV(pts[pts.length - 1].v)) + 14;
+  const x = d3.scalePoint(pts.map((p) => p.data), [left + 6, W - right]).padding(0.1);
+  const g = svg.append('g');
+  g.selectAll('line.grid').data(ticks).join('line').attr('x1', left).attr('x2', W - right + 6).attr('y1', y0).attr('y2', y0).attr('stroke', 'var(--cds-chart-grid)').attr('stroke-width', 1);
+  g.selectAll('text.yt').data(ticks).join('text').attr('x', left - 8).attr('y', (t) => y0(t) + 4).attr('text-anchor', 'end').text(fmtV);
+  const step = W < 420 ? 2 : 1;
+  g.selectAll('text.xt').data(pts.filter((p, i) => i % step === 0 || i === pts.length - 1)).join('text').attr('x', (p) => x(p.data)).attr('y', H - 8).attr('text-anchor', 'middle').text((p) => dfmt(p.d));
+  if (ref != null) {
+    g.append('line').attr('x1', left).attr('x2', W - right + 6).attr('y1', y0(ref)).attr('y2', y0(ref)).attr('stroke', 'var(--cds-chart-reference)').attr('stroke-dasharray', '4 4');
+  }
+  const path = g.append('path').datum(pts).attr('fill', 'none').attr('stroke', color).attr('stroke-width', 2).attr('stroke-linecap', 'round').attr('stroke-linejoin', 'round')
+    .attr('d', d3.line().x((p) => x(p.data)).y((p) => y0(p.v)));
+  if (!el.dataset.drawn) { path.attr('class', 'px-anim'); el.dataset.drawn = '1'; }
+  const last = pts[pts.length - 1];
+  g.selectAll('circle').data(pts).join('circle').attr('cx', (p) => x(p.data)).attr('cy', (p) => y0(p.v)).attr('r', (p) => p === last ? 5 : 3.5)
+    .attr('fill', (p) => p === last ? 'var(--cds-chart-status-critical)' : color).attr('stroke', 'var(--color-panel)').attr('stroke-width', 1.5);
+  g.append('text').attr('class', 'px-strong').attr('x', x(last.data) + 9).attr('y', y0(last.v) + 4).text(fmtV(last.v));
+  const tip = pxTip(el);
+  g.selectAll('rect.hit').data(pts).join('rect').attr('x', (p) => x(p.data) - 18).attr('width', 36).attr('y', 0).attr('height', H).attr('fill', 'transparent')
+    .on('mousemove', (ev, p) => tip.show(ev, `${dfmt(p.d)} · ${p.momento}`, [fmtV(p.v), p.fonte]))
+    .on('mouseleave', () => tip.hide());
+}
+dash.onData(() => {
+  const m = dash.data('mercado');
+  const elI = document.getElementById('ch-ibov'), elD = document.getElementById('ch-dolar');
+  if (m.status === 'ok') {
+    const rows = m.data.slice().sort((a, b) => a.data.localeCompare(b.data));
+    drawLine(elI, rows, 'ibov', (v) => pxFmt.num.format(v / 1000) + ' mil', dash.colors[0], null);
+    const ini = rows.find((r) => r.data === '2026-01-02');
+    drawLine(elD, rows, 'dolar', (v) => 'R$ ' + pxFmt.dec(v, 2), dash.colors[1], ini ? Number(ini.dolar) : null);
+  } else if (m.status === 'error') { pxFail(elI); pxFail(elD); }
+  else { elI.innerHTML = ''; elD.innerHTML = ''; }
+});
+
+})();
+</script>
+
+<script>
+(function () {
+// Expectativa vs. resultado: barras 100% Flávio x Lula
+dash.onData(() => {
+  const el = document.getElementById('ch-exp');
+  const s = dash.data('expectativa');
+  if (s.status !== 'ok') { if (s.status === 'error') pxFail(el); else el.innerHTML = ''; return; }
+  el.innerHTML = '';
+  const rows = s.data;
+  const W = el.clientWidth || 360, rowH = 46, top = 22, H = top + rows.length * rowH;
+  const svg = d3.select(el).append('svg').attr('width', '100%').attr('viewBox', `0 0 ${W} ${H}`);
+  const cF = dash.colors[1], cL = dash.colors[0];
+  const x = d3.scaleLinear([0, 100], [0, W]);
+  svg.append('circle').attr('cx', 5).attr('cy', 7).attr('r', 5).attr('fill', cF);
+  svg.append('text').attr('x', 14).attr('y', 11).text('Flávio Bolsonaro');
+  const lw = pxTextW(svg, 'Lula');
+  svg.append('circle').attr('cx', W - lw - 14).attr('cy', 7).attr('r', 5).attr('fill', cL);
+  svg.append('text').attr('x', W).attr('y', 11).attr('text-anchor', 'end').text('Lula');
+  const tip = pxTip(el);
+  rows.forEach((r, i) => {
+    const y = top + i * rowH;
+    const f = Number(r.flavio), l = Number(r.lula), tot = f + l;
+    const g = svg.append('g');
+    g.append('text').attr('x', 0).attr('y', y + 12).attr('class', r.tipo === 'resultado' ? 'px-strong' : null).text(r.medida);
+    const fw = x(f / tot * 100);
+    g.append('rect').attr('x', 0).attr('y', y + 18).attr('width', Math.max(0, fw - 1)).attr('height', 18).attr('rx', 4).attr('fill', cF).attr('opacity', r.tipo === 'resultado' ? 1 : 0.85);
+    g.append('rect').attr('x', fw + 1).attr('y', y + 18).attr('width', Math.max(0, W - fw - 1)).attr('height', 18).attr('rx', 4).attr('fill', cL).attr('opacity', r.tipo === 'resultado' ? 1 : 0.85);
+    g.append('text').attr('x', 6).attr('y', y + 31).style('fill', 'var(--color-bg)').style('font-weight', 600).text(pxFmt.dec(f, f % 1 ? 1 : 0) + '%');
+    g.append('text').attr('x', W - 6).attr('y', y + 31).attr('text-anchor', 'end').style('fill', 'var(--color-bg)').style('font-weight', 600).text(pxFmt.dec(l, l % 1 ? 1 : 0) + '%');
+    g.append('line').attr('x1', x(50)).attr('x2', x(50)).attr('y1', y + 15).attr('y2', y + 39).attr('stroke', 'var(--cds-chart-reference)').attr('stroke-dasharray', '3 3');
+    g.append('rect').attr('x', 0).attr('y', y).attr('width', W).attr('height', rowH).attr('fill', 'transparent')
+      .on('mousemove', (ev) => tip.show(ev, r.medida, [`Flávio ${pxFmt.dec(f, 1)}% · Lula ${pxFmt.dec(l, 1)}%`, 'Fonte: ' + r.fonte]))
+      .on('mouseleave', () => tip.hide());
+  });
+});
+
+})();
+</script>
+
+<script>
+(function () {
+// Polymarket: probabilidade de Lula
+dash.onData(() => {
+  const el = document.getElementById('ch-poly');
+  const s = dash.data('polymarket');
+  if (s.status !== 'ok') { if (s.status === 'error') pxFail(el); else el.innerHTML = ''; return; }
+  el.innerHTML = '';
+  const rows = s.data.slice().sort((a, b) => Number(a.min) - Number(b.min));
+  const W = el.clientWidth || 360, H = 220;
+  const svg = d3.select(el).append('svg').attr('width', '100%').attr('viewBox', `0 0 ${W} ${H}`);
+  const left = pxTextW(svg, '100%') + 10, right = pxTextW(svg, '99,9%') + 14;
+  const x = d3.scalePoint(rows.map((r) => r.hora), [left + 6, W - right]).padding(0.1);
+  const y = d3.scaleLinear([0, 100], [H - 28, 10]);
+  const ticks = [0, 25, 50, 75, 100];
+  svg.selectAll('line.g').data(ticks).join('line').attr('x1', left).attr('x2', W - right + 6).attr('y1', y).attr('y2', y)
+    .attr('stroke', (t) => t === 50 ? 'var(--cds-chart-reference)' : 'var(--cds-chart-grid)').attr('stroke-dasharray', (t) => t === 50 ? '4 4' : null);
+  svg.selectAll('text.yt').data(ticks).join('text').attr('x', left - 8).attr('y', (t) => y(t) + 4).attr('text-anchor', 'end').text((t) => t + '%');
+  const showIdx = W < 460 ? [0, 5, rows.length - 1] : rows.map((r, i) => i).filter((i) => i % 2 === 0 || i === rows.length - 1);
+  svg.selectAll('text.xt').data(showIdx).join('text').attr('x', (i) => x(rows[i].hora)).attr('y', H - 8).attr('text-anchor', 'middle').text((i) => rows[i].hora);
+  const c = dash.colors[0];
+  const gid = 'px-poly-grad';
+  const grad = svg.append('defs').append('linearGradient').attr('id', gid).attr('x1', 0).attr('x2', 0).attr('y1', 0).attr('y2', 1);
+  [[0, .26], [.25, .16], [.5, .08], [.75, .03], [1, 0]].forEach(([o, a]) => grad.append('stop').attr('offset', o).attr('style', `stop-color:${c};stop-opacity:${a}`));
+  const lx = (r) => x(r.hora), ly = (r) => y(Number(r.lula));
+  svg.append('path').datum(rows).attr('fill', `url(#${gid})`).attr('d', d3.area().x(lx).y0(y(0)).y1(ly));
+  svg.append('path').datum(rows).attr('fill', 'none').attr('stroke', c).attr('stroke-width', 2).attr('stroke-linecap', 'round').attr('stroke-linejoin', 'round').attr('d', d3.line().x(lx).y(ly));
+  svg.selectAll('circle').data(rows).join('circle').attr('cx', lx).attr('cy', ly).attr('r', (r) => r.evento ? 4 : 2.5).attr('fill', c).attr('stroke', 'var(--color-panel)').attr('stroke-width', 1.5);
+  const last = rows[rows.length - 1];
+  svg.append('text').attr('class', 'px-strong').attr('x', lx(last) + 8).attr('y', ly(last) + 4).text(pxFmt.dec(Number(last.lula), 1) + '%');
+  const tip = pxTip(el);
+  svg.selectAll('rect.hit').data(rows).join('rect').attr('x', (r) => lx(r) - 14).attr('width', 28).attr('y', 0).attr('height', H).attr('fill', 'transparent')
+    .on('mousemove', (ev, r) => tip.show(ev, r.hora, ['Lula: ' + pxFmt.dec(Number(r.lula), 1) + '%'].concat(r.evento ? [r.evento] : [])))
+    .on('mouseleave', () => tip.hide());
+});
+
+})();
+</script>
+
+<script>
+(function () {
+// Setores: barras divergentes
+dash.onData(() => {
+  const el = document.getElementById('ch-set');
+  const s = dash.data('setores');
+  if (s.status !== 'ok') { if (s.status === 'error') pxFail(el); else el.innerHTML = ''; return; }
+  el.innerHTML = '';
+  const rows = s.data.slice().sort((a, b) => Number(a.var) - Number(b.var));
+  const W = el.clientWidth || 600, bh = 18, gap = 9, top = 4, H = top + rows.length * (bh + gap) + 20;
+  const svg = d3.select(el).append('svg').attr('width', '100%').attr('viewBox', `0 0 ${W} ${H}`);
+  const labelW = d3.max(rows, (r) => pxTextW(svg, r.ativo)) + 12;
+  const valW = pxTextW(svg, '−55,1%') + 8;
+  const ext = d3.extent(rows, (r) => Number(r.var));
+  const x = d3.scaleLinear([Math.min(0, ext[0]), Math.max(0, ext[1])], [labelW + valW, W - valW]);
+  const ticks = x.ticks(W < 500 ? 4 : 7);
+  svg.selectAll('line.g').data(ticks).join('line').attr('x1', x).attr('x2', x).attr('y1', top - 2).attr('y2', H - 18).attr('stroke', (t) => t === 0 ? 'var(--cds-chart-axis)' : 'var(--cds-chart-grid)');
+  svg.selectAll('text.xt').data(ticks).join('text').attr('x', x).attr('y', H - 4).attr('text-anchor', 'middle').text((t) => t + '%');
+  const tip = pxTip(el);
+  rows.forEach((r, i) => {
+    const v = Number(r.var), yy = top + i * (bh + gap);
+    const isIdx = r.grupo === 'Índice';
+    const col = isIdx ? 'var(--cds-chart-muted)' : v < 0 ? 'var(--cds-chart-status-critical)' : dash.colors[2];
+    svg.append('text').attr('x', labelW - 12).attr('y', yy + bh / 2 + 4).attr('text-anchor', 'end').attr('class', r.ativo === 'Ibovespa' ? 'px-strong' : null).text(r.ativo);
+    svg.append('rect').attr('x', Math.min(x(0), x(v))).attr('y', yy).attr('width', Math.abs(x(v) - x(0))).attr('height', bh).attr('rx', 4).attr('fill', col);
+    svg.append('text').attr('x', v < 0 ? x(v) - 6 : x(v) + 6).attr('y', yy + bh / 2 + 4).attr('text-anchor', v < 0 ? 'end' : 'start').style('font-variant-numeric', 'tabular-nums').text(pxFmt.pp(v));
+    svg.append('rect').attr('x', 0).attr('y', yy - gap / 2).attr('width', W).attr('height', bh + gap).attr('fill', 'transparent')
+      .on('mousemove', (ev) => tip.show(ev, r.ativo, [r.grupo, pxFmt.pp(v, 2)]))
+      .on('mouseleave', () => tip.hide());
+  });
+});
+
+})();
+</script>
+
+<script>
+(function () {
+// Tabelas: fluxo e hipótese
+dash.calc('placar', {
+  title: 'Placar das evidências',
+  description: 'Quantas evidências pesam contra, a favor ou de forma inconclusiva para a hipótese de manipulação.',
+  inputs: ['hipotese'],
+  fn: (hipotese) => [...new Set(hipotese.map((h) => h.peso))].map((peso) => ({ peso, n: hipotese.filter((h) => h.peso === peso).length }))
+});
+dash.onData(() => {
+  const f = dash.data('fluxo');
+  const tb = document.querySelector('#tb-fluxo tbody');
+  tb.innerHTML = '';
+  if (f.status === 'ok') {
+    f.data.forEach((r) => {
+      const tr = document.createElement('tr');
+      const v = Number(r.valor);
+      const val = r.unidade === 'R$ bi' ? 'R$ ' + pxFmt.dec(v, 2) + ' bi' : r.unidade === '%' ? '+' + pxFmt.dec(v, 2) + '%' : '+' + pxFmt.num.format(v) + ' pb';
+      [[r.indicador, ''], [val, 'num'], [r.fonte, 'muted']].forEach(([t, c]) => { const td = document.createElement('td'); td.textContent = t; if (c) td.className = c; tr.appendChild(td); });
+      tb.appendChild(tr);
+    });
+  }
+  const h = dash.data('hipotese');
+  const th = document.querySelector('#tb-hip tbody');
+  th.innerHTML = '';
+  if (h.status === 'ok') {
+    h.data.forEach((r) => {
+      const tr = document.createElement('tr');
+      tr.dataset.key = r.id;
+      const a = document.createElement('td'); a.textContent = r.evidencia;
+      const b = document.createElement('td'); const pill = document.createElement('span');
+      pill.className = 'px-pill ' + (r.peso === 'Contra' ? 'contra' : r.peso.startsWith('A favor') ? 'favor' : 'inc'); pill.textContent = r.peso; b.appendChild(pill);
+      const c = document.createElement('td'); c.className = 'muted'; c.textContent = r.leitura;
+      tr.append(a, b, c); th.appendChild(tr);
+    });
+  }
+  const p = dash.data('placar');
+  const box = document.getElementById('placar');
+  box.innerHTML = '';
+  if (p.status === 'ok') {
+    p.data.forEach((r) => {
+      const s = document.createElement('span');
+      s.className = 'px-pill ' + (r.peso === 'Contra' ? 'contra' : r.peso.startsWith('A favor') ? 'favor' : 'inc');
+      s.textContent = `${r.peso}: ${r.n}`;
+      box.appendChild(s);
+    });
+  }
+});
+
+})();
+</script>
+
+<script>
+(function () {
+// Navegação entre seções
+document.querySelectorAll('.px-nav [data-go]').forEach((b) => b.addEventListener('click', () => {
+  const el = document.getElementById(b.dataset.go);
+  if (el) { el.scrollIntoView({ behavior: 'smooth', block: 'start' }); dash.setLink(el.id); }
+}));
+let pxLinked = false;
+dash.onData(() => {
+  if (pxLinked) return;
+  const named = location.hash && document.getElementById(location.hash.slice(1));
+  if (named && dash.data('macro').status === 'ok') { pxLinked = true; requestAnimationFrame(() => named.scrollIntoView()); }
+});
+
+})();
+</script>
+
+<script>
+(function () {
+// Economia real: cartões com mini-gráfico por indicador
+const PX_MESES = ['jan', 'fev', 'mar', 'abr', 'mai', 'jun', 'jul', 'ago', 'set', 'out', 'nov', 'dez'];
+const pxMes = (m) => PX_MESES[Number(m.slice(5, 7)) - 1] + '/' + m.slice(2, 4);
+dash.calc('macro_resumo', {
+  title: 'Indicadores: último valor e variação',
+  description: 'Para cada indicador mensal do Banco Central, o último valor e a variação desde dez/2022 (pontos percentuais; no dólar, variação %).',
+  inputs: ['macro'],
+  fn: (macro) => {
+    const ordem = ['desemprego', 'ipca', 'selic', 'divida_bruta', 'divida_liquida', 'primario', 'dolar'];
+    return ordem.map((serie) => {
+      const rs = macro.filter((r) => r.serie === serie).sort((a, b) => a.mes.localeCompare(b.mes));
+      if (!rs.length) return null;
+      const ini = rs[0], fim = rs[rs.length - 1];
+      const delta = serie === 'dolar' ? Number(fim.valor) / Number(ini.valor) - 1 : Number(fim.valor) - Number(ini.valor);
+      return { serie, nome: fim.nome, unidade: fim.unidade, inicio_mes: ini.mes, ultimo_mes: fim.mes, inicio: Number(ini.valor), ultimo: Number(fim.valor), delta };
+    }).filter(Boolean);
+  }
+});
+const PX_BOM = { desemprego: -1, ipca: -1, selic: -1, divida_bruta: -1, divida_liquida: -1, primario: 1, dolar: 0 };
+const PX_NOTA = {
+  desemprego: 'Perto da mínima da série histórica',
+  ipca: 'Inflação em 12 meses',
+  selic: 'Média do mês, anualizada',
+  divida_bruta: 'O ponto central da preocupação do mercado',
+  divida_liquida: 'Descontados os ativos do governo',
+  primario: 'Positivo é superávit, negativo é déficit',
+  dolar: 'Média mensal (Ptax), antes da eleição'
+};
+function pxFmtMacro(serie, v) {
+  return serie === 'dolar' ? 'R$ ' + pxFmt.dec(v, 2) : pxFmt.dec(v, 1).replace(/^-/, '−') + '%';
+}
+function pxSpark(el, rows, color) {
+  el.innerHTML = '';
+  const W = el.clientWidth || 220, H = 64;
+  const svg = d3.select(el).append('svg').attr('width', '100%').attr('viewBox', `0 0 ${W} ${H}`);
+  const pts = rows.map((r) => ({ m: r.mes, v: Number(r.valor), d: new Date(r.mes + '-01T00:00:00Z') }));
+  const x = d3.scaleUtc(d3.extent(pts, (p) => p.d), [2, W - 6]);
+  const ext = d3.extent(pts, (p) => p.v);
+  const pad = (ext[1] - ext[0]) * 0.12 || 1;
+  const y = d3.scaleLinear([ext[0] - pad, ext[1] + pad], [H - 16, 4]);
+  if (ext[0] < 0 && ext[1] > 0) svg.append('line').attr('x1', 2).attr('x2', W - 6).attr('y1', y(0)).attr('y2', y(0)).attr('stroke', 'var(--cds-chart-reference)').attr('stroke-dasharray', '3 3');
+  svg.append('path').datum(pts).attr('fill', 'none').attr('stroke', color).attr('stroke-width', 2).attr('stroke-linecap', 'round').attr('stroke-linejoin', 'round').attr('d', d3.line().x((p) => x(p.d)).y((p) => y(p.v)));
+  const last = pts[pts.length - 1], first = pts[0];
+  svg.append('circle').attr('cx', x(last.d)).attr('cy', y(last.v)).attr('r', 3.5).attr('fill', color).attr('stroke', 'var(--color-panel)').attr('stroke-width', 1.5);
+  svg.append('text').attr('x', 2).attr('y', H - 2).text(pxMes(first.m));
+  svg.append('text').attr('x', W - 2).attr('y', H - 2).attr('text-anchor', 'end').text(pxMes(last.m));
+  const tip = pxTip(el);
+  const bis = d3.bisector((p) => p.d).center;
+  svg.append('rect').attr('width', W).attr('height', H).attr('fill', 'transparent')
+    .on('mousemove', (ev) => { const [mx] = d3.pointer(ev); const p = pts[bis(pts, x.invert(mx))]; tip.show(ev, pxMes(p.m), [pxFmtMacro(rows[0].serie, p.v)]); })
+    .on('mouseleave', () => tip.hide());
+}
+dash.onData(() => {
+  const grid = document.getElementById('macro-grid');
+  const m = dash.data('macro'), s = dash.data('macro_resumo');
+  if (m.status === 'error') { pxFail(grid); return; }
+  if (m.status !== 'ok' || s.status !== 'ok') { grid.innerHTML = ''; return; }
+  grid.innerHTML = '';
+  s.data.forEach((r, i) => {
+    const card = document.createElement('div'); card.className = 'px-mcard'; card.id = 'macro-' + r.serie;
+    const lab = document.createElement('span'); lab.className = 'px-tile-label'; lab.textContent = `${r.nome} · ${pxMes(r.ultimo_mes)}`;
+    const val = document.createElement('span'); val.className = 'px-mval';
+    val.dataset.source = 'macro_resumo'; val.dataset.field = 'ultimo'; val.dataset.where = 'serie=' + r.serie;
+    val.textContent = pxFmtMacro(r.serie, r.ultimo);
+    const del = document.createElement('span'); del.className = 'px-tile-delta';
+    del.dataset.source = 'macro_resumo'; del.dataset.field = 'delta'; del.dataset.where = 'serie=' + r.serie;
+    const dtxt = r.serie === 'dolar' ? pxFmt.pct(r.delta) : (r.delta > 0 ? '+' : r.delta < 0 ? '−' : '') + pxFmt.dec(Math.abs(r.delta), 1) + ' p.p.';
+    del.textContent = `${dtxt} desde ${pxMes(r.inicio_mes)}`;
+    const dir = PX_BOM[r.serie];
+    if (dir !== 0 && r.delta !== 0) del.classList.add(Math.sign(r.delta) === dir ? 'px-ok' : 'px-bad');
+    const sp = document.createElement('div'); sp.className = 'px-spark';
+    const nota = document.createElement('span'); nota.className = 'px-note'; nota.textContent = PX_NOTA[r.serie] || '';
+    card.append(lab, val, del, sp, nota);
+    grid.appendChild(card);
+    const rows = m.data.filter((x) => x.serie === r.serie).sort((a, b) => a.mes.localeCompare(b.mes));
+    const col = dir === 0 ? 'var(--cds-chart-muted)' : Math.sign(r.delta) === dir ? 'var(--color-ok)' : 'var(--cds-chart-status-critical)';
+    pxSpark(sp, rows, col);
+  });
+});
+
+// PIB anual em barras
+dash.onData(() => {
+  const el = document.getElementById('ch-pib');
+  const m = dash.data('macro');
+  if (m.status !== 'ok') { if (m.status === 'error') pxFail(el); else el.innerHTML = ''; return; }
+  el.innerHTML = '';
+  const rows = m.data.filter((r) => r.serie === 'pib').sort((a, b) => a.mes.localeCompare(b.mes));
+  const W = el.clientWidth || 320, H = 220;
+  const svg = d3.select(el).append('svg').attr('width', '100%').attr('viewBox', `0 0 ${W} ${H}`);
+  const y = d3.scaleLinear([0, d3.max(rows, (r) => Number(r.valor)) * 1.2], [H - 26, 10]).nice(4);
+  const ticks = y.ticks(4);
+  const left = d3.max(ticks, (t) => pxTextW(svg, pxFmt.dec(t, 0) + '%')) + 10;
+  const x = d3.scaleBand(rows.map((r) => r.mes.slice(0, 4)), [left, W]).padding(0.45);
+  svg.selectAll('line.g').data(ticks).join('line').attr('x1', left).attr('x2', W).attr('y1', y).attr('y2', y).attr('stroke', (t) => t === 0 ? 'var(--cds-chart-axis)' : 'var(--cds-chart-grid)');
+  svg.selectAll('text.yt').data(ticks).join('text').attr('x', left - 8).attr('y', (t) => y(t) + 4).attr('text-anchor', 'end').text((t) => pxFmt.dec(t, 0) + '%');
+  const bw = Math.min(32, x.bandwidth());
+  const tip = pxTip(el);
+  rows.forEach((r) => {
+    const cx = x(r.mes.slice(0, 4)) + x.bandwidth() / 2, v = Number(r.valor);
+    svg.append('rect').attr('x', cx - bw / 2).attr('width', bw).attr('y', y(v)).attr('height', y(0) - y(v)).attr('rx', 4).attr('fill', dash.colors[0])
+      .on('mousemove', (ev) => tip.show(ev, r.mes.slice(0, 4), ['PIB: ' + pxFmt.dec(v, 2) + '%'])).on('mouseleave', () => tip.hide());
+    svg.append('text').attr('class', 'px-strong').attr('x', cx).attr('y', y(v) - 6).attr('text-anchor', 'middle').text(pxFmt.dec(v, 1) + '%');
+    svg.append('text').attr('x', cx).attr('y', H - 6).attr('text-anchor', 'middle').text(r.mes.slice(0, 4));
+  });
+});
+
+})();
+</script>
+
+<script>
+(function () {
+// Tabelas: eleições anteriores e acompanhamento
+dash.calc('placar_acomp', {
+  title: 'Pontos por status',
+  description: 'Quantos pontos do acompanhamento estão em cada status.',
+  inputs: ['acompanhamento'],
+  fn: (acompanhamento) => [...new Set(acompanhamento.map((a) => a.status))].map((status) => ({ status, n: acompanhamento.filter((a) => a.status === status).length }))
+});
+const pxStatusClass = (s) => ({ 'Crítico': 'critico', 'Aguardando': 'aguardando', 'A observar': 'observar', 'Melhorando': 'ok2', 'Resolvido': 'ok2', 'Piorando': 'critico' }[s] || 'observar');
+dash.onData(() => {
+  const e = dash.data('eleicoes');
+  const tb = document.querySelector('#tb-elei tbody');
+  tb.innerHTML = '';
+  if (e.status === 'ok') e.data.forEach((r) => {
+    const tr = document.createElement('tr');
+    [[r.eleicao, 'num'], [r.panico, ''], [r.depois, 'muted']].forEach(([t, c]) => { const td = document.createElement('td'); td.textContent = t; if (c) td.className = c; tr.appendChild(td); });
+    tb.appendChild(tr);
+  });
+  const a = dash.data('acompanhamento');
+  const ta = document.querySelector('#tb-acomp tbody');
+  ta.innerHTML = '';
+  if (a.status === 'ok') a.data.forEach((r) => {
+    const tr = document.createElement('tr'); tr.dataset.key = r.id;
+    const c1 = document.createElement('td'); c1.textContent = r.ponto; c1.style.fontWeight = '500';
+    const c2 = document.createElement('td'); const p = document.createElement('span'); p.className = 'px-pill ' + pxStatusClass(r.status); p.textContent = r.status; c2.appendChild(p);
+    const c3 = document.createElement('td'); c3.textContent = r.referencia;
+    const c3b = document.createElement('td'); c3b.textContent = r.atual || '—';
+    const c4 = document.createElement('td'); c4.className = 'muted'; c4.textContent = r.bom;
+    const c5 = document.createElement('td'); c5.className = 'muted'; c5.textContent = r.ruim;
+    const c6 = document.createElement('td'); c6.className = 'num muted'; c6.textContent = r.atualizado ? r.atualizado.split('-').reverse().join('/') : '';
+    tr.append(c1, c2, c3, c3b, c4, c5, c6); ta.appendChild(tr);
+  });
+  const pa = dash.data('placar_acomp');
+  const box = document.getElementById('placar-acomp');
+  box.innerHTML = '';
+  if (pa.status === 'ok') pa.data.forEach((r) => {
+    const s = document.createElement('span'); s.className = 'px-pill ' + pxStatusClass(r.status); s.textContent = `${r.status}: ${r.n}`; box.appendChild(s);
+  });
+});
+
+})();
+</script>
+
+<footer class="px-foot" id="fontes">
+  <h2>Fontes dos dados</h2>
+  <dl id="lista-fontes"></dl>
+  <p id="rodape-info"></p>
+</footer>
+</div>
+<script>
+(function () {
+dash.onData(function () {
+  const b = dash.bundle, dl = document.getElementById('lista-fontes');
+  dl.innerHTML = '';
+  Object.values(b.fontes).forEach((f) => {
+    const box = document.createElement('div');
+    const dt = document.createElement('dt'); dt.textContent = f.title;
+    const dd = document.createElement('dd'); dd.textContent = f.description;
+    box.append(dt, dd); dl.appendChild(box);
+  });
+  const p = document.getElementById('rodape-info');
+  p.textContent = 'Dados atualizados em ' + b.atualizado.split('-').reverse().join('/') + '. Análise feita com Claude a partir de fontes públicas. Não é recomendação de investimento.';
+});
+
+})();
+</script>
+</body>
+</html>

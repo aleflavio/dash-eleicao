@@ -1,0 +1,3120 @@
+{
+ "atualizado": "2026-10-26",
+ "dados": {
+  "mercado": [
+   {
+    "data": "2026-01-02",
+    "momento": "Início de 2026",
+    "ibov": null,
+    "dolar": 5.45,
+    "fonte": "Bora Investir/B3 (analista Convexa: câmbio começou o ano perto de R$ 5,45)"
+   },
+   {
+    "data": "2026-09-30",
+    "momento": "Fechamento de setembro",
+    "ibov": 186340.46,
+    "dolar": 5.174,
+    "fonte": "Suno/Investidor10 (Ibovespa); dólar à vista R$ 5,174 segundo Suno (CNN Brasil: 5,1735; Seu Dinheiro: 5,175)"
+   },
+   {
+    "data": "2026-10-02",
+    "momento": "Véspera do 1º turno",
+    "ibov": 192108,
+    "dolar": 5.217,
+    "fonte": "Derivado do fechamento de 05/10 e das variações do dia (Agência Brasil)"
+   },
+   {
+    "data": "2026-10-05",
+    "momento": "Pós 1º turno (Flávio à frente)",
+    "ibov": 207190.44,
+    "dolar": 5.0022,
+    "fonte": "Agência Brasil / CNN Brasil"
+   },
+   {
+    "data": "2026-10-22",
+    "momento": "Pesquisas apertadas",
+    "ibov": 204130,
+    "dolar": 5.03,
+    "fonte": "InfoMoney 22/10 (Ibov derivado de 23/10)"
+   },
+   {
+    "data": "2026-10-23",
+    "momento": "Último pregão antes do 2º turno",
+    "ibov": 205088.74,
+    "dolar": 4.9931,
+    "fonte": "InfoMoney / SpaceMoney"
+   },
+   {
+    "data": "2026-10-26",
+    "momento": "Pós 2º turno, ~12h (Lula eleito)",
+    "ibov": 173064.64,
+    "dolar": 5.4414,
+    "fonte": "Reuters via Investing.com, 12h05"
+   }
+  ],
+  "setores": [
+   {
+    "ativo": "Magazine Luiza ON",
+    "grupo": "Varejo doméstico",
+    "var": -55.08
+   },
+   {
+    "ativo": "XP (EUA)",
+    "grupo": "Financeiro",
+    "var": -50.97
+   },
+   {
+    "ativo": "Cyrela ON",
+    "grupo": "Imobiliário",
+    "var": -43.91
+   },
+   {
+    "ativo": "BTG Pactual Unit",
+    "grupo": "Financeiro",
+    "var": -34.09
+   },
+   {
+    "ativo": "Índice Imobiliário (IMOB)",
+    "grupo": "Índice",
+    "var": -28.56
+   },
+   {
+    "ativo": "Banco do Brasil ON",
+    "grupo": "Financeiro",
+    "var": -28.56
+   },
+   {
+    "ativo": "Small Caps (SMLL)",
+    "grupo": "Índice",
+    "var": -26.31
+   },
+   {
+    "ativo": "Bradesco PN",
+    "grupo": "Financeiro",
+    "var": -25.58
+   },
+   {
+    "ativo": "Consumo (ICON)",
+    "grupo": "Índice",
+    "var": -25.48
+   },
+   {
+    "ativo": "Nubank (EUA)",
+    "grupo": "Financeiro",
+    "var": -20.65
+   },
+   {
+    "ativo": "Itaú Unibanco PN",
+    "grupo": "Financeiro",
+    "var": -15.63
+   },
+   {
+    "ativo": "Ibovespa",
+    "grupo": "Índice",
+    "var": -15.61
+   },
+   {
+    "ativo": "Petrobras PN",
+    "grupo": "Estatal / petróleo",
+    "var": -11.78
+   },
+   {
+    "ativo": "Santander Brasil Unit",
+    "grupo": "Financeiro",
+    "var": -3.85
+   },
+   {
+    "ativo": "Vale ON",
+    "grupo": "Exportadora",
+    "var": 5.61
+   },
+   {
+    "ativo": "Embraer ON",
+    "grupo": "Exportadora",
+    "var": 7.63
+   },
+   {
+    "ativo": "Suzano ON",
+    "grupo": "Exportadora",
+    "var": 7.8
+   }
+  ],
+  "expectativa": [
+   {
+    "medida": "Quaest, véspera (votos válidos)",
+    "flavio": 51,
+    "lula": 49,
+    "tipo": "pesquisa",
+    "fonte": "Exame, 24/10"
+   },
+   {
+    "medida": "Média de 10 pesquisas (23–24/10)",
+    "flavio": 50.9,
+    "lula": 49.1,
+    "tipo": "pesquisa",
+    "fonte": "Rio Times"
+   },
+   {
+    "medida": "Polymarket, sábado à noite (prob. de vitória)",
+    "flavio": 83.9,
+    "lula": 16.1,
+    "tipo": "aposta",
+    "fonte": "Rio Times"
+   },
+   {
+    "medida": "Kalshi, véspera (prob. de vitória)",
+    "flavio": 80,
+    "lula": 20,
+    "tipo": "aposta",
+    "fonte": "Rio Times"
+   },
+   {
+    "medida": "Resultado TSE (votos válidos)",
+    "flavio": 48.21,
+    "lula": 51.79,
+    "tipo": "resultado",
+    "fonte": "TSE via InfoMoney / TRE-SP"
+   }
+  ],
+  "polymarket": [
+   {
+    "hora": "Sáb noite",
+    "min": -600,
+    "lula": 16.1,
+    "evento": "Flávio a 83,9¢"
+   },
+   {
+    "hora": "16h06",
+    "min": 0,
+    "lula": 23.9,
+    "evento": "Queda de Flávio antes de decisão judicial ser pública"
+   },
+   {
+    "hora": "16h12",
+    "min": 6,
+    "lula": 35.0,
+    "evento": "Flávio a 65%"
+   },
+   {
+    "hora": "17h56",
+    "min": 110,
+    "lula": 35.0,
+    "evento": "Lula sobe antes da contagem retomar"
+   },
+   {
+    "hora": "17h59",
+    "min": 113,
+    "lula": 43.0,
+    "evento": "Movimento sem explicação"
+   },
+   {
+    "hora": "18h09",
+    "min": 123,
+    "lula": 50.0,
+    "evento": "Lula passa de 50% com menos de 2% apurado"
+   },
+   {
+    "hora": "18h41",
+    "min": 155,
+    "lula": 70.0,
+    "evento": ""
+   },
+   {
+    "hora": "19h03",
+    "min": 177,
+    "lula": 80.0,
+    "evento": "Flávio ainda lidera a contagem por 317 mil votos"
+   },
+   {
+    "hora": "19h15",
+    "min": 189,
+    "lula": 90.0,
+    "evento": ""
+   },
+   {
+    "hora": "19h28",
+    "min": 202,
+    "lula": 93.0,
+    "evento": "Contagem vira para Lula"
+   },
+   {
+    "hora": "Dom noite",
+    "min": 300,
+    "lula": 99.85,
+    "evento": "Mercado liquidado"
+   }
+  ],
+  "fluxo": [
+   {
+    "indicador": "Fluxo estrangeiro na B3 em 05/10 (dia seguinte ao 1º turno)",
+    "valor": 10.06,
+    "unidade": "R$ bi",
+    "fonte": "Gazeta Mercantil"
+   },
+   {
+    "indicador": "Fluxo estrangeiro em outubro até 07/10",
+    "valor": 13.08,
+    "unidade": "R$ bi",
+    "fonte": "Carteira Fundos (dados B3)"
+   },
+   {
+    "indicador": "Fluxo estrangeiro acumulado em 2026 após 05/10",
+    "valor": 40.01,
+    "unidade": "R$ bi",
+    "fonte": "Gazeta Mercantil"
+   },
+   {
+    "indicador": "Valorização do real no ano até 07/10",
+    "valor": 10.19,
+    "unidade": "%",
+    "fonte": "Elos Ayta via Aciara"
+   },
+   {
+    "indicador": "Alta dos juros futuros longos (DI) pós-eleição",
+    "valor": 260,
+    "unidade": "pb",
+    "fonte": "Reuters"
+   },
+   {
+    "indicador": "Volume financeiro na B3 até ~12h de 26/10",
+    "valor": 33.24,
+    "unidade": "R$ bi",
+    "fonte": "Reuters"
+   }
+  ],
+  "hipotese": [
+   {
+    "id": "h1",
+    "evidencia": "Mercado apostava pesado em Flávio: pesquisas 51–49 e apostas a ~80%",
+    "peso": "Contra",
+    "leitura": "Uma surpresa contra um consenso tão forte provoca repreço brusco sem precisar de coordenação."
+   },
+   {
+    "id": "h2",
+    "evidencia": "O rali após o 1º turno foi o mesmo movimento ao contrário (bolsa sobe, dólar cai, entrada recorde de estrangeiros)",
+    "peso": "Contra",
+    "leitura": "Hoje está sendo desfeito, em parte, um prêmio que o próprio mercado tinha colocado nos preços."
+   },
+   {
+    "id": "h3",
+    "evidencia": "Dólar a ~R$ 5,44 está perto de onde começou o ano (~R$ 5,45)",
+    "peso": "Contra",
+    "leitura": "Fora do normal era o dólar abaixo de R$ 5,00 na véspera. O nível de agora não é inédito."
+   },
+   {
+    "id": "h4",
+    "evidencia": "Queda seletiva: bancos, varejo, imobiliário e small caps afundam; exportadoras (Vale, Suzano, Embraer) sobem",
+    "peso": "Contra",
+    "leitura": "Bate com a lógica de juros mais altos e câmbio mais fraco. Uma venda forçada e artificial tende a derrubar tudo junto."
+   },
+   {
+    "id": "h5",
+    "evidencia": "Juros longos +260 pb e Tesouro cancela leilões de 27 a 29/10",
+    "peso": "Contra",
+    "leitura": "O choque atinge o mercado de dívida pública, que é profundo e difícil de manipular por um grupo isolado."
+   },
+   {
+    "id": "h6",
+    "evidencia": "Estrangeiro que vende agora recebe menos dólares: em USD o Ibovespa caiu mais que em reais",
+    "peso": "Contra",
+    "leitura": "Vender ações com o dólar alto dá prejuízo em dobro para quem converte. Quem ganha é quem já estava vendido ou protegido, ou quem compra barato."
+   },
+   {
+    "id": "h11",
+    "evidencia": "Quem apostou em Flávio perde dinheiro a cada ponto de queda",
+    "peso": "Contra",
+    "leitura": "Para recuperar o prejuízo essas instituições precisam que os preços subam. Espalhar pessimismo aprofundaria a perda delas."
+   },
+   {
+    "id": "h12",
+    "evidencia": "O mercado transformou um empate técnico numa certeza de ~80%",
+    "peso": "A favor (viés)",
+    "leitura": "Indica manada e preferência política no consenso. Explica o erro de aposta, mas não é manipulação no sentido legal."
+   },
+   {
+    "id": "h13",
+    "evidencia": "Pessimismo com Lula já se mostrou exagerado em 2002 e 2022",
+    "peso": "A favor (viés)",
+    "leitura": "Histórico sugere que o mercado superestima o risco Lula, o que reforça a tese de exagero."
+   },
+   {
+    "id": "h14",
+    "evidencia": "Crescimento e emprego melhoraram, mas a dívida subiu e o primário virou déficit",
+    "peso": "Contra",
+    "leitura": "O mercado precifica a trajetória fiscal, que piorou em números oficiais do BCB. O cenário não é inventado, embora o peso dado a ele seja discutível."
+   },
+   {
+    "id": "h7",
+    "evidencia": "Queda acima de 15%, perto do pior dia desde 1998, com circuit breaker e ações caindo 30% a 55%",
+    "peso": "A favor (exagero)",
+    "leitura": "A intensidade sugere overshoot: stops, desalavancagem e pouca liquidez. Isso é exagero de mercado, não prova de manipulação."
+   },
+   {
+    "id": "h8",
+    "evidencia": "Polymarket se moveu sem explicação antes da apuração (16h06 e 17h56)",
+    "peso": "Inconclusivo",
+    "leitura": "Pode indicar informação privilegiada sobre a ordem da contagem. Os dados públicos não identificam os traders, e não há ligação conhecida com a B3."
+   },
+   {
+    "id": "h9",
+    "evidencia": "CEO da Petrobras chama a queda de \"movimento especulativo\"",
+    "peso": "Inconclusivo",
+    "leitura": "É uma opinião de parte interessada (estatal do governo eleito), não uma evidência."
+   },
+   {
+    "id": "h10",
+    "evidencia": "Nenhuma investigação da CVM ou da B3 noticiada até agora",
+    "peso": "Inconclusivo",
+    "leitura": "Ausência de investigação não prova nada, mas também não sustenta a tese."
+   }
+  ],
+  "macro": [
+   {
+    "serie": "divida_bruta",
+    "nome": "Dívida bruta do governo geral",
+    "unidade": "% do PIB",
+    "mes": "2022-12",
+    "valor": 71.68,
+    "codigo_sgs": 13762
+   },
+   {
+    "serie": "divida_bruta",
+    "nome": "Dívida bruta do governo geral",
+    "unidade": "% do PIB",
+    "mes": "2023-01",
+    "valor": 71.38,
+    "codigo_sgs": 13762
+   },
+   {
+    "serie": "divida_bruta",
+    "nome": "Dívida bruta do governo geral",
+    "unidade": "% do PIB",
+    "mes": "2023-02",
+    "valor": 71.77,
+    "codigo_sgs": 13762
+   },
+   {
+    "serie": "divida_bruta",
+    "nome": "Dívida bruta do governo geral",
+    "unidade": "% do PIB",
+    "mes": "2023-03",
+    "valor": 71.54,
+    "codigo_sgs": 13762
+   },
+   {
+    "serie": "divida_bruta",
+    "nome": "Dívida bruta do governo geral",
+    "unidade": "% do PIB",
+    "mes": "2023-04",
+    "valor": 71.57,
+    "codigo_sgs": 13762
+   },
+   {
+    "serie": "divida_bruta",
+    "nome": "Dívida bruta do governo geral",
+    "unidade": "% do PIB",
+    "mes": "2023-05",
+    "valor": 72.11,
+    "codigo_sgs": 13762
+   },
+   {
+    "serie": "divida_bruta",
+    "nome": "Dívida bruta do governo geral",
+    "unidade": "% do PIB",
+    "mes": "2023-06",
+    "valor": 71.97,
+    "codigo_sgs": 13762
+   },
+   {
+    "serie": "divida_bruta",
+    "nome": "Dívida bruta do governo geral",
+    "unidade": "% do PIB",
+    "mes": "2023-07",
+    "valor": 72.48,
+    "codigo_sgs": 13762
+   },
+   {
+    "serie": "divida_bruta",
+    "nome": "Dívida bruta do governo geral",
+    "unidade": "% do PIB",
+    "mes": "2023-08",
+    "valor": 72.89,
+    "codigo_sgs": 13762
+   },
+   {
+    "serie": "divida_bruta",
+    "nome": "Dívida bruta do governo geral",
+    "unidade": "% do PIB",
+    "mes": "2023-09",
+    "valor": 73.01,
+    "codigo_sgs": 13762
+   },
+   {
+    "serie": "divida_bruta",
+    "nome": "Dívida bruta do governo geral",
+    "unidade": "% do PIB",
+    "mes": "2023-10",
+    "valor": 73.32,
+    "codigo_sgs": 13762
+   },
+   {
+    "serie": "divida_bruta",
+    "nome": "Dívida bruta do governo geral",
+    "unidade": "% do PIB",
+    "mes": "2023-11",
+    "valor": 73.32,
+    "codigo_sgs": 13762
+   },
+   {
+    "serie": "divida_bruta",
+    "nome": "Dívida bruta do governo geral",
+    "unidade": "% do PIB",
+    "mes": "2023-12",
+    "valor": 73.83,
+    "codigo_sgs": 13762
+   },
+   {
+    "serie": "divida_bruta",
+    "nome": "Dívida bruta do governo geral",
+    "unidade": "% do PIB",
+    "mes": "2024-01",
+    "valor": 74.47,
+    "codigo_sgs": 13762
+   },
+   {
+    "serie": "divida_bruta",
+    "nome": "Dívida bruta do governo geral",
+    "unidade": "% do PIB",
+    "mes": "2024-02",
+    "valor": 74.81,
+    "codigo_sgs": 13762
+   },
+   {
+    "serie": "divida_bruta",
+    "nome": "Dívida bruta do governo geral",
+    "unidade": "% do PIB",
+    "mes": "2024-03",
+    "valor": 75.02,
+    "codigo_sgs": 13762
+   },
+   {
+    "serie": "divida_bruta",
+    "nome": "Dívida bruta do governo geral",
+    "unidade": "% do PIB",
+    "mes": "2024-04",
+    "valor": 75.15,
+    "codigo_sgs": 13762
+   },
+   {
+    "serie": "divida_bruta",
+    "nome": "Dívida bruta do governo geral",
+    "unidade": "% do PIB",
+    "mes": "2024-05",
+    "valor": 75.67,
+    "codigo_sgs": 13762
+   },
+   {
+    "serie": "divida_bruta",
+    "nome": "Dívida bruta do governo geral",
+    "unidade": "% do PIB",
+    "mes": "2024-06",
+    "valor": 76.68,
+    "codigo_sgs": 13762
+   },
+   {
+    "serie": "divida_bruta",
+    "nome": "Dívida bruta do governo geral",
+    "unidade": "% do PIB",
+    "mes": "2024-07",
+    "valor": 77.21,
+    "codigo_sgs": 13762
+   },
+   {
+    "serie": "divida_bruta",
+    "nome": "Dívida bruta do governo geral",
+    "unidade": "% do PIB",
+    "mes": "2024-08",
+    "valor": 77.36,
+    "codigo_sgs": 13762
+   },
+   {
+    "serie": "divida_bruta",
+    "nome": "Dívida bruta do governo geral",
+    "unidade": "% do PIB",
+    "mes": "2024-09",
+    "valor": 77.09,
+    "codigo_sgs": 13762
+   },
+   {
+    "serie": "divida_bruta",
+    "nome": "Dívida bruta do governo geral",
+    "unidade": "% do PIB",
+    "mes": "2024-10",
+    "valor": 77.38,
+    "codigo_sgs": 13762
+   },
+   {
+    "serie": "divida_bruta",
+    "nome": "Dívida bruta do governo geral",
+    "unidade": "% do PIB",
+    "mes": "2024-11",
+    "valor": 77.5,
+    "codigo_sgs": 13762
+   },
+   {
+    "serie": "divida_bruta",
+    "nome": "Dívida bruta do governo geral",
+    "unidade": "% do PIB",
+    "mes": "2024-12",
+    "valor": 76.27,
+    "codigo_sgs": 13762
+   },
+   {
+    "serie": "divida_bruta",
+    "nome": "Dívida bruta do governo geral",
+    "unidade": "% do PIB",
+    "mes": "2025-01",
+    "valor": 75.48,
+    "codigo_sgs": 13762
+   },
+   {
+    "serie": "divida_bruta",
+    "nome": "Dívida bruta do governo geral",
+    "unidade": "% do PIB",
+    "mes": "2025-02",
+    "valor": 75.78,
+    "codigo_sgs": 13762
+   },
+   {
+    "serie": "divida_bruta",
+    "nome": "Dívida bruta do governo geral",
+    "unidade": "% do PIB",
+    "mes": "2025-03",
+    "valor": 75.55,
+    "codigo_sgs": 13762
+   },
+   {
+    "serie": "divida_bruta",
+    "nome": "Dívida bruta do governo geral",
+    "unidade": "% do PIB",
+    "mes": "2025-04",
+    "valor": 75.62,
+    "codigo_sgs": 13762
+   },
+   {
+    "serie": "divida_bruta",
+    "nome": "Dívida bruta do governo geral",
+    "unidade": "% do PIB",
+    "mes": "2025-05",
+    "valor": 75.75,
+    "codigo_sgs": 13762
+   },
+   {
+    "serie": "divida_bruta",
+    "nome": "Dívida bruta do governo geral",
+    "unidade": "% do PIB",
+    "mes": "2025-06",
+    "valor": 76.3,
+    "codigo_sgs": 13762
+   },
+   {
+    "serie": "divida_bruta",
+    "nome": "Dívida bruta do governo geral",
+    "unidade": "% do PIB",
+    "mes": "2025-07",
+    "valor": 77.18,
+    "codigo_sgs": 13762
+   },
+   {
+    "serie": "divida_bruta",
+    "nome": "Dívida bruta do governo geral",
+    "unidade": "% do PIB",
+    "mes": "2025-08",
+    "valor": 77.31,
+    "codigo_sgs": 13762
+   },
+   {
+    "serie": "divida_bruta",
+    "nome": "Dívida bruta do governo geral",
+    "unidade": "% do PIB",
+    "mes": "2025-09",
+    "valor": 77.84,
+    "codigo_sgs": 13762
+   },
+   {
+    "serie": "divida_bruta",
+    "nome": "Dívida bruta do governo geral",
+    "unidade": "% do PIB",
+    "mes": "2025-10",
+    "valor": 78.29,
+    "codigo_sgs": 13762
+   },
+   {
+    "serie": "divida_bruta",
+    "nome": "Dívida bruta do governo geral",
+    "unidade": "% do PIB",
+    "mes": "2025-11",
+    "valor": 78.95,
+    "codigo_sgs": 13762
+   },
+   {
+    "serie": "divida_bruta",
+    "nome": "Dívida bruta do governo geral",
+    "unidade": "% do PIB",
+    "mes": "2025-12",
+    "valor": 78.64,
+    "codigo_sgs": 13762
+   },
+   {
+    "serie": "divida_bruta",
+    "nome": "Dívida bruta do governo geral",
+    "unidade": "% do PIB",
+    "mes": "2026-01",
+    "valor": 78.7,
+    "codigo_sgs": 13762
+   },
+   {
+    "serie": "divida_bruta",
+    "nome": "Dívida bruta do governo geral",
+    "unidade": "% do PIB",
+    "mes": "2026-02",
+    "valor": 79.13,
+    "codigo_sgs": 13762
+   },
+   {
+    "serie": "divida_bruta",
+    "nome": "Dívida bruta do governo geral",
+    "unidade": "% do PIB",
+    "mes": "2026-03",
+    "valor": 79.88,
+    "codigo_sgs": 13762
+   },
+   {
+    "serie": "divida_bruta",
+    "nome": "Dívida bruta do governo geral",
+    "unidade": "% do PIB",
+    "mes": "2026-04",
+    "valor": 80.09,
+    "codigo_sgs": 13762
+   },
+   {
+    "serie": "divida_bruta",
+    "nome": "Dívida bruta do governo geral",
+    "unidade": "% do PIB",
+    "mes": "2026-05",
+    "valor": 81.04,
+    "codigo_sgs": 13762
+   },
+   {
+    "serie": "divida_bruta",
+    "nome": "Dívida bruta do governo geral",
+    "unidade": "% do PIB",
+    "mes": "2026-06",
+    "valor": 81.95,
+    "codigo_sgs": 13762
+   },
+   {
+    "serie": "divida_bruta",
+    "nome": "Dívida bruta do governo geral",
+    "unidade": "% do PIB",
+    "mes": "2026-07",
+    "valor": 82.55,
+    "codigo_sgs": 13762
+   },
+   {
+    "serie": "divida_bruta",
+    "nome": "Dívida bruta do governo geral",
+    "unidade": "% do PIB",
+    "mes": "2026-08",
+    "valor": 82.87,
+    "codigo_sgs": 13762
+   },
+   {
+    "serie": "divida_liquida",
+    "nome": "Dívida líquida do setor público",
+    "unidade": "% do PIB",
+    "mes": "2022-12",
+    "valor": 56.13,
+    "codigo_sgs": 4513
+   },
+   {
+    "serie": "divida_liquida",
+    "nome": "Dívida líquida do setor público",
+    "unidade": "% do PIB",
+    "mes": "2023-01",
+    "valor": 55.21,
+    "codigo_sgs": 4513
+   },
+   {
+    "serie": "divida_liquida",
+    "nome": "Dívida líquida do setor público",
+    "unidade": "% do PIB",
+    "mes": "2023-02",
+    "valor": 55.71,
+    "codigo_sgs": 4513
+   },
+   {
+    "serie": "divida_liquida",
+    "nome": "Dívida líquida do setor público",
+    "unidade": "% do PIB",
+    "mes": "2023-03",
+    "valor": 55.98,
+    "codigo_sgs": 4513
+   },
+   {
+    "serie": "divida_liquida",
+    "nome": "Dívida líquida do setor público",
+    "unidade": "% do PIB",
+    "mes": "2023-04",
+    "valor": 55.92,
+    "codigo_sgs": 4513
+   },
+   {
+    "serie": "divida_liquida",
+    "nome": "Dívida líquida do setor público",
+    "unidade": "% do PIB",
+    "mes": "2023-05",
+    "valor": 56.59,
+    "codigo_sgs": 4513
+   },
+   {
+    "serie": "divida_liquida",
+    "nome": "Dívida líquida do setor público",
+    "unidade": "% do PIB",
+    "mes": "2023-06",
+    "valor": 57.78,
+    "codigo_sgs": 4513
+   },
+   {
+    "serie": "divida_liquida",
+    "nome": "Dívida líquida do setor público",
+    "unidade": "% do PIB",
+    "mes": "2023-07",
+    "valor": 58.34,
+    "codigo_sgs": 4513
+   },
+   {
+    "serie": "divida_liquida",
+    "nome": "Dívida líquida do setor público",
+    "unidade": "% do PIB",
+    "mes": "2023-08",
+    "valor": 58.68,
+    "codigo_sgs": 4513
+   },
+   {
+    "serie": "divida_liquida",
+    "nome": "Dívida líquida do setor público",
+    "unidade": "% do PIB",
+    "mes": "2023-09",
+    "valor": 58.87,
+    "codigo_sgs": 4513
+   },
+   {
+    "serie": "divida_liquida",
+    "nome": "Dívida líquida do setor público",
+    "unidade": "% do PIB",
+    "mes": "2023-10",
+    "valor": 58.85,
+    "codigo_sgs": 4513
+   },
+   {
+    "serie": "divida_liquida",
+    "nome": "Dívida líquida do setor público",
+    "unidade": "% do PIB",
+    "mes": "2023-11",
+    "valor": 59.08,
+    "codigo_sgs": 4513
+   },
+   {
+    "serie": "divida_liquida",
+    "nome": "Dívida líquida do setor público",
+    "unidade": "% do PIB",
+    "mes": "2023-12",
+    "valor": 60.43,
+    "codigo_sgs": 4513
+   },
+   {
+    "serie": "divida_liquida",
+    "nome": "Dívida líquida do setor público",
+    "unidade": "% do PIB",
+    "mes": "2024-01",
+    "valor": 59.55,
+    "codigo_sgs": 4513
+   },
+   {
+    "serie": "divida_liquida",
+    "nome": "Dívida líquida do setor público",
+    "unidade": "% do PIB",
+    "mes": "2024-02",
+    "valor": 60.32,
+    "codigo_sgs": 4513
+   },
+   {
+    "serie": "divida_liquida",
+    "nome": "Dívida líquida do setor público",
+    "unidade": "% do PIB",
+    "mes": "2024-03",
+    "valor": 60.59,
+    "codigo_sgs": 4513
+   },
+   {
+    "serie": "divida_liquida",
+    "nome": "Dívida líquida do setor público",
+    "unidade": "% do PIB",
+    "mes": "2024-04",
+    "valor": 60.55,
+    "codigo_sgs": 4513
+   },
+   {
+    "serie": "divida_liquida",
+    "nome": "Dívida líquida do setor público",
+    "unidade": "% do PIB",
+    "mes": "2024-05",
+    "valor": 61.23,
+    "codigo_sgs": 4513
+   },
+   {
+    "serie": "divida_liquida",
+    "nome": "Dívida líquida do setor público",
+    "unidade": "% do PIB",
+    "mes": "2024-06",
+    "valor": 61.28,
+    "codigo_sgs": 4513
+   },
+   {
+    "serie": "divida_liquida",
+    "nome": "Dívida líquida do setor público",
+    "unidade": "% do PIB",
+    "mes": "2024-07",
+    "valor": 60.91,
+    "codigo_sgs": 4513
+   },
+   {
+    "serie": "divida_liquida",
+    "nome": "Dívida líquida do setor público",
+    "unidade": "% do PIB",
+    "mes": "2024-08",
+    "valor": 61.08,
+    "codigo_sgs": 4513
+   },
+   {
+    "serie": "divida_liquida",
+    "nome": "Dívida líquida do setor público",
+    "unidade": "% do PIB",
+    "mes": "2024-09",
+    "valor": 61.46,
+    "codigo_sgs": 4513
+   },
+   {
+    "serie": "divida_liquida",
+    "nome": "Dívida líquida do setor público",
+    "unidade": "% do PIB",
+    "mes": "2024-10",
+    "valor": 61.12,
+    "codigo_sgs": 4513
+   },
+   {
+    "serie": "divida_liquida",
+    "nome": "Dívida líquida do setor público",
+    "unidade": "% do PIB",
+    "mes": "2024-11",
+    "valor": 60.99,
+    "codigo_sgs": 4513
+   },
+   {
+    "serie": "divida_liquida",
+    "nome": "Dívida líquida do setor público",
+    "unidade": "% do PIB",
+    "mes": "2024-12",
+    "valor": 61.3,
+    "codigo_sgs": 4513
+   },
+   {
+    "serie": "divida_liquida",
+    "nome": "Dívida líquida do setor público",
+    "unidade": "% do PIB",
+    "mes": "2025-01",
+    "valor": 60.96,
+    "codigo_sgs": 4513
+   },
+   {
+    "serie": "divida_liquida",
+    "nome": "Dívida líquida do setor público",
+    "unidade": "% do PIB",
+    "mes": "2025-02",
+    "valor": 61.13,
+    "codigo_sgs": 4513
+   },
+   {
+    "serie": "divida_liquida",
+    "nome": "Dívida líquida do setor público",
+    "unidade": "% do PIB",
+    "mes": "2025-03",
+    "valor": 61.3,
+    "codigo_sgs": 4513
+   },
+   {
+    "serie": "divida_liquida",
+    "nome": "Dívida líquida do setor público",
+    "unidade": "% do PIB",
+    "mes": "2025-04",
+    "valor": 61.25,
+    "codigo_sgs": 4513
+   },
+   {
+    "serie": "divida_liquida",
+    "nome": "Dívida líquida do setor público",
+    "unidade": "% do PIB",
+    "mes": "2025-05",
+    "valor": 61.71,
+    "codigo_sgs": 4513
+   },
+   {
+    "serie": "divida_liquida",
+    "nome": "Dívida líquida do setor público",
+    "unidade": "% do PIB",
+    "mes": "2025-06",
+    "valor": 62.6,
+    "codigo_sgs": 4513
+   },
+   {
+    "serie": "divida_liquida",
+    "nome": "Dívida líquida do setor público",
+    "unidade": "% do PIB",
+    "mes": "2025-07",
+    "valor": 63.41,
+    "codigo_sgs": 4513
+   },
+   {
+    "serie": "divida_liquida",
+    "nome": "Dívida líquida do setor público",
+    "unidade": "% do PIB",
+    "mes": "2025-08",
+    "valor": 64.05,
+    "codigo_sgs": 4513
+   },
+   {
+    "serie": "divida_liquida",
+    "nome": "Dívida líquida do setor público",
+    "unidade": "% do PIB",
+    "mes": "2025-09",
+    "valor": 64.57,
+    "codigo_sgs": 4513
+   },
+   {
+    "serie": "divida_liquida",
+    "nome": "Dívida líquida do setor público",
+    "unidade": "% do PIB",
+    "mes": "2025-10",
+    "valor": 64.68,
+    "codigo_sgs": 4513
+   },
+   {
+    "serie": "divida_liquida",
+    "nome": "Dívida líquida do setor público",
+    "unidade": "% do PIB",
+    "mes": "2025-11",
+    "valor": 65.18,
+    "codigo_sgs": 4513
+   },
+   {
+    "serie": "divida_liquida",
+    "nome": "Dívida líquida do setor público",
+    "unidade": "% do PIB",
+    "mes": "2025-12",
+    "valor": 65.24,
+    "codigo_sgs": 4513
+   },
+   {
+    "serie": "divida_liquida",
+    "nome": "Dívida líquida do setor público",
+    "unidade": "% do PIB",
+    "mes": "2026-01",
+    "valor": 64.94,
+    "codigo_sgs": 4513
+   },
+   {
+    "serie": "divida_liquida",
+    "nome": "Dívida líquida do setor público",
+    "unidade": "% do PIB",
+    "mes": "2026-02",
+    "valor": 65.46,
+    "codigo_sgs": 4513
+   },
+   {
+    "serie": "divida_liquida",
+    "nome": "Dívida líquida do setor público",
+    "unidade": "% do PIB",
+    "mes": "2026-03",
+    "valor": 66.67,
+    "codigo_sgs": 4513
+   },
+   {
+    "serie": "divida_liquida",
+    "nome": "Dívida líquida do setor público",
+    "unidade": "% do PIB",
+    "mes": "2026-04",
+    "valor": 67.13,
+    "codigo_sgs": 4513
+   },
+   {
+    "serie": "divida_liquida",
+    "nome": "Dívida líquida do setor público",
+    "unidade": "% do PIB",
+    "mes": "2026-05",
+    "valor": 67.88,
+    "codigo_sgs": 4513
+   },
+   {
+    "serie": "divida_liquida",
+    "nome": "Dívida líquida do setor público",
+    "unidade": "% do PIB",
+    "mes": "2026-06",
+    "valor": 68.49,
+    "codigo_sgs": 4513
+   },
+   {
+    "serie": "divida_liquida",
+    "nome": "Dívida líquida do setor público",
+    "unidade": "% do PIB",
+    "mes": "2026-07",
+    "valor": 69.11,
+    "codigo_sgs": 4513
+   },
+   {
+    "serie": "divida_liquida",
+    "nome": "Dívida líquida do setor público",
+    "unidade": "% do PIB",
+    "mes": "2026-08",
+    "valor": 69.27,
+    "codigo_sgs": 4513
+   },
+   {
+    "serie": "primario",
+    "nome": "Resultado primário, 12 meses",
+    "unidade": "% do PIB",
+    "mes": "2022-12",
+    "valor": 1.25,
+    "codigo_sgs": 5793
+   },
+   {
+    "serie": "primario",
+    "nome": "Resultado primário, 12 meses",
+    "unidade": "% do PIB",
+    "mes": "2023-01",
+    "valor": 1.21,
+    "codigo_sgs": 5793
+   },
+   {
+    "serie": "primario",
+    "nome": "Resultado primário, 12 meses",
+    "unidade": "% do PIB",
+    "mes": "2023-02",
+    "valor": 0.91,
+    "codigo_sgs": 5793
+   },
+   {
+    "serie": "primario",
+    "nome": "Resultado primário, 12 meses",
+    "unidade": "% do PIB",
+    "mes": "2023-03",
+    "valor": 0.72,
+    "codigo_sgs": 5793
+   },
+   {
+    "serie": "primario",
+    "nome": "Resultado primário, 12 meses",
+    "unidade": "% do PIB",
+    "mes": "2023-04",
+    "valor": 0.54,
+    "codigo_sgs": 5793
+   },
+   {
+    "serie": "primario",
+    "nome": "Resultado primário, 12 meses",
+    "unidade": "% do PIB",
+    "mes": "2023-05",
+    "valor": 0.37,
+    "codigo_sgs": 5793
+   },
+   {
+    "serie": "primario",
+    "nome": "Resultado primário, 12 meses",
+    "unidade": "% do PIB",
+    "mes": "2023-06",
+    "valor": -0.23,
+    "codigo_sgs": 5793
+   },
+   {
+    "serie": "primario",
+    "nome": "Resultado primário, 12 meses",
+    "unidade": "% do PIB",
+    "mes": "2023-07",
+    "valor": -0.76,
+    "codigo_sgs": 5793
+   },
+   {
+    "serie": "primario",
+    "nome": "Resultado primário, 12 meses",
+    "unidade": "% do PIB",
+    "mes": "2023-08",
+    "valor": -0.69,
+    "codigo_sgs": 5793
+   },
+   {
+    "serie": "primario",
+    "nome": "Resultado primário, 12 meses",
+    "unidade": "% do PIB",
+    "mes": "2023-09",
+    "valor": -0.95,
+    "codigo_sgs": 5793
+   },
+   {
+    "serie": "primario",
+    "nome": "Resultado primário, 12 meses",
+    "unidade": "% do PIB",
+    "mes": "2023-10",
+    "valor": -1.06,
+    "codigo_sgs": 5793
+   },
+   {
+    "serie": "primario",
+    "nome": "Resultado primário, 12 meses",
+    "unidade": "% do PIB",
+    "mes": "2023-11",
+    "valor": -1.21,
+    "codigo_sgs": 5793
+   },
+   {
+    "serie": "primario",
+    "nome": "Resultado primário, 12 meses",
+    "unidade": "% do PIB",
+    "mes": "2023-12",
+    "valor": -2.28,
+    "codigo_sgs": 5793
+   },
+   {
+    "serie": "primario",
+    "nome": "Resultado primário, 12 meses",
+    "unidade": "% do PIB",
+    "mes": "2024-01",
+    "valor": -2.23,
+    "codigo_sgs": 5793
+   },
+   {
+    "serie": "primario",
+    "nome": "Resultado primário, 12 meses",
+    "unidade": "% do PIB",
+    "mes": "2024-02",
+    "valor": -2.42,
+    "codigo_sgs": 5793
+   },
+   {
+    "serie": "primario",
+    "nome": "Resultado primário, 12 meses",
+    "unidade": "% do PIB",
+    "mes": "2024-03",
+    "valor": -2.27,
+    "codigo_sgs": 5793
+   },
+   {
+    "serie": "primario",
+    "nome": "Resultado primário, 12 meses",
+    "unidade": "% do PIB",
+    "mes": "2024-04",
+    "valor": -2.38,
+    "codigo_sgs": 5793
+   },
+   {
+    "serie": "primario",
+    "nome": "Resultado primário, 12 meses",
+    "unidade": "% do PIB",
+    "mes": "2024-05",
+    "valor": -2.49,
+    "codigo_sgs": 5793
+   },
+   {
+    "serie": "primario",
+    "nome": "Resultado primário, 12 meses",
+    "unidade": "% do PIB",
+    "mes": "2024-06",
+    "valor": -2.4,
+    "codigo_sgs": 5793
+   },
+   {
+    "serie": "primario",
+    "nome": "Resultado primário, 12 meses",
+    "unidade": "% do PIB",
+    "mes": "2024-07",
+    "valor": -2.25,
+    "codigo_sgs": 5793
+   },
+   {
+    "serie": "primario",
+    "nome": "Resultado primário, 12 meses",
+    "unidade": "% do PIB",
+    "mes": "2024-08",
+    "valor": -2.23,
+    "codigo_sgs": 5793
+   },
+   {
+    "serie": "primario",
+    "nome": "Resultado primário, 12 meses",
+    "unidade": "% do PIB",
+    "mes": "2024-09",
+    "valor": -2.12,
+    "codigo_sgs": 5793
+   },
+   {
+    "serie": "primario",
+    "nome": "Resultado primário, 12 meses",
+    "unidade": "% do PIB",
+    "mes": "2024-10",
+    "valor": -1.91,
+    "codigo_sgs": 5793
+   },
+   {
+    "serie": "primario",
+    "nome": "Resultado primário, 12 meses",
+    "unidade": "% do PIB",
+    "mes": "2024-11",
+    "valor": -1.64,
+    "codigo_sgs": 5793
+   },
+   {
+    "serie": "primario",
+    "nome": "Resultado primário, 12 meses",
+    "unidade": "% do PIB",
+    "mes": "2024-12",
+    "valor": -0.4,
+    "codigo_sgs": 5793
+   },
+   {
+    "serie": "primario",
+    "nome": "Resultado primário, 12 meses",
+    "unidade": "% do PIB",
+    "mes": "2025-01",
+    "valor": -0.39,
+    "codigo_sgs": 5793
+   },
+   {
+    "serie": "primario",
+    "nome": "Resultado primário, 12 meses",
+    "unidade": "% do PIB",
+    "mes": "2025-02",
+    "valor": -0.13,
+    "codigo_sgs": 5793
+   },
+   {
+    "serie": "primario",
+    "nome": "Resultado primário, 12 meses",
+    "unidade": "% do PIB",
+    "mes": "2025-03",
+    "valor": -0.11,
+    "codigo_sgs": 5793
+   },
+   {
+    "serie": "primario",
+    "nome": "Resultado primário, 12 meses",
+    "unidade": "% do PIB",
+    "mes": "2025-04",
+    "valor": -0.05,
+    "codigo_sgs": 5793
+   },
+   {
+    "serie": "primario",
+    "nome": "Resultado primário, 12 meses",
+    "unidade": "% do PIB",
+    "mes": "2025-05",
+    "valor": 0.2,
+    "codigo_sgs": 5793
+   },
+   {
+    "serie": "primario",
+    "nome": "Resultado primário, 12 meses",
+    "unidade": "% do PIB",
+    "mes": "2025-06",
+    "valor": 0.15,
+    "codigo_sgs": 5793
+   },
+   {
+    "serie": "primario",
+    "nome": "Resultado primário, 12 meses",
+    "unidade": "% do PIB",
+    "mes": "2025-07",
+    "valor": -0.22,
+    "codigo_sgs": 5793
+   },
+   {
+    "serie": "primario",
+    "nome": "Resultado primário, 12 meses",
+    "unidade": "% do PIB",
+    "mes": "2025-08",
+    "valor": -0.19,
+    "codigo_sgs": 5793
+   },
+   {
+    "serie": "primario",
+    "nome": "Resultado primário, 12 meses",
+    "unidade": "% do PIB",
+    "mes": "2025-09",
+    "valor": -0.27,
+    "codigo_sgs": 5793
+   },
+   {
+    "serie": "primario",
+    "nome": "Resultado primário, 12 meses",
+    "unidade": "% do PIB",
+    "mes": "2025-10",
+    "valor": -0.3,
+    "codigo_sgs": 5793
+   },
+   {
+    "serie": "primario",
+    "nome": "Resultado primário, 12 meses",
+    "unidade": "% do PIB",
+    "mes": "2025-11",
+    "valor": -0.36,
+    "codigo_sgs": 5793
+   },
+   {
+    "serie": "primario",
+    "nome": "Resultado primário, 12 meses",
+    "unidade": "% do PIB",
+    "mes": "2025-12",
+    "valor": -0.43,
+    "codigo_sgs": 5793
+   },
+   {
+    "serie": "primario",
+    "nome": "Resultado primário, 12 meses",
+    "unidade": "% do PIB",
+    "mes": "2026-01",
+    "valor": -0.43,
+    "codigo_sgs": 5793
+   },
+   {
+    "serie": "primario",
+    "nome": "Resultado primário, 12 meses",
+    "unidade": "% do PIB",
+    "mes": "2026-02",
+    "valor": -0.41,
+    "codigo_sgs": 5793
+   },
+   {
+    "serie": "primario",
+    "nome": "Resultado primário, 12 meses",
+    "unidade": "% do PIB",
+    "mes": "2026-03",
+    "valor": -1.06,
+    "codigo_sgs": 5793
+   },
+   {
+    "serie": "primario",
+    "nome": "Resultado primário, 12 meses",
+    "unidade": "% do PIB",
+    "mes": "2026-04",
+    "valor": -0.97,
+    "codigo_sgs": 5793
+   },
+   {
+    "serie": "primario",
+    "nome": "Resultado primário, 12 meses",
+    "unidade": "% do PIB",
+    "mes": "2026-05",
+    "valor": -1.14,
+    "codigo_sgs": 5793
+   },
+   {
+    "serie": "primario",
+    "nome": "Resultado primário, 12 meses",
+    "unidade": "% do PIB",
+    "mes": "2026-06",
+    "valor": -1.19,
+    "codigo_sgs": 5793
+   },
+   {
+    "serie": "primario",
+    "nome": "Resultado primário, 12 meses",
+    "unidade": "% do PIB",
+    "mes": "2026-07",
+    "valor": -0.67,
+    "codigo_sgs": 5793
+   },
+   {
+    "serie": "primario",
+    "nome": "Resultado primário, 12 meses",
+    "unidade": "% do PIB",
+    "mes": "2026-08",
+    "valor": -0.62,
+    "codigo_sgs": 5793
+   },
+   {
+    "serie": "selic",
+    "nome": "Selic efetiva",
+    "unidade": "% ao ano",
+    "mes": "2022-12",
+    "valor": 13.65,
+    "codigo_sgs": 4189
+   },
+   {
+    "serie": "selic",
+    "nome": "Selic efetiva",
+    "unidade": "% ao ano",
+    "mes": "2023-01",
+    "valor": 13.65,
+    "codigo_sgs": 4189
+   },
+   {
+    "serie": "selic",
+    "nome": "Selic efetiva",
+    "unidade": "% ao ano",
+    "mes": "2023-02",
+    "valor": 13.65,
+    "codigo_sgs": 4189
+   },
+   {
+    "serie": "selic",
+    "nome": "Selic efetiva",
+    "unidade": "% ao ano",
+    "mes": "2023-03",
+    "valor": 13.65,
+    "codigo_sgs": 4189
+   },
+   {
+    "serie": "selic",
+    "nome": "Selic efetiva",
+    "unidade": "% ao ano",
+    "mes": "2023-04",
+    "valor": 13.65,
+    "codigo_sgs": 4189
+   },
+   {
+    "serie": "selic",
+    "nome": "Selic efetiva",
+    "unidade": "% ao ano",
+    "mes": "2023-05",
+    "valor": 13.65,
+    "codigo_sgs": 4189
+   },
+   {
+    "serie": "selic",
+    "nome": "Selic efetiva",
+    "unidade": "% ao ano",
+    "mes": "2023-06",
+    "valor": 13.65,
+    "codigo_sgs": 4189
+   },
+   {
+    "serie": "selic",
+    "nome": "Selic efetiva",
+    "unidade": "% ao ano",
+    "mes": "2023-07",
+    "valor": 13.65,
+    "codigo_sgs": 4189
+   },
+   {
+    "serie": "selic",
+    "nome": "Selic efetiva",
+    "unidade": "% ao ano",
+    "mes": "2023-08",
+    "valor": 13.19,
+    "codigo_sgs": 4189
+   },
+   {
+    "serie": "selic",
+    "nome": "Selic efetiva",
+    "unidade": "% ao ano",
+    "mes": "2023-09",
+    "valor": 12.97,
+    "codigo_sgs": 4189
+   },
+   {
+    "serie": "selic",
+    "nome": "Selic efetiva",
+    "unidade": "% ao ano",
+    "mes": "2023-10",
+    "valor": 12.65,
+    "codigo_sgs": 4189
+   },
+   {
+    "serie": "selic",
+    "nome": "Selic efetiva",
+    "unidade": "% ao ano",
+    "mes": "2023-11",
+    "valor": 12.17,
+    "codigo_sgs": 4189
+   },
+   {
+    "serie": "selic",
+    "nome": "Selic efetiva",
+    "unidade": "% ao ano",
+    "mes": "2023-12",
+    "valor": 11.87,
+    "codigo_sgs": 4189
+   },
+   {
+    "serie": "selic",
+    "nome": "Selic efetiva",
+    "unidade": "% ao ano",
+    "mes": "2024-01",
+    "valor": 11.65,
+    "codigo_sgs": 4189
+   },
+   {
+    "serie": "selic",
+    "nome": "Selic efetiva",
+    "unidade": "% ao ano",
+    "mes": "2024-02",
+    "valor": 11.15,
+    "codigo_sgs": 4189
+   },
+   {
+    "serie": "selic",
+    "nome": "Selic efetiva",
+    "unidade": "% ao ano",
+    "mes": "2024-03",
+    "valor": 11.0,
+    "codigo_sgs": 4189
+   },
+   {
+    "serie": "selic",
+    "nome": "Selic efetiva",
+    "unidade": "% ao ano",
+    "mes": "2024-04",
+    "valor": 10.65,
+    "codigo_sgs": 4189
+   },
+   {
+    "serie": "selic",
+    "nome": "Selic efetiva",
+    "unidade": "% ao ano",
+    "mes": "2024-05",
+    "valor": 10.46,
+    "codigo_sgs": 4189
+   },
+   {
+    "serie": "selic",
+    "nome": "Selic efetiva",
+    "unidade": "% ao ano",
+    "mes": "2024-06",
+    "valor": 10.4,
+    "codigo_sgs": 4189
+   },
+   {
+    "serie": "selic",
+    "nome": "Selic efetiva",
+    "unidade": "% ao ano",
+    "mes": "2024-07",
+    "valor": 10.4,
+    "codigo_sgs": 4189
+   },
+   {
+    "serie": "selic",
+    "nome": "Selic efetiva",
+    "unidade": "% ao ano",
+    "mes": "2024-08",
+    "valor": 10.4,
+    "codigo_sgs": 4189
+   },
+   {
+    "serie": "selic",
+    "nome": "Selic efetiva",
+    "unidade": "% ao ano",
+    "mes": "2024-09",
+    "valor": 10.5,
+    "codigo_sgs": 4189
+   },
+   {
+    "serie": "selic",
+    "nome": "Selic efetiva",
+    "unidade": "% ao ano",
+    "mes": "2024-10",
+    "valor": 10.65,
+    "codigo_sgs": 4189
+   },
+   {
+    "serie": "selic",
+    "nome": "Selic efetiva",
+    "unidade": "% ao ano",
+    "mes": "2024-11",
+    "valor": 11.04,
+    "codigo_sgs": 4189
+   },
+   {
+    "serie": "selic",
+    "nome": "Selic efetiva",
+    "unidade": "% ao ano",
+    "mes": "2024-12",
+    "valor": 11.77,
+    "codigo_sgs": 4189
+   },
+   {
+    "serie": "selic",
+    "nome": "Selic efetiva",
+    "unidade": "% ao ano",
+    "mes": "2025-01",
+    "valor": 12.24,
+    "codigo_sgs": 4189
+   },
+   {
+    "serie": "selic",
+    "nome": "Selic efetiva",
+    "unidade": "% ao ano",
+    "mes": "2025-02",
+    "valor": 13.15,
+    "codigo_sgs": 4189
+   },
+   {
+    "serie": "selic",
+    "nome": "Selic efetiva",
+    "unidade": "% ao ano",
+    "mes": "2025-03",
+    "valor": 13.57,
+    "codigo_sgs": 4189
+   },
+   {
+    "serie": "selic",
+    "nome": "Selic efetiva",
+    "unidade": "% ao ano",
+    "mes": "2025-04",
+    "valor": 14.15,
+    "codigo_sgs": 4189
+   },
+   {
+    "serie": "selic",
+    "nome": "Selic efetiva",
+    "unidade": "% ao ano",
+    "mes": "2025-05",
+    "valor": 14.55,
+    "codigo_sgs": 4189
+   },
+   {
+    "serie": "selic",
+    "nome": "Selic efetiva",
+    "unidade": "% ao ano",
+    "mes": "2025-06",
+    "valor": 14.74,
+    "codigo_sgs": 4189
+   },
+   {
+    "serie": "selic",
+    "nome": "Selic efetiva",
+    "unidade": "% ao ano",
+    "mes": "2025-07",
+    "valor": 14.9,
+    "codigo_sgs": 4189
+   },
+   {
+    "serie": "selic",
+    "nome": "Selic efetiva",
+    "unidade": "% ao ano",
+    "mes": "2025-08",
+    "valor": 14.9,
+    "codigo_sgs": 4189
+   },
+   {
+    "serie": "selic",
+    "nome": "Selic efetiva",
+    "unidade": "% ao ano",
+    "mes": "2025-09",
+    "valor": 14.9,
+    "codigo_sgs": 4189
+   },
+   {
+    "serie": "selic",
+    "nome": "Selic efetiva",
+    "unidade": "% ao ano",
+    "mes": "2025-10",
+    "valor": 14.9,
+    "codigo_sgs": 4189
+   },
+   {
+    "serie": "selic",
+    "nome": "Selic efetiva",
+    "unidade": "% ao ano",
+    "mes": "2025-11",
+    "valor": 14.9,
+    "codigo_sgs": 4189
+   },
+   {
+    "serie": "selic",
+    "nome": "Selic efetiva",
+    "unidade": "% ao ano",
+    "mes": "2025-12",
+    "valor": 14.9,
+    "codigo_sgs": 4189
+   },
+   {
+    "serie": "selic",
+    "nome": "Selic efetiva",
+    "unidade": "% ao ano",
+    "mes": "2026-01",
+    "valor": 14.9,
+    "codigo_sgs": 4189
+   },
+   {
+    "serie": "selic",
+    "nome": "Selic efetiva",
+    "unidade": "% ao ano",
+    "mes": "2026-02",
+    "valor": 14.9,
+    "codigo_sgs": 4189
+   },
+   {
+    "serie": "selic",
+    "nome": "Selic efetiva",
+    "unidade": "% ao ano",
+    "mes": "2026-03",
+    "valor": 14.8,
+    "codigo_sgs": 4189
+   },
+   {
+    "serie": "selic",
+    "nome": "Selic efetiva",
+    "unidade": "% ao ano",
+    "mes": "2026-04",
+    "valor": 14.64,
+    "codigo_sgs": 4189
+   },
+   {
+    "serie": "selic",
+    "nome": "Selic efetiva",
+    "unidade": "% ao ano",
+    "mes": "2026-05",
+    "valor": 14.4,
+    "codigo_sgs": 4189
+   },
+   {
+    "serie": "selic",
+    "nome": "Selic efetiva",
+    "unidade": "% ao ano",
+    "mes": "2026-06",
+    "valor": 14.29,
+    "codigo_sgs": 4189
+   },
+   {
+    "serie": "selic",
+    "nome": "Selic efetiva",
+    "unidade": "% ao ano",
+    "mes": "2026-07",
+    "valor": 14.15,
+    "codigo_sgs": 4189
+   },
+   {
+    "serie": "selic",
+    "nome": "Selic efetiva",
+    "unidade": "% ao ano",
+    "mes": "2026-08",
+    "valor": 13.94,
+    "codigo_sgs": 4189
+   },
+   {
+    "serie": "selic",
+    "nome": "Selic efetiva",
+    "unidade": "% ao ano",
+    "mes": "2026-09",
+    "valor": 13.78,
+    "codigo_sgs": 4189
+   },
+   {
+    "serie": "selic",
+    "nome": "Selic efetiva",
+    "unidade": "% ao ano",
+    "mes": "2026-10",
+    "valor": 13.65,
+    "codigo_sgs": 4189
+   },
+   {
+    "serie": "ipca",
+    "nome": "Inflação (IPCA), 12 meses",
+    "unidade": "%",
+    "mes": "2022-12",
+    "valor": 5.79,
+    "codigo_sgs": 13522
+   },
+   {
+    "serie": "ipca",
+    "nome": "Inflação (IPCA), 12 meses",
+    "unidade": "%",
+    "mes": "2023-01",
+    "valor": 5.77,
+    "codigo_sgs": 13522
+   },
+   {
+    "serie": "ipca",
+    "nome": "Inflação (IPCA), 12 meses",
+    "unidade": "%",
+    "mes": "2023-02",
+    "valor": 5.6,
+    "codigo_sgs": 13522
+   },
+   {
+    "serie": "ipca",
+    "nome": "Inflação (IPCA), 12 meses",
+    "unidade": "%",
+    "mes": "2023-03",
+    "valor": 4.65,
+    "codigo_sgs": 13522
+   },
+   {
+    "serie": "ipca",
+    "nome": "Inflação (IPCA), 12 meses",
+    "unidade": "%",
+    "mes": "2023-04",
+    "valor": 4.18,
+    "codigo_sgs": 13522
+   },
+   {
+    "serie": "ipca",
+    "nome": "Inflação (IPCA), 12 meses",
+    "unidade": "%",
+    "mes": "2023-05",
+    "valor": 3.94,
+    "codigo_sgs": 13522
+   },
+   {
+    "serie": "ipca",
+    "nome": "Inflação (IPCA), 12 meses",
+    "unidade": "%",
+    "mes": "2023-06",
+    "valor": 3.16,
+    "codigo_sgs": 13522
+   },
+   {
+    "serie": "ipca",
+    "nome": "Inflação (IPCA), 12 meses",
+    "unidade": "%",
+    "mes": "2023-07",
+    "valor": 3.99,
+    "codigo_sgs": 13522
+   },
+   {
+    "serie": "ipca",
+    "nome": "Inflação (IPCA), 12 meses",
+    "unidade": "%",
+    "mes": "2023-08",
+    "valor": 4.61,
+    "codigo_sgs": 13522
+   },
+   {
+    "serie": "ipca",
+    "nome": "Inflação (IPCA), 12 meses",
+    "unidade": "%",
+    "mes": "2023-09",
+    "valor": 5.19,
+    "codigo_sgs": 13522
+   },
+   {
+    "serie": "ipca",
+    "nome": "Inflação (IPCA), 12 meses",
+    "unidade": "%",
+    "mes": "2023-10",
+    "valor": 4.82,
+    "codigo_sgs": 13522
+   },
+   {
+    "serie": "ipca",
+    "nome": "Inflação (IPCA), 12 meses",
+    "unidade": "%",
+    "mes": "2023-11",
+    "valor": 4.68,
+    "codigo_sgs": 13522
+   },
+   {
+    "serie": "ipca",
+    "nome": "Inflação (IPCA), 12 meses",
+    "unidade": "%",
+    "mes": "2023-12",
+    "valor": 4.62,
+    "codigo_sgs": 13522
+   },
+   {
+    "serie": "ipca",
+    "nome": "Inflação (IPCA), 12 meses",
+    "unidade": "%",
+    "mes": "2024-01",
+    "valor": 4.51,
+    "codigo_sgs": 13522
+   },
+   {
+    "serie": "ipca",
+    "nome": "Inflação (IPCA), 12 meses",
+    "unidade": "%",
+    "mes": "2024-02",
+    "valor": 4.5,
+    "codigo_sgs": 13522
+   },
+   {
+    "serie": "ipca",
+    "nome": "Inflação (IPCA), 12 meses",
+    "unidade": "%",
+    "mes": "2024-03",
+    "valor": 3.93,
+    "codigo_sgs": 13522
+   },
+   {
+    "serie": "ipca",
+    "nome": "Inflação (IPCA), 12 meses",
+    "unidade": "%",
+    "mes": "2024-04",
+    "valor": 3.69,
+    "codigo_sgs": 13522
+   },
+   {
+    "serie": "ipca",
+    "nome": "Inflação (IPCA), 12 meses",
+    "unidade": "%",
+    "mes": "2024-05",
+    "valor": 3.93,
+    "codigo_sgs": 13522
+   },
+   {
+    "serie": "ipca",
+    "nome": "Inflação (IPCA), 12 meses",
+    "unidade": "%",
+    "mes": "2024-06",
+    "valor": 4.23,
+    "codigo_sgs": 13522
+   },
+   {
+    "serie": "ipca",
+    "nome": "Inflação (IPCA), 12 meses",
+    "unidade": "%",
+    "mes": "2024-07",
+    "valor": 4.5,
+    "codigo_sgs": 13522
+   },
+   {
+    "serie": "ipca",
+    "nome": "Inflação (IPCA), 12 meses",
+    "unidade": "%",
+    "mes": "2024-08",
+    "valor": 4.24,
+    "codigo_sgs": 13522
+   },
+   {
+    "serie": "ipca",
+    "nome": "Inflação (IPCA), 12 meses",
+    "unidade": "%",
+    "mes": "2024-09",
+    "valor": 4.42,
+    "codigo_sgs": 13522
+   },
+   {
+    "serie": "ipca",
+    "nome": "Inflação (IPCA), 12 meses",
+    "unidade": "%",
+    "mes": "2024-10",
+    "valor": 4.76,
+    "codigo_sgs": 13522
+   },
+   {
+    "serie": "ipca",
+    "nome": "Inflação (IPCA), 12 meses",
+    "unidade": "%",
+    "mes": "2024-11",
+    "valor": 4.87,
+    "codigo_sgs": 13522
+   },
+   {
+    "serie": "ipca",
+    "nome": "Inflação (IPCA), 12 meses",
+    "unidade": "%",
+    "mes": "2024-12",
+    "valor": 4.83,
+    "codigo_sgs": 13522
+   },
+   {
+    "serie": "ipca",
+    "nome": "Inflação (IPCA), 12 meses",
+    "unidade": "%",
+    "mes": "2025-01",
+    "valor": 4.56,
+    "codigo_sgs": 13522
+   },
+   {
+    "serie": "ipca",
+    "nome": "Inflação (IPCA), 12 meses",
+    "unidade": "%",
+    "mes": "2025-02",
+    "valor": 5.06,
+    "codigo_sgs": 13522
+   },
+   {
+    "serie": "ipca",
+    "nome": "Inflação (IPCA), 12 meses",
+    "unidade": "%",
+    "mes": "2025-03",
+    "valor": 5.48,
+    "codigo_sgs": 13522
+   },
+   {
+    "serie": "ipca",
+    "nome": "Inflação (IPCA), 12 meses",
+    "unidade": "%",
+    "mes": "2025-04",
+    "valor": 5.53,
+    "codigo_sgs": 13522
+   },
+   {
+    "serie": "ipca",
+    "nome": "Inflação (IPCA), 12 meses",
+    "unidade": "%",
+    "mes": "2025-05",
+    "valor": 5.32,
+    "codigo_sgs": 13522
+   },
+   {
+    "serie": "ipca",
+    "nome": "Inflação (IPCA), 12 meses",
+    "unidade": "%",
+    "mes": "2025-06",
+    "valor": 5.35,
+    "codigo_sgs": 13522
+   },
+   {
+    "serie": "ipca",
+    "nome": "Inflação (IPCA), 12 meses",
+    "unidade": "%",
+    "mes": "2025-07",
+    "valor": 5.23,
+    "codigo_sgs": 13522
+   },
+   {
+    "serie": "ipca",
+    "nome": "Inflação (IPCA), 12 meses",
+    "unidade": "%",
+    "mes": "2025-08",
+    "valor": 5.13,
+    "codigo_sgs": 13522
+   },
+   {
+    "serie": "ipca",
+    "nome": "Inflação (IPCA), 12 meses",
+    "unidade": "%",
+    "mes": "2025-09",
+    "valor": 5.17,
+    "codigo_sgs": 13522
+   },
+   {
+    "serie": "ipca",
+    "nome": "Inflação (IPCA), 12 meses",
+    "unidade": "%",
+    "mes": "2025-10",
+    "valor": 4.68,
+    "codigo_sgs": 13522
+   },
+   {
+    "serie": "ipca",
+    "nome": "Inflação (IPCA), 12 meses",
+    "unidade": "%",
+    "mes": "2025-11",
+    "valor": 4.46,
+    "codigo_sgs": 13522
+   },
+   {
+    "serie": "ipca",
+    "nome": "Inflação (IPCA), 12 meses",
+    "unidade": "%",
+    "mes": "2025-12",
+    "valor": 4.26,
+    "codigo_sgs": 13522
+   },
+   {
+    "serie": "ipca",
+    "nome": "Inflação (IPCA), 12 meses",
+    "unidade": "%",
+    "mes": "2026-01",
+    "valor": 4.44,
+    "codigo_sgs": 13522
+   },
+   {
+    "serie": "ipca",
+    "nome": "Inflação (IPCA), 12 meses",
+    "unidade": "%",
+    "mes": "2026-02",
+    "valor": 3.81,
+    "codigo_sgs": 13522
+   },
+   {
+    "serie": "ipca",
+    "nome": "Inflação (IPCA), 12 meses",
+    "unidade": "%",
+    "mes": "2026-03",
+    "valor": 4.14,
+    "codigo_sgs": 13522
+   },
+   {
+    "serie": "ipca",
+    "nome": "Inflação (IPCA), 12 meses",
+    "unidade": "%",
+    "mes": "2026-04",
+    "valor": 4.39,
+    "codigo_sgs": 13522
+   },
+   {
+    "serie": "ipca",
+    "nome": "Inflação (IPCA), 12 meses",
+    "unidade": "%",
+    "mes": "2026-05",
+    "valor": 4.72,
+    "codigo_sgs": 13522
+   },
+   {
+    "serie": "ipca",
+    "nome": "Inflação (IPCA), 12 meses",
+    "unidade": "%",
+    "mes": "2026-06",
+    "valor": 4.64,
+    "codigo_sgs": 13522
+   },
+   {
+    "serie": "ipca",
+    "nome": "Inflação (IPCA), 12 meses",
+    "unidade": "%",
+    "mes": "2026-07",
+    "valor": 4.44,
+    "codigo_sgs": 13522
+   },
+   {
+    "serie": "ipca",
+    "nome": "Inflação (IPCA), 12 meses",
+    "unidade": "%",
+    "mes": "2026-08",
+    "valor": 4.22,
+    "codigo_sgs": 13522
+   },
+   {
+    "serie": "ipca",
+    "nome": "Inflação (IPCA), 12 meses",
+    "unidade": "%",
+    "mes": "2026-09",
+    "valor": 4.58,
+    "codigo_sgs": 13522
+   },
+   {
+    "serie": "desemprego",
+    "nome": "Desemprego (PNAD)",
+    "unidade": "%",
+    "mes": "2022-12",
+    "valor": 7.9,
+    "codigo_sgs": 24369
+   },
+   {
+    "serie": "desemprego",
+    "nome": "Desemprego (PNAD)",
+    "unidade": "%",
+    "mes": "2023-01",
+    "valor": 8.4,
+    "codigo_sgs": 24369
+   },
+   {
+    "serie": "desemprego",
+    "nome": "Desemprego (PNAD)",
+    "unidade": "%",
+    "mes": "2023-02",
+    "valor": 8.6,
+    "codigo_sgs": 24369
+   },
+   {
+    "serie": "desemprego",
+    "nome": "Desemprego (PNAD)",
+    "unidade": "%",
+    "mes": "2023-03",
+    "valor": 8.8,
+    "codigo_sgs": 24369
+   },
+   {
+    "serie": "desemprego",
+    "nome": "Desemprego (PNAD)",
+    "unidade": "%",
+    "mes": "2023-04",
+    "valor": 8.5,
+    "codigo_sgs": 24369
+   },
+   {
+    "serie": "desemprego",
+    "nome": "Desemprego (PNAD)",
+    "unidade": "%",
+    "mes": "2023-05",
+    "valor": 8.3,
+    "codigo_sgs": 24369
+   },
+   {
+    "serie": "desemprego",
+    "nome": "Desemprego (PNAD)",
+    "unidade": "%",
+    "mes": "2023-06",
+    "valor": 8.0,
+    "codigo_sgs": 24369
+   },
+   {
+    "serie": "desemprego",
+    "nome": "Desemprego (PNAD)",
+    "unidade": "%",
+    "mes": "2023-07",
+    "valor": 7.9,
+    "codigo_sgs": 24369
+   },
+   {
+    "serie": "desemprego",
+    "nome": "Desemprego (PNAD)",
+    "unidade": "%",
+    "mes": "2023-08",
+    "valor": 7.8,
+    "codigo_sgs": 24369
+   },
+   {
+    "serie": "desemprego",
+    "nome": "Desemprego (PNAD)",
+    "unidade": "%",
+    "mes": "2023-09",
+    "valor": 7.7,
+    "codigo_sgs": 24369
+   },
+   {
+    "serie": "desemprego",
+    "nome": "Desemprego (PNAD)",
+    "unidade": "%",
+    "mes": "2023-10",
+    "valor": 7.6,
+    "codigo_sgs": 24369
+   },
+   {
+    "serie": "desemprego",
+    "nome": "Desemprego (PNAD)",
+    "unidade": "%",
+    "mes": "2023-11",
+    "valor": 7.5,
+    "codigo_sgs": 24369
+   },
+   {
+    "serie": "desemprego",
+    "nome": "Desemprego (PNAD)",
+    "unidade": "%",
+    "mes": "2023-12",
+    "valor": 7.4,
+    "codigo_sgs": 24369
+   },
+   {
+    "serie": "desemprego",
+    "nome": "Desemprego (PNAD)",
+    "unidade": "%",
+    "mes": "2024-01",
+    "valor": 7.6,
+    "codigo_sgs": 24369
+   },
+   {
+    "serie": "desemprego",
+    "nome": "Desemprego (PNAD)",
+    "unidade": "%",
+    "mes": "2024-02",
+    "valor": 7.8,
+    "codigo_sgs": 24369
+   },
+   {
+    "serie": "desemprego",
+    "nome": "Desemprego (PNAD)",
+    "unidade": "%",
+    "mes": "2024-03",
+    "valor": 7.9,
+    "codigo_sgs": 24369
+   },
+   {
+    "serie": "desemprego",
+    "nome": "Desemprego (PNAD)",
+    "unidade": "%",
+    "mes": "2024-04",
+    "valor": 7.5,
+    "codigo_sgs": 24369
+   },
+   {
+    "serie": "desemprego",
+    "nome": "Desemprego (PNAD)",
+    "unidade": "%",
+    "mes": "2024-05",
+    "valor": 7.1,
+    "codigo_sgs": 24369
+   },
+   {
+    "serie": "desemprego",
+    "nome": "Desemprego (PNAD)",
+    "unidade": "%",
+    "mes": "2024-06",
+    "valor": 6.9,
+    "codigo_sgs": 24369
+   },
+   {
+    "serie": "desemprego",
+    "nome": "Desemprego (PNAD)",
+    "unidade": "%",
+    "mes": "2024-07",
+    "valor": 6.8,
+    "codigo_sgs": 24369
+   },
+   {
+    "serie": "desemprego",
+    "nome": "Desemprego (PNAD)",
+    "unidade": "%",
+    "mes": "2024-08",
+    "valor": 6.6,
+    "codigo_sgs": 24369
+   },
+   {
+    "serie": "desemprego",
+    "nome": "Desemprego (PNAD)",
+    "unidade": "%",
+    "mes": "2024-09",
+    "valor": 6.4,
+    "codigo_sgs": 24369
+   },
+   {
+    "serie": "desemprego",
+    "nome": "Desemprego (PNAD)",
+    "unidade": "%",
+    "mes": "2024-10",
+    "valor": 6.2,
+    "codigo_sgs": 24369
+   },
+   {
+    "serie": "desemprego",
+    "nome": "Desemprego (PNAD)",
+    "unidade": "%",
+    "mes": "2024-11",
+    "valor": 6.1,
+    "codigo_sgs": 24369
+   },
+   {
+    "serie": "desemprego",
+    "nome": "Desemprego (PNAD)",
+    "unidade": "%",
+    "mes": "2024-12",
+    "valor": 6.2,
+    "codigo_sgs": 24369
+   },
+   {
+    "serie": "desemprego",
+    "nome": "Desemprego (PNAD)",
+    "unidade": "%",
+    "mes": "2025-01",
+    "valor": 6.5,
+    "codigo_sgs": 24369
+   },
+   {
+    "serie": "desemprego",
+    "nome": "Desemprego (PNAD)",
+    "unidade": "%",
+    "mes": "2025-02",
+    "valor": 6.8,
+    "codigo_sgs": 24369
+   },
+   {
+    "serie": "desemprego",
+    "nome": "Desemprego (PNAD)",
+    "unidade": "%",
+    "mes": "2025-03",
+    "valor": 7.0,
+    "codigo_sgs": 24369
+   },
+   {
+    "serie": "desemprego",
+    "nome": "Desemprego (PNAD)",
+    "unidade": "%",
+    "mes": "2025-04",
+    "valor": 6.6,
+    "codigo_sgs": 24369
+   },
+   {
+    "serie": "desemprego",
+    "nome": "Desemprego (PNAD)",
+    "unidade": "%",
+    "mes": "2025-05",
+    "valor": 6.2,
+    "codigo_sgs": 24369
+   },
+   {
+    "serie": "desemprego",
+    "nome": "Desemprego (PNAD)",
+    "unidade": "%",
+    "mes": "2025-06",
+    "valor": 5.8,
+    "codigo_sgs": 24369
+   },
+   {
+    "serie": "desemprego",
+    "nome": "Desemprego (PNAD)",
+    "unidade": "%",
+    "mes": "2025-07",
+    "valor": 5.6,
+    "codigo_sgs": 24369
+   },
+   {
+    "serie": "desemprego",
+    "nome": "Desemprego (PNAD)",
+    "unidade": "%",
+    "mes": "2025-08",
+    "valor": 5.6,
+    "codigo_sgs": 24369
+   },
+   {
+    "serie": "desemprego",
+    "nome": "Desemprego (PNAD)",
+    "unidade": "%",
+    "mes": "2025-09",
+    "valor": 5.6,
+    "codigo_sgs": 24369
+   },
+   {
+    "serie": "desemprego",
+    "nome": "Desemprego (PNAD)",
+    "unidade": "%",
+    "mes": "2025-10",
+    "valor": 5.4,
+    "codigo_sgs": 24369
+   },
+   {
+    "serie": "desemprego",
+    "nome": "Desemprego (PNAD)",
+    "unidade": "%",
+    "mes": "2025-11",
+    "valor": 5.2,
+    "codigo_sgs": 24369
+   },
+   {
+    "serie": "desemprego",
+    "nome": "Desemprego (PNAD)",
+    "unidade": "%",
+    "mes": "2025-12",
+    "valor": 5.1,
+    "codigo_sgs": 24369
+   },
+   {
+    "serie": "desemprego",
+    "nome": "Desemprego (PNAD)",
+    "unidade": "%",
+    "mes": "2026-01",
+    "valor": 5.4,
+    "codigo_sgs": 24369
+   },
+   {
+    "serie": "desemprego",
+    "nome": "Desemprego (PNAD)",
+    "unidade": "%",
+    "mes": "2026-02",
+    "valor": 5.8,
+    "codigo_sgs": 24369
+   },
+   {
+    "serie": "desemprego",
+    "nome": "Desemprego (PNAD)",
+    "unidade": "%",
+    "mes": "2026-03",
+    "valor": 6.1,
+    "codigo_sgs": 24369
+   },
+   {
+    "serie": "desemprego",
+    "nome": "Desemprego (PNAD)",
+    "unidade": "%",
+    "mes": "2026-04",
+    "valor": 5.8,
+    "codigo_sgs": 24369
+   },
+   {
+    "serie": "desemprego",
+    "nome": "Desemprego (PNAD)",
+    "unidade": "%",
+    "mes": "2026-05",
+    "valor": 5.6,
+    "codigo_sgs": 24369
+   },
+   {
+    "serie": "desemprego",
+    "nome": "Desemprego (PNAD)",
+    "unidade": "%",
+    "mes": "2026-06",
+    "valor": 5.4,
+    "codigo_sgs": 24369
+   },
+   {
+    "serie": "desemprego",
+    "nome": "Desemprego (PNAD)",
+    "unidade": "%",
+    "mes": "2026-07",
+    "valor": 5.3,
+    "codigo_sgs": 24369
+   },
+   {
+    "serie": "desemprego",
+    "nome": "Desemprego (PNAD)",
+    "unidade": "%",
+    "mes": "2026-08",
+    "valor": 5.3,
+    "codigo_sgs": 24369
+   },
+   {
+    "serie": "dolar",
+    "nome": "Dólar, média do mês",
+    "unidade": "R$",
+    "mes": "2022-12",
+    "valor": 5.2424,
+    "codigo_sgs": 3698
+   },
+   {
+    "serie": "dolar",
+    "nome": "Dólar, média do mês",
+    "unidade": "R$",
+    "mes": "2023-01",
+    "valor": 5.2007,
+    "codigo_sgs": 3698
+   },
+   {
+    "serie": "dolar",
+    "nome": "Dólar, média do mês",
+    "unidade": "R$",
+    "mes": "2023-02",
+    "valor": 5.1717,
+    "codigo_sgs": 3698
+   },
+   {
+    "serie": "dolar",
+    "nome": "Dólar, média do mês",
+    "unidade": "R$",
+    "mes": "2023-03",
+    "valor": 5.2115,
+    "codigo_sgs": 3698
+   },
+   {
+    "serie": "dolar",
+    "nome": "Dólar, média do mês",
+    "unidade": "R$",
+    "mes": "2023-04",
+    "valor": 5.0197,
+    "codigo_sgs": 3698
+   },
+   {
+    "serie": "dolar",
+    "nome": "Dólar, média do mês",
+    "unidade": "R$",
+    "mes": "2023-05",
+    "valor": 4.9828,
+    "codigo_sgs": 3698
+   },
+   {
+    "serie": "dolar",
+    "nome": "Dólar, média do mês",
+    "unidade": "R$",
+    "mes": "2023-06",
+    "valor": 4.8516,
+    "codigo_sgs": 3698
+   },
+   {
+    "serie": "dolar",
+    "nome": "Dólar, média do mês",
+    "unidade": "R$",
+    "mes": "2023-07",
+    "valor": 4.8008,
+    "codigo_sgs": 3698
+   },
+   {
+    "serie": "dolar",
+    "nome": "Dólar, média do mês",
+    "unidade": "R$",
+    "mes": "2023-08",
+    "valor": 4.9035,
+    "codigo_sgs": 3698
+   },
+   {
+    "serie": "dolar",
+    "nome": "Dólar, média do mês",
+    "unidade": "R$",
+    "mes": "2023-09",
+    "valor": 4.937,
+    "codigo_sgs": 3698
+   },
+   {
+    "serie": "dolar",
+    "nome": "Dólar, média do mês",
+    "unidade": "R$",
+    "mes": "2023-10",
+    "valor": 5.0648,
+    "codigo_sgs": 3698
+   },
+   {
+    "serie": "dolar",
+    "nome": "Dólar, média do mês",
+    "unidade": "R$",
+    "mes": "2023-11",
+    "valor": 4.8983,
+    "codigo_sgs": 3698
+   },
+   {
+    "serie": "dolar",
+    "nome": "Dólar, média do mês",
+    "unidade": "R$",
+    "mes": "2023-12",
+    "valor": 4.8972,
+    "codigo_sgs": 3698
+   },
+   {
+    "serie": "dolar",
+    "nome": "Dólar, média do mês",
+    "unidade": "R$",
+    "mes": "2024-01",
+    "valor": 4.9144,
+    "codigo_sgs": 3698
+   },
+   {
+    "serie": "dolar",
+    "nome": "Dólar, média do mês",
+    "unidade": "R$",
+    "mes": "2024-02",
+    "valor": 4.9644,
+    "codigo_sgs": 3698
+   },
+   {
+    "serie": "dolar",
+    "nome": "Dólar, média do mês",
+    "unidade": "R$",
+    "mes": "2024-03",
+    "valor": 4.9801,
+    "codigo_sgs": 3698
+   },
+   {
+    "serie": "dolar",
+    "nome": "Dólar, média do mês",
+    "unidade": "R$",
+    "mes": "2024-04",
+    "valor": 5.1291,
+    "codigo_sgs": 3698
+   },
+   {
+    "serie": "dolar",
+    "nome": "Dólar, média do mês",
+    "unidade": "R$",
+    "mes": "2024-05",
+    "valor": 5.133,
+    "codigo_sgs": 3698
+   },
+   {
+    "serie": "dolar",
+    "nome": "Dólar, média do mês",
+    "unidade": "R$",
+    "mes": "2024-06",
+    "valor": 5.389,
+    "codigo_sgs": 3698
+   },
+   {
+    "serie": "dolar",
+    "nome": "Dólar, média do mês",
+    "unidade": "R$",
+    "mes": "2024-07",
+    "valor": 5.542,
+    "codigo_sgs": 3698
+   },
+   {
+    "serie": "dolar",
+    "nome": "Dólar, média do mês",
+    "unidade": "R$",
+    "mes": "2024-08",
+    "valor": 5.5526,
+    "codigo_sgs": 3698
+   },
+   {
+    "serie": "dolar",
+    "nome": "Dólar, média do mês",
+    "unidade": "R$",
+    "mes": "2024-09",
+    "valor": 5.5416,
+    "codigo_sgs": 3698
+   },
+   {
+    "serie": "dolar",
+    "nome": "Dólar, média do mês",
+    "unidade": "R$",
+    "mes": "2024-10",
+    "valor": 5.6241,
+    "codigo_sgs": 3698
+   },
+   {
+    "serie": "dolar",
+    "nome": "Dólar, média do mês",
+    "unidade": "R$",
+    "mes": "2024-11",
+    "valor": 5.8071,
+    "codigo_sgs": 3698
+   },
+   {
+    "serie": "dolar",
+    "nome": "Dólar, média do mês",
+    "unidade": "R$",
+    "mes": "2024-12",
+    "valor": 6.097,
+    "codigo_sgs": 3698
+   },
+   {
+    "serie": "dolar",
+    "nome": "Dólar, média do mês",
+    "unidade": "R$",
+    "mes": "2025-01",
+    "valor": 6.0218,
+    "codigo_sgs": 3698
+   },
+   {
+    "serie": "dolar",
+    "nome": "Dólar, média do mês",
+    "unidade": "R$",
+    "mes": "2025-02",
+    "valor": 5.7656,
+    "codigo_sgs": 3698
+   },
+   {
+    "serie": "dolar",
+    "nome": "Dólar, média do mês",
+    "unidade": "R$",
+    "mes": "2025-03",
+    "valor": 5.7468,
+    "codigo_sgs": 3698
+   },
+   {
+    "serie": "dolar",
+    "nome": "Dólar, média do mês",
+    "unidade": "R$",
+    "mes": "2025-04",
+    "valor": 5.7837,
+    "codigo_sgs": 3698
+   },
+   {
+    "serie": "dolar",
+    "nome": "Dólar, média do mês",
+    "unidade": "R$",
+    "mes": "2025-05",
+    "valor": 5.6674,
+    "codigo_sgs": 3698
+   },
+   {
+    "serie": "dolar",
+    "nome": "Dólar, média do mês",
+    "unidade": "R$",
+    "mes": "2025-06",
+    "valor": 5.5471,
+    "codigo_sgs": 3698
+   },
+   {
+    "serie": "dolar",
+    "nome": "Dólar, média do mês",
+    "unidade": "R$",
+    "mes": "2025-07",
+    "valor": 5.5285,
+    "codigo_sgs": 3698
+   },
+   {
+    "serie": "dolar",
+    "nome": "Dólar, média do mês",
+    "unidade": "R$",
+    "mes": "2025-08",
+    "valor": 5.4469,
+    "codigo_sgs": 3698
+   },
+   {
+    "serie": "dolar",
+    "nome": "Dólar, média do mês",
+    "unidade": "R$",
+    "mes": "2025-09",
+    "valor": 5.3674,
+    "codigo_sgs": 3698
+   },
+   {
+    "serie": "dolar",
+    "nome": "Dólar, média do mês",
+    "unidade": "R$",
+    "mes": "2025-10",
+    "valor": 5.3855,
+    "codigo_sgs": 3698
+   },
+   {
+    "serie": "dolar",
+    "nome": "Dólar, média do mês",
+    "unidade": "R$",
+    "mes": "2025-11",
+    "valor": 5.3409,
+    "codigo_sgs": 3698
+   },
+   {
+    "serie": "dolar",
+    "nome": "Dólar, média do mês",
+    "unidade": "R$",
+    "mes": "2025-12",
+    "valor": 5.4531,
+    "codigo_sgs": 3698
+   },
+   {
+    "serie": "dolar",
+    "nome": "Dólar, média do mês",
+    "unidade": "R$",
+    "mes": "2026-01",
+    "valor": 5.338,
+    "codigo_sgs": 3698
+   },
+   {
+    "serie": "dolar",
+    "nome": "Dólar, média do mês",
+    "unidade": "R$",
+    "mes": "2026-02",
+    "valor": 5.2006,
+    "codigo_sgs": 3698
+   },
+   {
+    "serie": "dolar",
+    "nome": "Dólar, média do mês",
+    "unidade": "R$",
+    "mes": "2026-03",
+    "valor": 5.2316,
+    "codigo_sgs": 3698
+   },
+   {
+    "serie": "dolar",
+    "nome": "Dólar, média do mês",
+    "unidade": "R$",
+    "mes": "2026-04",
+    "valor": 5.0331,
+    "codigo_sgs": 3698
+   },
+   {
+    "serie": "dolar",
+    "nome": "Dólar, média do mês",
+    "unidade": "R$",
+    "mes": "2026-05",
+    "valor": 4.9837,
+    "codigo_sgs": 3698
+   },
+   {
+    "serie": "dolar",
+    "nome": "Dólar, média do mês",
+    "unidade": "R$",
+    "mes": "2026-06",
+    "valor": 5.1276,
+    "codigo_sgs": 3698
+   },
+   {
+    "serie": "dolar",
+    "nome": "Dólar, média do mês",
+    "unidade": "R$",
+    "mes": "2026-07",
+    "valor": 5.1139,
+    "codigo_sgs": 3698
+   },
+   {
+    "serie": "dolar",
+    "nome": "Dólar, média do mês",
+    "unidade": "R$",
+    "mes": "2026-08",
+    "valor": 5.1532,
+    "codigo_sgs": 3698
+   },
+   {
+    "serie": "dolar",
+    "nome": "Dólar, média do mês",
+    "unidade": "R$",
+    "mes": "2026-09",
+    "valor": 5.1447,
+    "codigo_sgs": 3698
+   },
+   {
+    "serie": "pib",
+    "nome": "Crescimento do PIB",
+    "unidade": "% no ano",
+    "mes": "2023-12",
+    "valor": 3.24,
+    "codigo_sgs": 7326
+   },
+   {
+    "serie": "pib",
+    "nome": "Crescimento do PIB",
+    "unidade": "% no ano",
+    "mes": "2024-12",
+    "valor": 3.42,
+    "codigo_sgs": 7326
+   },
+   {
+    "serie": "pib",
+    "nome": "Crescimento do PIB",
+    "unidade": "% no ano",
+    "mes": "2025-12",
+    "valor": 2.29,
+    "codigo_sgs": 7326
+   }
+  ],
+  "acompanhamento": [
+   {
+    "id": "a1",
+    "ponto": "Equipe econômica e plano fiscal",
+    "referencia": "Não anunciados (26/10)",
+    "bom": "Nomes com credibilidade e meta de primário mantida",
+    "ruim": "Flexibilização do arcabouço fiscal ou meta afrouxada",
+    "status": "Aguardando",
+    "atualizado": "2026-10-26",
+    "atual": "Não encontrado: sem anúncio de equipe econômica ou plano fiscal até 26/10/2026"
+   },
+   {
+    "id": "a2",
+    "ponto": "Juros futuros longos (DI)",
+    "referencia": "+260 pb após a eleição",
+    "bom": "Devolve pelo menos metade da alta",
+    "ruim": "Nova rodada de alta",
+    "status": "Crítico",
+    "atualizado": "2026-10-26",
+    "atual": "Fechamento de set/26 não encontrado; DI jan/2031 em 12,60% em 07/10 (Money Times, após queda de mais de 100 pb em dois dias)"
+   },
+   {
+    "id": "a3",
+    "ponto": "Dólar",
+    "referencia": "R$ 5,44 em 26/10 (~12h)",
+    "bom": "Volta abaixo de R$ 5,20",
+    "ruim": "Fecha acima de R$ 5,60 (pico do dia)",
+    "status": "Crítico",
+    "atualizado": "2026-10-26",
+    "atual": "R$ 5,17 em 30/09, queda de 0,15% em setembro (Agência Brasil); R$ 5,44 em 26/10 ~12h (Reuters)"
+   },
+   {
+    "id": "a4",
+    "ponto": "Ibovespa",
+    "referencia": "173 mil pontos em 26/10 (~12h)",
+    "bom": "Recupera 190 mil pontos",
+    "ruim": "Fecha abaixo de 170 mil pontos",
+    "status": "Crítico",
+    "atualizado": "2026-10-26",
+    "atual": "186.340 pontos em 30/09, alta de 5,03% em setembro (Investidor10/Suno); 173 mil em 26/10 ~12h (Reuters)"
+   },
+   {
+    "id": "a5",
+    "ponto": "Fluxo estrangeiro na B3",
+    "referencia": "+R$ 40 bi no ano até 05/10",
+    "bom": "Mês volta a ter entrada líquida",
+    "ruim": "Saída líquida por dois meses seguidos",
+    "status": "A observar",
+    "atualizado": "2026-10-26",
+    "atual": "Setembro: entrada líquida de R$ 9,11 bi, 32,03 bi no ano; agosto teve saída de R$ 18,12 bi (Poder360/Elos Ayta); outubro não encontrado"
+   },
+   {
+    "id": "a6",
+    "ponto": "Dívida bruta (BCB)",
+    "referencia": "82,9% do PIB em ago/26",
+    "bom": "Estabiliza perto do nível atual",
+    "ruim": "Sobe mais de 0,5 ponto por mês",
+    "status": "A observar",
+    "atualizado": "2026-10-26",
+    "atual": "82,87% do PIB em ago/26, sem dado novo (BCB SGS 13762)"
+   },
+   {
+    "id": "a7",
+    "ponto": "Resultado primário, 12 meses",
+    "referencia": "Déficit de 0,62% do PIB em ago/26",
+    "bom": "Déficit encolhe em direção à meta",
+    "ruim": "Déficit aumenta",
+    "status": "A observar",
+    "atualizado": "2026-10-26",
+    "atual": "Déficit de 0,62% do PIB em ago/26, vindo de 0,67% em jul (BCB SGS 5793)"
+   },
+   {
+    "id": "a8",
+    "ponto": "Selic e Copom",
+    "referencia": "Meta de 13,75% ao ano",
+    "bom": "Ciclo de cortes continua",
+    "ruim": "Copom interrompe cortes ou volta a subir",
+    "status": "A observar",
+    "atualizado": "2026-10-26",
+    "atual": "Copom cortou a Selic para 13,75% em 16/09, 5º corte seguido e unânime; próxima reunião em 04/11 (Atlas Público/Banco Central)"
+   },
+   {
+    "id": "a9",
+    "ponto": "Contestação do resultado",
+    "referencia": "Flávio pede anulação e não reconhece",
+    "bom": "Reconhecimento ou rejeição rápida pelo TSE",
+    "ruim": "Escalada institucional prolongada",
+    "status": "Crítico",
+    "atualizado": "2026-10-26",
+    "atual": "Flávio não reconheceu a derrota e disse que pedirá à Justiça a anulação da votação (CNBC, Rio Times, 26/10)"
+   },
+   {
+    "id": "a10",
+    "ponto": "Leilões do Tesouro",
+    "referencia": "Leilões de 27 a 29/10 cancelados",
+    "bom": "Retomada normal das emissões",
+    "ruim": "Novos cancelamentos ou prêmios muito altos",
+    "status": "Crítico",
+    "atualizado": "2026-10-26",
+    "atual": "Tesouro cancelou os leilões de 27 a 29/10 após a eleição (CNBC, 26/10)"
+   },
+   {
+    "id": "a11",
+    "ponto": "Investigação de manipulação (CVM/BSM)",
+    "referencia": "Nenhuma notícia",
+    "bom": "Nada atípico apontado",
+    "ruim": "Abertura de investigação sobre o pregão de 26/10",
+    "status": "A observar",
+    "atualizado": "2026-10-26",
+    "atual": "Não encontrado: nenhuma investigação da CVM/BSM sobre o pregão de 26/10 nas buscas"
+   }
+  ],
+  "eleicoes": [
+   {
+    "eleicao": "2002",
+    "panico": "Dólar sobe de cerca de R$ 2,60 no início do ano para R$ 3,99 em 10/10, o recorde do Plano Real até então",
+    "depois": "Governo mantém disciplina fiscal; mercado se acalma nos primeiros meses de 2003 e o câmbio recua",
+    "fonte": "Gazeta do Povo; Jornal Opção"
+   },
+   {
+    "eleicao": "2022",
+    "panico": "Sem pânico: vitória de Lula já estava nos preços",
+    "depois": "No dia seguinte o Ibovespa sobe 1,31% e o dólar cai 2,54%; o dólar médio passa de R$ 5,25 (out/22) para R$ 5,06 (out/23)",
+    "fonte": "ICL Notícias; BCB, série 3698"
+   },
+   {
+    "eleicao": "2026",
+    "panico": "Vitória surpresa contra um consenso de ~80%: Ibovespa −15%, dólar +9%, juros longos +260 pb",
+    "depois": "Em aberto. Depende de sinal fiscal, da equipe econômica e da contestação do resultado",
+    "fonte": "Reuters; este dashboard"
+   }
+  ]
+ },
+ "fontes": {
+  "mercado": {
+   "title": "Ibovespa e dólar nas datas-chave",
+   "description": "Fechamentos do Ibovespa e do dólar comercial em datas-chave de 2026 e o nível intradiário de 26/10 (~12h), compilados de Agência Brasil, CNN Brasil, InfoMoney, SpaceMoney e Reuters. Valores de 02/10 e o Ibovespa de 22/10 são derivados das variações publicadas."
+  },
+  "setores": {
+   "title": "Ações e índices em 26/10",
+   "description": "Variação intradiária de ações e índices setoriais em 26/10/2026 por volta de 12h, segundo reportagem da Reuters (via Investing.com)."
+  },
+  "expectativa": {
+   "title": "Pesquisas, apostas e resultado",
+   "description": "Pesquisas da véspera (Quaest, média de 10 pesquisas), probabilidades em Polymarket e Kalshi e o resultado oficial do TSE, compilados de Exame, Rio Times e InfoMoney."
+  },
+  "polymarket": {
+   "title": "Polymarket na noite da apuração",
+   "description": "Probabilidade implícita de vitória de Lula no Polymarket em 25/10/2026, horários ET, segundo a linha do tempo publicada pelo Rio Times."
+  },
+  "fluxo": {
+   "title": "Fluxo, câmbio e juros",
+   "description": "Fluxo estrangeiro na B3, valorização do real em 2026, alta dos juros longos e volume do pregão, compilados de Gazeta Mercantil, Carteira Fundos, Elos Ayta (via Aciara) e Reuters."
+  },
+  "hipotese": {
+   "title": "Avaliação das evidências",
+   "description": "Análise do Claude: cada evidência pública classificada quanto a apoiar ou não a hipótese de manipulação. É julgamento, não dado de mercado."
+  },
+  "macro": {
+   "title": "Indicadores do Banco Central",
+   "description": "Séries mensais do SGS do Banco Central desde dez/2022: dívida bruta (13762), dívida líquida (4513), resultado primário 12m com sinal invertido para superávit positivo (5793), Selic efetiva (4189), IPCA 12m (13522), desemprego PNAD (24369), dólar médio (3698) e PIB anual (7326)."
+  },
+  "acompanhamento": {
+   "title": "Pontos críticos acompanhados",
+   "description": "Pontos que decidem se a queda pós-eleição foi exagero: referência no pós-eleição, sinal bom, sinal ruim e status. Limites e status são avaliação do Claude a partir de notícias públicas."
+  },
+  "eleicoes": {
+   "title": "Reação a Lula em 2002, 2022, 2026",
+   "description": "Como câmbio e bolsa reagiram às eleições de Lula, compilado de Gazeta do Povo, Jornal Opção, ICL Notícias, Reuters e da série 3698 do Banco Central."
+  }
+ }
+}
