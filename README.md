@@ -6,3 +6,5 @@ Dados do dashboard **Pânico Pós-Eleição 2026**, publicado em https://aleflav
 - `index.html`: cópia da página publicada na Hostinger, para referência.
 
 Uma rotina mensal (dia 5) atualiza `data/dados.json` com indicadores do Banco Central (SGS), fechamentos de mercado e a tabela de acompanhamento.
+
+Esse é um projeto absolutamente pessoal que visa compartilhar um pouco mais de compreensão sobre o funcionamento do "Mercado" e seus indicadores, nem sempre refletindo a realidade da maioria das pessoas, mas sim, a vontade e crenças de poucos.
