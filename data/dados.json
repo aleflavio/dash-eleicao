@@ -1,5 +1,5 @@
 {
- "atualizado": "2026-10-26",
+ "atualizado": "2026-11-05",
  "dados": {
   "mercado": [
    {
@@ -50,6 +50,13 @@
     "ibov": 173064.64,
     "dolar": 5.4414,
     "fonte": "Reuters via Investing.com, 12h05"
+   },
+   {
+    "data": "2026-10-30",
+    "momento": "Fechamento de outubro",
+    "ibov": 167921.8,
+    "dolar": 5.4443,
+    "fonte": "Brasil 61 e BB Investalk (Ibovespa -0,75%, -9,88% em outubro); dólar comercial R$ 5,4443 (Brasil 61)"
    }
   ],
   "setores": [
@@ -730,6 +737,14 @@
     "codigo_sgs": 13762
    },
    {
+    "serie": "divida_bruta",
+    "nome": "Dívida bruta do governo geral",
+    "unidade": "% do PIB",
+    "mes": "2026-09",
+    "valor": 82.93,
+    "codigo_sgs": 13762
+   },
+   {
     "serie": "divida_liquida",
     "nome": "Dívida líquida do setor público",
     "unidade": "% do PIB",
@@ -1090,6 +1105,14 @@
     "codigo_sgs": 4513
    },
    {
+    "serie": "divida_liquida",
+    "nome": "Dívida líquida do setor público",
+    "unidade": "% do PIB",
+    "mes": "2026-09",
+    "valor": 69.98,
+    "codigo_sgs": 4513
+   },
+   {
     "serie": "primario",
     "nome": "Resultado primário, 12 meses",
     "unidade": "% do PIB",
@@ -1447,6 +1470,14 @@
     "unidade": "% do PIB",
     "mes": "2026-08",
     "valor": -0.62,
+    "codigo_sgs": 5793
+   },
+   {
+    "serie": "primario",
+    "nome": "Resultado primário, 12 meses",
+    "unidade": "% do PIB",
+    "mes": "2026-09",
+    "valor": -0.52,
     "codigo_sgs": 5793
    },
    {
@@ -1822,6 +1853,14 @@
     "nome": "Selic efetiva",
     "unidade": "% ao ano",
     "mes": "2026-10",
+    "valor": 13.65,
+    "codigo_sgs": 4189
+   },
+   {
+    "serie": "selic",
+    "nome": "Selic efetiva",
+    "unidade": "% ao ano",
+    "mes": "2026-11",
     "valor": 13.65,
     "codigo_sgs": 4189
    },
@@ -2554,6 +2593,14 @@
     "codigo_sgs": 24369
    },
    {
+    "serie": "desemprego",
+    "nome": "Desemprego (PNAD)",
+    "unidade": "%",
+    "mes": "2026-09",
+    "valor": 5.2,
+    "codigo_sgs": 24369
+   },
+   {
     "serie": "dolar",
     "nome": "Dólar, média do mês",
     "unidade": "R$",
@@ -2922,6 +2969,14 @@
     "codigo_sgs": 3698
    },
    {
+    "serie": "dolar",
+    "nome": "Dólar, média do mês",
+    "unidade": "R$",
+    "mes": "2026-10",
+    "valor": 5.1294,
+    "codigo_sgs": 3698
+   },
+   {
     "serie": "pib",
     "nome": "Crescimento do PIB",
     "unidade": "% no ano",
@@ -2954,8 +3009,8 @@
     "bom": "Nomes com credibilidade e meta de primário mantida",
     "ruim": "Flexibilização do arcabouço fiscal ou meta afrouxada",
     "status": "Aguardando",
-    "atualizado": "2026-10-26",
-    "atual": "Não encontrado: sem anúncio de equipe econômica ou plano fiscal até 26/10/2026"
+    "atualizado": "2026-11-05",
+    "atual": "Lula deve anunciar o ministro da Fazenda do novo mandato até o fim de 2026 e manter o compromisso com o superávit; definição dos ministros só após viagem de 9 a 16/11 (Edinho Silva, presidente do PT, via A Crítica; Congresso em Foco, 02/10). Sem anúncio oficial até 05/11"
    },
    {
     "id": "a2",
@@ -2964,8 +3019,8 @@
     "bom": "Devolve pelo menos metade da alta",
     "ruim": "Nova rodada de alta",
     "status": "Crítico",
-    "atualizado": "2026-10-26",
-    "atual": "Fechamento de set/26 não encontrado; DI jan/2031 em 12,60% em 07/10 (Money Times, após queda de mais de 100 pb em dois dias)"
+    "atualizado": "2026-11-05",
+    "atual": "DI jan/2031 disparou mais de 200 pb em 26/10, ajuste em 15,279%; 15,195% na manhã de 27/10 (Jornal do Comércio), contra 12,60% em 07/10. Fechamento de 30/10 não encontrado"
    },
    {
     "id": "a3",
@@ -2974,8 +3029,8 @@
     "bom": "Volta abaixo de R$ 5,20",
     "ruim": "Fecha acima de R$ 5,60 (pico do dia)",
     "status": "Crítico",
-    "atualizado": "2026-10-26",
-    "atual": "R$ 5,17 em 30/09, queda de 0,15% em setembro (Agência Brasil); R$ 5,44 em 26/10 ~12h (Reuters)"
+    "atualizado": "2026-11-05",
+    "atual": "R$ 5,4443 em 30/10 (+1,05%), maior fechamento desde 30/12/2025; média de outubro R$ 5,1294 (Brasil 61; BCB SGS 3698)"
    },
    {
     "id": "a4",
@@ -2984,8 +3039,8 @@
     "bom": "Recupera 190 mil pontos",
     "ruim": "Fecha abaixo de 170 mil pontos",
     "status": "Crítico",
-    "atualizado": "2026-10-26",
-    "atual": "186.340 pontos em 30/09, alta de 5,03% em setembro (Investidor10/Suno); 173 mil em 26/10 ~12h (Reuters)"
+    "atualizado": "2026-11-05",
+    "atual": "167.921,80 pontos em 30/10, 5ª queda seguida e -9,88% em outubro, pior mês desde jun/2022; abaixo dos 170 mil (Brasil 61; BB Investalk)"
    },
    {
     "id": "a5",
@@ -2994,7 +3049,7 @@
     "bom": "Mês volta a ter entrada líquida",
     "ruim": "Saída líquida por dois meses seguidos",
     "status": "A observar",
-    "atualizado": "2026-10-26",
+    "atualizado": "2026-11-05",
     "atual": "Setembro: entrada líquida de R$ 9,11 bi, 32,03 bi no ano; agosto teve saída de R$ 18,12 bi (Poder360/Elos Ayta); outubro não encontrado"
    },
    {
@@ -3004,8 +3059,8 @@
     "bom": "Estabiliza perto do nível atual",
     "ruim": "Sobe mais de 0,5 ponto por mês",
     "status": "A observar",
-    "atualizado": "2026-10-26",
-    "atual": "82,87% do PIB em ago/26, sem dado novo (BCB SGS 13762)"
+    "atualizado": "2026-11-05",
+    "atual": "82,93% do PIB em set/26, de 82,87% em ago (+0,06 p.p.) (BCB SGS 13762)"
    },
    {
     "id": "a7",
@@ -3013,9 +3068,9 @@
     "referencia": "Déficit de 0,62% do PIB em ago/26",
     "bom": "Déficit encolhe em direção à meta",
     "ruim": "Déficit aumenta",
-    "status": "A observar",
-    "atualizado": "2026-10-26",
-    "atual": "Déficit de 0,62% do PIB em ago/26, vindo de 0,67% em jul (BCB SGS 5793)"
+    "status": "Melhorando",
+    "atualizado": "2026-11-05",
+    "atual": "Déficit de 0,52% do PIB em set/26, vindo de 0,62% em ago (BCB SGS 5793)"
    },
    {
     "id": "a8",
@@ -3023,9 +3078,9 @@
     "referencia": "Meta de 13,75% ao ano",
     "bom": "Ciclo de cortes continua",
     "ruim": "Copom interrompe cortes ou volta a subir",
-    "status": "A observar",
-    "atualizado": "2026-10-26",
-    "atual": "Copom cortou a Selic para 13,75% em 16/09, 5º corte seguido e unânime; próxima reunião em 04/11 (Atlas Público/Banco Central)"
+    "status": "Piorando",
+    "atualizado": "2026-11-05",
+    "atual": "Copom manteve a Selic em 13,75% em 04/11, por unanimidade, interrompendo cinco cortes seguidos; cita expectativas de inflação maiores e incerteza maior; ata em 10/11, próxima reunião 8 e 9/12 (Banco Central; Suno; Agência Brasil)"
    },
    {
     "id": "a9",
@@ -3033,9 +3088,9 @@
     "referencia": "Flávio pede anulação e não reconhece",
     "bom": "Reconhecimento ou rejeição rápida pelo TSE",
     "ruim": "Escalada institucional prolongada",
-    "status": "Crítico",
-    "atualizado": "2026-10-26",
-    "atual": "Flávio não reconheceu a derrota e disse que pedirá à Justiça a anulação da votação (CNBC, Rio Times, 26/10)"
+    "status": "Melhorando",
+    "atualizado": "2026-11-05",
+    "atual": "Flávio Bolsonaro desistiu em 26/10 de pedir a anulação e passou a preparar ação contra Lula; TSE confirmou a vitória (51,77% a 48,23%); fontes divergem, sem protocolo formal encontrado (Bahia Notícias; Fundação Perseu Abramo)"
    },
    {
     "id": "a10",
@@ -3044,8 +3099,8 @@
     "bom": "Retomada normal das emissões",
     "ruim": "Novos cancelamentos ou prêmios muito altos",
     "status": "Crítico",
-    "atualizado": "2026-10-26",
-    "atual": "Tesouro cancelou os leilões de 27 a 29/10 após a eleição (CNBC, 26/10)"
+    "atualizado": "2026-11-05",
+    "atual": "Tesouro cancelou os leilões de 27 a 29/10 (NTN-B, LTN, NTN-F) sem data de retomada; nenhum leilão posterior encontrado até 05/11 (Jornal do Comércio; Money Times)"
    },
    {
     "id": "a11",
@@ -3054,7 +3109,7 @@
     "bom": "Nada atípico apontado",
     "ruim": "Abertura de investigação sobre o pregão de 26/10",
     "status": "A observar",
-    "atualizado": "2026-10-26",
+    "atualizado": "2026-11-05",
     "atual": "Não encontrado: nenhuma investigação da CVM/BSM sobre o pregão de 26/10 nas buscas"
    }
   ],
